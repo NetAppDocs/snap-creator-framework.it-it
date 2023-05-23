@@ -1,0 +1,14 @@
+---
+permalink: administration/reference_troubleshooting_snap_creator_issues.html 
+sidebar: sidebar 
+keywords: troubleshoot, snap, creator, information, log, error 
+summary: È possibile risolvere i problemi di Snap Creator utilizzando le informazioni contenute nei registri e nei messaggi di errore di Snap Creator. 
+---
+= Risoluzione dei problemi di Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile risolvere i problemi di Snap Creator utilizzando le informazioni contenute nei registri e nei messaggi di errore di Snap Creator.

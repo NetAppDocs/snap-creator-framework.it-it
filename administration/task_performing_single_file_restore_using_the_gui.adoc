@@ -1,0 +1,38 @@
+---
+permalink: administration/task_performing_single_file_restore_using_the_gui.html 
+sidebar: sidebar 
+keywords: snap, creator, gui, file, restore, wizard 
+summary: È possibile eseguire operazioni di ripristino di un singolo file utilizzando la GUI di Snap Creator. 
+---
+= Esecuzione di operazioni di ripristino di un singolo file
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eseguire operazioni di ripristino di un singolo file utilizzando la GUI di Snap Creator.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *Gestione* > *configurazioni*.
+. Dalla scheda configurazioni nel riquadro profili e configurazione, selezionare il file di configurazione.
+. Selezionare *Action* > *Restore*.
++
+La procedura guidata di ripristino si apre nel riquadro di destra.
+
+. Completare la procedura guidata di ripristino:
++
+.. Nella sezione "`Restore details`" (Dettagli ripristino), selezionare un nome di controller o Vserver, un nome di volume di ripristino, un criterio e un nome di copia Snapshot di ripristino, quindi selezionare *Single file Restore* dall'elenco Restore type (tipo di ripristino).
++
+image::../media/restore_wizard_restore_details.gif[dettagli del ripristino guidato]
+
+.. Selezionare i file da ripristinare.
+.. Selezionare la posizione in cui ripristinare i file.
+.. Esaminare il riepilogo e fare clic su *fine*.
+
+
++
+Viene visualizzato un messaggio di avviso che chiede se sono presenti altri elementi da ripristinare.
+
+. Fare clic su *No* se non sono presenti altri elementi da ripristinare, quindi fare clic su *OK* nella pagina di conferma del ripristino.
+. Nel pannello della console, verificare che i file selezionati siano stati ripristinati correttamente esaminando i messaggi visualizzati.
+

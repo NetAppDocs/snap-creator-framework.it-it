@@ -1,0 +1,26 @@
+---
+permalink: installation/concept_scf_component_server.html 
+sidebar: sidebar 
+keywords: snap, creator, server 
+summary: Le azioni di Snap Creator vengono avviate da Snap Creator Server. 
+---
+= Server Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le azioni di Snap Creator vengono avviate da Snap Creator Server.
+
+In genere, Snap Creator Server viene installato su un host fisico o virtuale. Il server ospita la GUI di Snap Creator e i database necessari per memorizzare informazioni su processi, pianificazioni, utenti, ruoli, profili, file di configurazione e metadati dai plug-in. Il server viene talvolta abbreviato in scServer all'interno di Snap Creator.
+
+Il server invia le operazioni di quiesce o unquiesce alle applicazioni supportate (database, email, hypervisor o qualsiasi altra applicazione personalizzata) tramite Snap Creator Agent. La comunicazione tra il server e l'agente Snap Creator avviene per impostazione predefinita sulla porta 9090, ma è possibile personalizzare la porta in base alle proprie esigenze.
+
+Per impostazione predefinita, il server Snap Creator utilizza le chiamate API di Data ONTAP per comunicare con i sistemi di storage e altri prodotti software NetApp. I comandi al sistema di storage dal server Snap Creator vengono eseguiti sulla porta 80 o 443 e gestiscono tutte le funzioni di tipo Snapshot, SnapVault e SnapMirror prima di apportare modifiche ai dispositivi o ai pool di storage.
+
+Il server Snap Creator comunica con Active IQ Unified Manager tramite l'API di Unified Manager.
+
+*Informazioni correlate*
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2854418["Guida all'amministrazione di Snap Creator Framework 4.3.3"]

@@ -1,0 +1,24 @@
+---
+permalink: administration/task_deleting_backups.html 
+sidebar: sidebar 
+keywords: delete, backup, copy, configuration, file, delete, snap, creator, gui, data 
+summary: È possibile eliminare le copie di backup di un file di configurazione. 
+---
+= Eliminazione dei backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eliminare le copie di backup di un file di configurazione.
+
+. Dal menu principale dell'interfaccia grafica utente (GUI) di Snap Creator, selezionare *Data* > *Backup*
+. Dal riquadro profili e configurazioni della scheda Backup, espandere un profilo e selezionare un file di configurazione.
+. Selezionare il backup che si desidera eliminare e fare clic su *Delete* (Elimina).
++
+
+NOTE: Se il file di configurazione contiene più volumi Data ONTAP, selezionare la copia Snapshot che si desidera eliminare su ciascuno dei volumi Data ONTAP.
+
+. Fare clic su *Sì* nella finestra di conferma.
+

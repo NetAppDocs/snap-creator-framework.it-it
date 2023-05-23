@@ -1,0 +1,23 @@
+---
+permalink: administration/task_assigning_policies.html 
+sidebar: sidebar 
+keywords: assign, retention, policy, configuration, snap, creator, gui, assignment 
+summary: È possibile assegnare criteri di conservazione ai file di configurazione utilizzando la GUI di Snap Creator. 
+---
+= Assegnazione dei criteri
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile assegnare criteri di conservazione ai file di configurazione utilizzando la GUI di Snap Creator.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *Policy* > *Policy Assignments*.
+. Selezionare un profilo dal riquadro Profilo.
+. Selezionare uno o più criteri da assegnare al profilo selezionando la casella di controllo appropriata nel riquadro a destra, quindi fare clic su *Salva*.
++
+Se nel profilo sono già presenti file di configurazione, viene visualizzato un messaggio che informa l'utente che il criterio assegnato ha la precedenza sulle impostazioni nel file di configurazione.
+
+. Fare clic su *Sì* per assegnare il criterio.
+

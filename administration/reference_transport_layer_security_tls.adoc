@@ -1,0 +1,32 @@
+---
+permalink: administration/reference_transport_layer_security_tls.html 
+sidebar: sidebar 
+keywords: cryptographic, flaw, transport, layer, security, tls, protocol 
+summary: Difetti di crittografia in Transport Layer Security 
+---
+= Difetti di crittografia in Transport Layer Security
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+* *Problema*
++
+TLS 1.0 presenta diversi difetti di crittografia. Un utente malintenzionato potrebbe sfruttare questi difetti per condurre attacchi man-in-the-middle o decrittare le comunicazioni tra il servizio interessato e i client.
+
+* *Causa*
++
+Il servizio remoto accetta connessioni crittografate utilizzando TLS 1.0.
+
+* *Azione correttiva*
++
+Snap Creator dispone di un'opzione per attivare o disattivare il protocollo TLS 1.0 .
+
++
+.. Per supportare la compatibilità con le versioni precedenti, impostare il parametro ENABLE_SECURITY_PROTOCOL_TLS_V1 su Y nei file snapcreator.properties e agent.properties. Il parametro ENABLE_SECURITY_PROTOCOL_TLS_V1 è impostato su N per impostazione predefinita.
+
+
+
+
+
+NOTE: Il parametro ENABLE_SECURITY_PROTOCOL_TLS_V1 può essere utilizzato solo nelle release precedenti a Snap Creator Framework 4.3.3. Perché Snap Creator Framework 4.3.3. La release supporta solo Oracle Java e OpenJDK 1.8 e versioni successive, il supporto per TLS 1.0 è stato rimosso da Snap Creator Framework.

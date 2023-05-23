@@ -1,0 +1,22 @@
+---
+permalink: sap-hana-ops/task_performing_file_based_backup_from_snap_creator_command_line.html 
+sidebar: sidebar 
+keywords: sap, hana, performing, file-based, backup, snap, creator, command, line 
+summary: È possibile eseguire il backup basato su file utilizzando la riga di comando di Snap Creator. 
+---
+= Esecuzione del backup basato su file dalla riga di comando di Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eseguire il backup basato su file utilizzando la riga di comando di Snap Creator.
+
+. Per eseguire il backup basato su file, eseguire il seguente comando:
++
+[listing]
+----
+./snapcreator --server localhost --port 8443 --user sc --passwd sc --profile hana_testing --config HANA_Test --action fileBasedBackup --policy none --verbose
+----
+

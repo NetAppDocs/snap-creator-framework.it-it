@@ -1,0 +1,36 @@
+---
+permalink: administration/task_performing_volume_restore_using_the_gui.html 
+sidebar: sidebar 
+keywords: volume, restore, snap, creator, gui, perform, wizard 
+summary: È possibile eseguire un ripristino del volume utilizzando la GUI di Snap Creator. 
+---
+= Ripristino del volume in corso
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eseguire un ripristino del volume utilizzando la GUI di Snap Creator.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *Gestione* > *configurazioni*.
+. Dalla scheda *configurazioni*, nel riquadro *profili e configurazione*, selezionare il file di configurazione.
+. Selezionare *Action* > *Restore*.
++
+La procedura guidata di ripristino viene visualizzata nel riquadro di destra.
+
+. Completare le pagine della procedura guidata di ripristino per eseguire il ripristino.
++
+.. Nella pagina *Restore details* (Dettagli ripristino), selezionare il nome del controller/SVM, il nome del volume Restore (Ripristino), Policy (criterio) e Restore Snapshot copy name (Copia Snapshot di ripristino), quindi selezionare *Volume Restore* dall'elenco a discesa *Restore type* (tipo di ripristino).
++
+image::../media/restore_wizard_restore_details.gif[dettagli del ripristino guidato]
+
+.. Esaminare il riepilogo, quindi fare clic su *fine*.
+
+
++
+Viene visualizzato un messaggio di avviso che chiede se sono presenti altri elementi da ripristinare.
+
+. Fare clic su *No*, quindi su *OK* nella pagina di conferma del ripristino.
+. Nel riquadro *Console*, verificare che il ripristino sia stato completato correttamente visualizzando i messaggi.
+

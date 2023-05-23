@@ -1,0 +1,74 @@
+---
+permalink: administration/reference_pre_commands.html 
+sidebar: sidebar 
+keywords: snap, creator, server, configuration, pre, command, quiesce, cmd, ntap, clone, exit 
+summary: Snap Creator Server include diversi PRE-comandi dei file di configurazione. 
+---
+= PRE-comandi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator Server include diversi PRE-comandi dei file di configurazione.
+
+
+NOTE: Per Windows, `cmd.exe /c` Deve essere incluso prima di qualsiasi PRE command.
+
+|===
+| Comando | Descrizione 
+
+
+ a| 
+PRE_APP_QUIESCE_ CMD N.
+ a| 
+Questo è il comando di avvio del backup pre-applicazione, dove n. è un numero compreso tra 01 e 99.
+
+
+
+ a| 
+N. PRE_NTAP_CMD
+ a| 
+Questo è il comando pre-Snapshot, dove n. è un numero compreso tra 01 e 99; viene eseguito prima di tutte le operazioni.
+
+
+
+ a| 
+N. PRE_APP_UNQUIESCE_CMD
+ a| 
+Questo è il comando di arresto del backup pre-applicazione, dove n. è un numero compreso tra 01 e 99.
+
+
+
+ a| 
+PRE_NTAP_CLONE_ DELETE_CMD N.
+ a| 
+Questo è il comando delete pre-clone, dove n. è un numero compreso tra 01 e 99. *Nota:* lo scopo del comando cloni delete è di richiamare uno o più script di mount in modo che i LUN clonati possano essere montati allo scopo di eseguire il backup (probabilmente su nastro).
+
+
+
+ a| 
+PRE_EXIT_CMD N.
+ a| 
+Si tratta di un comando facoltativo che viene eseguito dopo un errore irreversibile ma prima dell'uscita di Snap Creator. Questa funzione è utile per ripristinare lo stato precedente all'esecuzione di Snap Creator.*Nota:*
+
+* Questo comando riporta un'applicazione nella normale modalità operativa prima che Snap Creator esca a causa di un errore.
+* Questo viene ignorato se si utilizza APP_NAME perché viene gestito internamente in Snap Creator.
+
+
+
+
+ a| 
+PRE_RESTORE_CMD N.
+ a| 
+Si tratta di un comando facoltativo che può essere eseguito prima di inserire un ripristino interattivo. Ciò consente di interagire con l'applicazione da ripristinare. Ad esempio, prima di eseguire un ripristino, potrebbe essere necessario chiudere l'applicazione. *Nota:* questo non è supportato con il plug-in MySQL.
+
+
+
+ a| 
+PRE_CLONE_CREATE _ CMD N.
+ a| 
+Si tratta di un comando facoltativo che può essere eseguito prima delle operazioni di cloning ONTAPI, dove n. è un numero compreso tra 01 e 99.
+
+|===

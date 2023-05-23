@@ -1,0 +1,61 @@
+---
+permalink: sap-hana-ops/task_installing_and_configuring_required_software_components.html 
+sidebar: sidebar 
+keywords: installing, install, configuring, configure, required, software 
+summary: Per la soluzione di backup e ripristino SAP HANA che utilizza Snap Creator Framework e il plug-in SAP HANA, è necessario installare i componenti software Snap Creator e il software client SAP HANA hdbsql. 
+---
+= Installazione e configurazione dei componenti software richiesti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per la soluzione di backup e ripristino SAP HANA che utilizza Snap Creator Framework e il plug-in SAP HANA, è necessario installare i componenti software Snap Creator e il software client SAP HANA hdbsql.
+
+Non è necessario installare il plug-in separatamente. Viene installato con l'agente.
+
+. Installare Snap Creator Server su un host che condivide la connettività di rete con l'host in cui si installa l'agente.
+. Installare Snap Creator Agent su un host che condivide la connettività di rete con l'host di Snap Creator Server.
++
+** In un singolo ambiente di nodi SAP HANA, installare l'Agent sull'host del database. In alternativa, installare l'agente su un altro host dotato di connettività di rete con l'host del database e con l'host del server Snap Creator.
+** In un ambiente SAP HANA multinodo, non installare l'agente sull'host del database; l'agente deve essere installato su un host separato con connettività di rete all'host del database e all'host del server Snap Creator.
+
+
+. Installare il software client SAP HANA hdbsql sull'host in cui è stato installato Snap Creator Agent.
++
+Configurare le chiavi dell'archivio utente per i nodi SAP HANA gestiti tramite questo host.
+
++
+[listing]
+----
+mgmtsrv01:/sapcd/HANA_SP5/DATA_UNITS/HDB_CLIENT_LINUXINTEL # ./hdbinst
+
+SAP HANA Database Client installation kit detected.
+
+SAP HANA Database Installation Manager - Client Installation 1.00.46.371989
+***************************************************************************
+
+Enter Installation Path [/usr/sap/hdbclient32]:
+Checking installation...
+Installing and configuring required software components | 13
+Preparing package "Product Manifest"...
+Preparing package "SQLDBC"...
+Preparing package "ODBC"...
+Preparing package "JDBC"...
+Preparing package "Client Installer"...
+Installing SAP HANA Database Client to /usr/sap/hdbclient32...
+Installing package 'Product Manifest' ...
+Installing package 'SQLDBC' ...
+Installing package 'ODBC' ...
+Installing package 'JDBC' ...
+Installing package 'Client Installer' ...
+Installation done
+Log file written to '/var/tmp/hdb_client_2013-07-05_11.38.17/hdbinst_client.log'
+mgmtsrv01:/sapcd/HANA_SP5/DATA_UNITS/HDB_CLIENT_LINUXINTEL #
+----
+
+
+*Informazioni correlate*
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2854419["Guida all'installazione di Snap Creator Framework"]

@@ -1,0 +1,37 @@
+---
+permalink: administration/task_monitoring_logs_by_using_the_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: profile, configuration, snap, creator, gui, monitor, log, out, debug, error, stderr, log 
+summary: È possibile visualizzare i log di ogni profilo e configurazione utilizzando la GUI di Snap Creator. 
+---
+= Registri di monitoraggio
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare i log di ogni profilo e configurazione utilizzando la GUI di Snap Creator.
+
+È possibile visualizzare i log out, Debug, Error e stderr per agevolare le operazioni di risoluzione dei problemi. Consultare i riferimenti correlati per ulteriori informazioni su questi registri per la risoluzione dei problemi.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *Report* > *registri*:
++
+image::../media/reports_logs.gif[log dei report]
+
+. Selezionare i log in base al profilo, al file di configurazione, al tipo di log o al log specifico, in base alle necessità:
++
+image::../media/reports_logs_example.gif[esempio di log dei report]
+
++
+Il log selezionato può essere scaricato anche facendo clic su *Download Selected Log* (Scarica log selezionato). Il file di log scaricato viene memorizzato nella directory (o cartella) specificata dal browser per i download.
+
++
+
+NOTE: I log out, debug, stderr e Agent vengono conservati come definito dal valore LOG_NUM nel file di configurazione, ma il log degli errori viene sempre aggiunto.
+
+
+
+*Informazioni correlate*
+
+xref:reference_logs.adoc[Tipi di messaggi di errore e log per la risoluzione dei problemi]

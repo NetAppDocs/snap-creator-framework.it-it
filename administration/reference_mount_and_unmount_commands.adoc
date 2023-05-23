@@ -1,0 +1,32 @@
+---
+permalink: administration/reference_mount_and_unmount_commands.html 
+sidebar: sidebar 
+keywords: cloning, mount_cmd, unmount_cmd, command, snap, creator, pre, post 
+summary: Durante la clonazione, utilizzare i comandi MOUNT_CMD e UMOUNT_CMD invece dei comandi pre o POST di Snap Creator. 
+---
+= Montare e smontare i comandi
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durante la clonazione, utilizzare i comandi MOUNT_CMD e UMOUNT_CMD invece dei comandi pre o POST di Snap Creator.
+
+|===
+| Comando | Descrizione 
+
+
+ a| 
+N. MOUNT_CMD
+ a| 
+I comandi mount vengono utilizzati per montare il file system per le azioni di cloning o mount, dove n. è un numero che inizia dal 01 al 99.
+
+
+
+ a| 
+UMOUNT_CMD N.
+ a| 
+I comandi Unmount vengono utilizzati per montare il file system per le azioni di cloning o mount, dove n. è un numero che inizia da 01 a 99.
+
+|===

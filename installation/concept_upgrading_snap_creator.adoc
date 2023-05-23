@@ -1,0 +1,28 @@
+---
+permalink: installation/concept_upgrading_snap_creator.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator 
+summary: 'È possibile eseguire l"aggiornamento alla versione più recente di Snap Creator da diverse versioni supportate.' 
+---
+= Aggiornamento di Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eseguire l'aggiornamento alla versione più recente di Snap Creator da diverse versioni supportate.
+
+
+NOTE: In caso di domande sulla possibilità di eseguire l'aggiornamento dalle release pubblicate sul sito delle community, puoi inviare domande generali al NetApp Communities Forum. Il NetApp Communities Forum è online all'indirizzo: https://communities.netapp.com/community/products_and_solutions/databases_and_enterprise_apps/snapcreator[]
+
+Prima di eseguire l'aggiornamento alla versione più recente di Snap Creator, controllare le dimensioni del monitor dei lavori per la versione attualmente installata di Snap Creator. Quando si esegue l'aggiornamento di Snap Creator, è necessario impostare le dimensioni del monitor del lavoro su un valore uguale o superiore all'impostazione precedente per evitare la perdita di dati nel database del monitor del lavoro.
+
+Inoltre, durante l'aggiornamento di Snap Creator, è necessario assicurarsi che l'aggiornamento avvenga su un host che utilizza lo stesso ambiente del sistema operativo. Ad esempio, se si esegue l'aggiornamento in un ambiente Windows, è necessario assicurarsi che durante la copia dei dati di backup vengano copiati anche i dati in un ambiente Windows e non in un sistema basato su UNIX.
+
+
+IMPORTANT: Snap Creator non dispone di un'opzione di downgrade (revert). Durante un processo di aggiornamento, viene eseguito il backup di diversi file. È importante conservare i file di cui è stato eseguito il backup fino a quando non si è certi di non dover ripristinare una versione precedente di Snap Creator.
+
+*Informazioni correlate*
+
+xref:task_checking_job_monitor_size.adoc[Verifica delle dimensioni del monitor dei lavori in corso]

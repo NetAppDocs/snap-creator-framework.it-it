@@ -1,0 +1,91 @@
+---
+permalink: domino-ops/task_scheduling_actions_using_the_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: domino, ibm, scheduling, schedule, backups 
+summary: È possibile pianificare processi di backup ricorrenti dopo aver eseguito il backup iniziale. 
+---
+= Pianificazione dei backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile pianificare processi di backup ricorrenti dopo aver eseguito il backup iniziale.
+
+Il file di configurazione per il backup dovrebbe essere stato creato, come descritto in xref:task_using_the_gui_to_create_a_configuration_file.adoc[Creazione di un file di configurazione].
+
+. Nel riquadro profili e configurazioni, selezionare il file di configurazione e fare clic su *Gestione* > *programmi* nella parte superiore della finestra di Snap Creator Framework.
+. Nel riquadro lavori, fare clic su *Crea*
+. Nella finestra di dialogo nuovo lavoro, specificare le informazioni sul lavoro:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Nome lavoro
+ a| 
+Immettere il nome del lavoro.
+
+
+
+ a| 
+Data di inizio
+ a| 
+Utilizzare il controllo Calendar per selezionare la data di inizio della pianificazione.
+
+
+
+ a| 
+Attivo
+ a| 
+Selezionare questa casella per attivare la pianificazione. Deselezionare la casella per disattivare la pianificazione.
+
+
+
+ a| 
+Profilo
+ a| 
+Selezionare il profilo per il file di configurazione.
+
+
+
+ a| 
+Configurazione
+ a| 
+Selezionare il file di configurazione.
+
+
+
+ a| 
+Azione
+ a| 
+Selezionare backup.
+
+
+
+ a| 
+Policy
+ a| 
+Selezionare il criterio per il processo di backup. *Nota:* è necessario aver configurato il criterio nel file di configurazione.
+
+
+
+ a| 
+Frequenza
+ a| 
+Selezionare la frequenza con cui eseguire il processo. A seconda della scelta, vengono visualizzati nuovi campi in cui è possibile specificare il minuto, l'ora e il giorno in cui eseguire il processo. Se si desidera utilizzare un job cron, selezionare cron e immettere il comando cron.
+
+|===
++
+Nell'esempio seguente viene illustrato come pianificare un processo di backup da eseguire ogni giorno a mezzanotte:
+
++
+image::../media/scfw_domino_new_job.gif[Questa immagine viene spiegata dal testo circostante.]
+
+. Fare clic su *Save* (Salva).
++
+Il processo pianificato viene elencato nella scheda Pianificazioni del riquadro lavori. Selezionare il lavoro da eseguire, modificare o eliminare.
+
+

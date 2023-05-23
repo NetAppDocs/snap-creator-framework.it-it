@@ -1,0 +1,660 @@
+---
+permalink: administration/reference_storage_error_messages.html 
+sidebar: sidebar 
+keywords: storage troubleshoot, error, message 
+summary: I messaggi di errore relativi allo storage possono aiutare a risolvere eventuali problemi che si verificano. 
+---
+= Messaggi di errore dello storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I messaggi di errore relativi allo storage possono aiutare a risolvere eventuali problemi che si verificano.
+
+La seguente tabella elenca i codici di errore e i messaggi, oltre a una breve descrizione dell'errore e alla risoluzione suggerita.
+
+[cols="15,35,50"]
+|===
+| Codice di errore | Messaggio di errore | Descrizione/risoluzione 
+
+
+ a| 
+STORAGE-00001
+ a| 
+Formato data [%s] non valido: [%s]
+ a| 
+Il clone del volume non è stato creato da Snap Creator oppure l'indicatore orario aggiunto al nome del clone non è valido.
+
+
+
+ a| 
+STORAGE-00002
+ a| 
+Impossibile recuperare l'esecutore
+ a| 
+Non è stato creato un esecutore per lo storage. Controllare i registri per verificare la presenza di errori di gestione NetApp che potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-00003
+ a| 
+Impossibile connettersi all'host
+ a| 
+L'host non è raggiungibile. Assicurarsi che le impostazioni del firewall locale siano corrette e che l'host sia in grado di eseguire il ping dal sistema in cui è installato Snap Creator Server.
+
+
+
+ a| 
+STORAGE-01003
+ a| 
+Creazione messaggio AutoSupport con id evento [%s], categoria [%s], descrizione [%s], livello [%s], nome host [%s] non riuscita con errore [%s].
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-01004
+ a| 
+Per il ripristino dei file, i volumi di origine e di destinazione devono essere lo stesso volume.
+ a| 
+I volumi di origine e di destinazione sono diversi. Fornire lo stesso volume del volume di origine e del volume di destinazione.
+
+
+
+ a| 
+STORAGE-02003
+ a| 
+Creazione della copia Snapshot del gruppo di coerenza [%s] sui volumi [%s] non riuscita con errore [%s];
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02006
+ a| 
+Commit Consistency group Snapshot copy on [%s] with CG Id [%s] failed with error [%s] (errore [%s])
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02009
+ a| 
+Creazione copia Snapshot [%s] sul volume [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02015
+ a| 
+Rimozione copia Snapshot [%s] sul volume [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02021
+ a| 
+Ripristino copia Snapshot [%s] del volume [%s] non riuscito con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02025
+ a| 
+Ripristino del file [%s] dalla copia Snapshot [%s] a [%s] non riuscito con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02028
+ a| 
+Creazione del programma di copia snapshot SnapVault primario [%s] sul volume [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02034
+ a| 
+Rimozione dei programmi di copia Snapshot SnapVault primari dal volume [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02038
+ a| 
+Creazione del clone [%s] del volume [%s] in base alla copia Snapshot [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02041
+ a| 
+Clonazione del file [%s] sul volume [%s] in [%s] in base alla copia Snapshot [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02043
+ a| 
+Elenco dei file sul percorso [%s] non riuscito con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02046
+ a| 
+Clonazione LUN [%s] in [%s] in base alla copia Snapshot [%s] con riserva di spazio [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02049
+ a| 
+Eliminazione LUN [%s] dal volume [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02052
+ a| 
+Elenco LUN non riuscito con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02062
+ a| 
+Aggiunta esportazione NFS [%s] per nome host [%s] con accesso [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02072
+ a| 
+Recupero dello stato di SnapMirror sul controller [%s] non riuscito con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02075
+ a| 
+Recupero delle relazioni SnapMirror sul controller [%s] non riuscito con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02082
+ a| 
+Aggiornamento della relazione SnapMirror [%s] in base alla copia Snapshot [%s] non riuscito con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02092
+ a| 
+Impossibile elencare le copie Snapshot sul volume [%s] con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02102
+ a| 
+Ridenominazione copia Snapshot [%s] sul volume [%s] in [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02112
+ a| 
+Recupero stato SnapVault sul controller [%s] non riuscito con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02115
+ a| 
+Recupero delle relazioni SnapVault sul controller [%s] non riuscito con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02122
+ a| 
+Aggiornamento della relazione SnapVault [%s] in base alla copia Snapshot [%s] non riuscito con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02132
+ a| 
+Impossibile elencare i volumi clonati in base al volume [%s] con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02142
+ a| 
+Eliminazione volume [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02152
+ a| 
+Impossibile elencare i volumi con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02155
+ a| 
+Impossibile elencare il volume [%s] con messaggio di errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-02162
+ a| 
+Ripristino copia Snapshot [%s] del volume [%s] non riuscito con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03001
+ a| 
+Recupero dei server virtuali dal nodo Clustered ONTAP [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-05003
+ a| 
+Creazione del set di dati di NetApp Management Console [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-05006
+ a| 
+Creazione del backup del set di dati [%s] basato su NetApp Management Console sul controller di storage [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-05009
+ a| 
+Recupero dello stato del dataset di NetApp Management Console per il dataset [%s] non riuscito con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-05012
+ a| 
+Convalida del set di dati di NetApp Management Console [%s] non riuscita con errore [%s].
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-05018
+ a| 
+Creazione di un evento OM [%s] su [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03002
+ a| 
+Mapping igroup [%s] su LUN [%s] non riuscito con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03005
+ a| 
+Esecuzione LUN [%s] sul volume [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03008
+ a| 
+Creazione copia snapshot SnapVault primaria [%s] sul volume [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03011
+ a| 
+Elenco delle copie di backup di NetApp Management Console per il set di dati [%s] non riuscito con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03014
+ a| 
+Eliminazione ID versione backup di NetApp Management Console [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03019
+ a| 
+Avvio del backup di NetApp Management Console per [%s] ([%s]) non riuscito, uscita!
+ a| 
+Verificare la presenza di errori nei log.molto probabilmente si è verificato un errore di gestione NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03022
+ a| 
+Avvio avanzamento backup NetApp Management Console per ID lavoro [%s] non riuscito, uscita in corso.
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03025
+ a| 
+Eliminazione del file sul percorso [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03030
+ a| 
+Rilevamento dei nodi Data ONTAP in cluster su [%s] non riuscito
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03033
+ a| 
+Recupero dettagli versione sistema di [%s] non riuscito con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03036
+ a| 
+Creazione della directory sul percorso [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03039
+ a| 
+Eliminazione della directory sul percorso [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03043
+ a| 
+Creazione del file sul percorso [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03046
+ a| 
+Modifica del set di dati della console di gestione NetApp non riuscita per il set di dati [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03049
+ a| 
+Impossibile leggere il contenuto del file [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03052
+ a| 
+Errore di ricezione delle opzioni per l'opzione [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03055
+ a| 
+Ricezione contatori delle performance per l'oggetto [%s] non riuscita
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03058
+ a| 
+Istanze di performance Get for object [%s] failed
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03061
+ a| 
+Le informazioni del set di dati di NetApp Management Console per [%s] non sono riuscite
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03064
+ a| 
+Comando CLI di sistema [%s] non riuscito
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03067
+ a| 
+Eliminazione del set di dati di NetApp Management Console [%s] non riuscita con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03070
+ a| 
+Ripristino della relazione SnapVault [%s] in base alla copia Snapshot [%s] non riuscito con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03073
+ a| 
+Esportazione CIFS per [%s]:[%s] non riuscita.
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03076
+ a| 
+Recupero del volume root sul controller [%s] non riuscito con errore [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03079
+ a| 
+GET del percorso di giunzione per il volume [%s] non riuscito
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03082
+ a| 
+Impossibile ottenere il nome del sistema
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03085
+ a| 
+Il servizio NFS Get on controller [%s] non è riuscito
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03088
+ a| 
+Verifica autorizzazione NFS per autorizzazione [%s] nome percorso host [%s] non riuscita
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03091
+ a| 
+Errore di accesso dell'interfaccia di rete al controller [%s]
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-03094
+ a| 
+Elenco qtree sul volume [%s] non riuscito
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si è verificato un errore di gestione di NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+STORAGE-04119
+ a| 
+Errore nell'elenco dei server virtuali
+ a| 
+Verificare la presenza di errori nei registri. Molto probabilmente si verifica un errore di gestione della soluzione ONTAP che potrebbe rivelare la causa del problema.
+
+
+
+ a| 
+VSERVER_TUNNEL_ENABLED
+ a| 
+(S/N)
+ a| 
+Impostare il tunneling Vsim. Se impostata su Y, la funzione Tunneling Vsim è attivata.
+
+|===

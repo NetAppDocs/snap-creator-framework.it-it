@@ -1,0 +1,27 @@
+---
+permalink: administration/concept_backup_and_recovery_workflow_with_plug_ins.html 
+sidebar: sidebar 
+keywords: backup, recovery, workflow, snap, creator, framework 
+summary: È possibile utilizzare il flusso di lavoro come guida per il processo di backup e ripristino utilizzando la GUI di Snap Creator. 
+---
+= Workflow di backup e recovery
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare il flusso di lavoro come guida per il processo di backup e ripristino utilizzando la GUI di Snap Creator.
+
+Quando si eseguono queste attività, Snap Creator deve essere in esecuzione e la GUI di Snap Creator deve essere aperta. In caso contrario, è possibile immettere l'URL del server Snap Creator in un browser Web ("https://IP_address:gui_port"[] Per impostazione predefinita, la porta è 8443), quindi accedere utilizzando le credenziali della GUI di Snap Creator.
+
+La seguente illustrazione mostra il set completo di attività durante l'esecuzione di un backup e ripristino del sistema quando si utilizzano i plug-in:
+
+
+NOTE: Le attività descritte nel flusso di lavoro possono essere eseguite anche dall'interfaccia della riga di comando (CLI). Per ulteriori informazioni sulla CLI, vedere i riferimenti correlati per informazioni sulla riga di comando CLI.
+
+image::../media/sc_workflow_with_plugin.gif[workflow sc con plug-in]
+
+*Informazioni correlate*
+
+xref:reference_guidelines_for_using_the_snap_creator_command_line.adoc[Linee guida per l'utilizzo dell'interfaccia della riga di comando di Snap Creator]

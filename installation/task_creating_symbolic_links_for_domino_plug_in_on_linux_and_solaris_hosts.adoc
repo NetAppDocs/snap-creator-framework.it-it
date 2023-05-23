@@ -1,0 +1,50 @@
+---
+permalink: installation/task_creating_symbolic_links_for_domino_plug_in_on_linux_and_solaris_hosts.html 
+sidebar: sidebar 
+keywords: creating, create, symbolic, links, domino, plug-in, linux, solaris, hosts 
+summary: Eseguire questa procedura se si desidera creare collegamenti simbolici per il plug-in Domino su host Linux e Solaris. 
+---
+= Creazione di collegamenti simbolici per il plug-in Domino su host Linux e Solaris
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Eseguire questa procedura se si desidera creare collegamenti simbolici per il plug-in Domino su host Linux e Solaris.
+
+Non copiare e incollare i comandi direttamente da questo documento; potrebbero verificarsi errori (ad esempio caratteri trasferiti in modo errato a causa di interruzioni di riga e ritorni a capo). Copiare e incollare i comandi in un editor di testo, verificare i comandi e immetterli nella console CLI.
+
+
+NOTE: I percorsi forniti nei seguenti passaggi si riferiscono ai sistemi a 32 bit; i sistemi a 64 bit devono creare simlink a /usr/lib64 invece di /usr/lib.
+
+. Aggiungere collegamenti a /usr/lib per i seguenti file:
++
+** libxmlproc.so
+** libndgts.so
+** libnotes.so
+** Libgsk8iccs.so (solo per Domino 9.0 o versioni successive) Un metodo tipico per creare un link simbolico consiste nell'utilizzare il comando ln:
+
+
++
+ln -s /percorso/a/file_origine /usr/lib/file_collegato
+
++
++ dove:
+
++
+** -s indica al sistema operativo di creare un collegamento simbolico.
+** /Path/to/source_file è il percorso di uno dei file della libreria Domino, incluso il nome del file.
+** linked_file è il nome del file collegato.
++
+[listing]
+----
+ln -s /opt/ibm/domino/notes/latest/linux/libxmlproc.so /usr/lib/libxmlproc.so
+ln -s /opt/ibm/domino/notes/latest/linux/libndgts.so /usr/lib/libndgts.so
+ln -s /opt/ibm/domino/notes/latest/linux/libnotes.so /usr/lib/libnotes.so
+ln -s /opt/ibm/domino/notes/latest/linux/libgsk8iccs.so /usr/lib/libgsk8iccs.so
+----
+
+
+. Verificare il percorso dei file elencati nella fase 1.
+

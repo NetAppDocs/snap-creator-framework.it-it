@@ -1,0 +1,52 @@
+---
+permalink: administration/task_creating_backups_using_the_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: create, backup, snap, creator, gui, configuration, backup, action, parameter 
+summary: È possibile creare backup utilizzando la GUI di Snap Creator. 
+---
+= Creazione di backup
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare backup utilizzando la GUI di Snap Creator.
+
+È necessario soddisfare una delle seguenti condizioni:
+
+* Nel file di configurazione deve essere definita una policy di backup; oppure
+* Un oggetto policy deve essere configurato e assegnato al profilo.
++
+
+NOTE: Se viene definito un oggetto policy, le voci eventualmente presenti nel file di configurazione verranno sovrascrivate.
+
++
+.. Dal menu principale della GUI di Snap Creator, selezionare *Gestione* > *configurazioni*.
+.. Dalla scheda *configurazioni*, nel riquadro *profili e configurazione*, selezionare il file di configurazione.
+.. Selezionare *azioni* > *Backup*.
++
+image::../media/backup_select.gif[backup select (selezione backup)]
+
+.. Nella finestra di dialogo Additional Parameters (parametri aggiuntivi), selezionare il criterio, quindi fare clic su *OK* per avviare il backup.
++
+
+NOTE: Se alla configurazione non viene assegnata alcuna policy creata dall'utente, le selezioni disponibili nell'elenco a discesa *Policy* sono orarie, giornaliere, settimanali e mensili. Se alla configurazione sono stati assegnati uno o più criteri creati dall'utente, questi vengono visualizzati nell'elenco a discesa *Policy*.
+
++
+image::../media/additional_parameters.gif[parametri aggiuntivi]
+
+.. Verificare che le informazioni relative al processo di backup siano visualizzate nel riquadro *Console*.
++
+image::../media/console_area_backup.gif[backup dell'area della console]
+
++
+In questo esempio, l'output indica che l'operazione Snap Creator è stata completata correttamente.
+
++
+
+NOTE: Il riquadro *Console* visualizza solo le informazioni più pertinenti; si tratta della modalità dettagliata. Per visualizzare informazioni dettagliate sul processo appena eseguito, selezionare *Report* > *registri* nella parte superiore della pagina. Dalla vista Logs (registri), è possibile selezionare il profilo, il file di configurazione, il tipo di registro e il registro specifico.
+
+
+
+

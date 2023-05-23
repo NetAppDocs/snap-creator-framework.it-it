@@ -1,0 +1,65 @@
+---
+permalink: sap-hana-ops/task_restoring_and_recovering_sap_hana_databases.html 
+sidebar: sidebar 
+keywords: sap, hana, restoring, restore, recovering, recover, databases 
+summary: Utilizzate SAP HANA Studio e Snap Creator per ripristinare e ripristinare i database SAP HANA. 
+---
+= Ripristino e ripristino dei database SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilizzate SAP HANA Studio e Snap Creator per ripristinare e ripristinare i database SAP HANA.
+
+. In SAP HANA Studio:
++
+.. Selezionare Recover (Ripristina) per il sistema SAP HANA.
+.. Il sistema SAP HANA viene arrestato.
+.. Selezionare il tipo di ripristino.
+.. Fornire posizioni per il backup dei log.
+.. Viene visualizzato l'elenco dei backup dei dati
+.. Selezionare backup per visualizzare l'ID del backup esterno.
+
+
+. Solo per un sistema storage che esegue Clustered Data ONTAP:
++
+.. Necessario solo se per il ripristino è stato utilizzato un backup diverso da quello più recente.
+.. Richiesto solo per "`Volume SnapRestore`" dallo storage primario.
+.. Disattivare le relazioni SnapVault
+
+
+. In Snap Creator:
++
+.. Selezionare "`Restore`" per il sistema SAP HANA.
+.. Selezionare Restore from primary or secondary storage (Ripristina da storage primario o secondario), a seconda della disponibilità del backup sullo storage primario.
+.. Selezionare il controller dello storage, il nome del volume e il nome della copia Snapshot. Il nome della copia Snapshot è correlato all'ID di backup precedente.
+.. Per i sistemi SAP HANA a più nodi, è necessario ripristinare più volumi:
++
+... Scegliere *Aggiungi altri elementi di ripristino*.
+... Selezionare il controller dello storage, il nome del volume e il nome della copia Snapshot.
+... Ripetere questa procedura per tutti i volumi richiesti.
+
+
+.. Per i sistemi di database MDC (Multitenant Database Container) a singolo tenant, vengono ripristinati sia i database DI SISTEMA che QUELLI TENANT.
+.. Il processo di ripristino viene avviato
+.. Ripristino completato per tutti i volumi.
+
+
+. Nei nodi del database, smontare e montare tutti i volumi di dati per eliminare gli "handle NFS obsoleti".
+. In SAP HANA Studio:
++
+.. Selezionare *Refresh* (Aggiorna) nell'elenco di backup.
+.. Selezionare il backup disponibile per il ripristino (elemento verde).
+.. Avviare il processo di ripristino.
+.. Per i sistemi di database MDC (Multitenant Database Container) a singolo tenant, avviare il processo di ripristino prima per il database DI SISTEMA e poi per il database TENANT.
+.. Viene avviato il sistema SAP HANA.
+
+
+. (Facoltativo) ripristinare le relazioni SnapVault per tutti i volumi ripristinati.
++
+
+NOTE: Nei sistemi storage, questa fase è necessaria solo se per il ripristino è stato utilizzato un backup diverso dall'ultimo.
+
+

@@ -1,0 +1,31 @@
+---
+permalink: administration/task_performing_application_defined_restore_operations.html 
+sidebar: sidebar 
+keywords: vmware, kvm, xen, plug-in, snap, creator, gui 
+summary: 'Se si utilizzano plug-in VMware, KVM e Xen, è possibile eseguire operazioni di ripristino definite dall"applicazione utilizzando l"interfaccia grafica di Snap Creator.' 
+---
+= Esecuzione di operazioni di ripristino definite dall'applicazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si utilizzano plug-in VMware, KVM e Xen, è possibile eseguire operazioni di ripristino definite dall'applicazione utilizzando l'interfaccia grafica di Snap Creator.
+
+In alcuni ambienti VMware, le operazioni di ripristino possono richiedere molto tempo. In questi casi, è possibile utilizzare la CLI di Snap Creator o impostare due agenti: Uno per il backup e l'altro per il ripristino.
+
+
+NOTE: Le operazioni di ripristino VMware che utilizzano la GUI sono supportate solo per Snap Creator Agent.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *Gestione* > *configurazioni*.
+. Dalla scheda *configurazioni*, nel riquadro profili e configurazione, selezionare il file di configurazione.
+. Selezionare *Action* > *Restore*.
++
+La finestra di dialogo Application Defined Restore (Ripristino definito dall'applicazione) viene visualizzata nel riquadro di destra.
+
+. Inserire i dettagli del ripristino e fare clic su *OK*:
++
+image::../media/restore_application_defined.gif[applicazione di ripristino definita]
+
+

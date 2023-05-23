@@ -1,0 +1,146 @@
+---
+permalink: administration/reference_snap_creator_terminology.html 
+sidebar: sidebar 
+keywords: snap, creator, terminology,action, backup, lun, clone, volume, agent, monitor, archive, log, configuration, discover, global, job, mount, ossv, profile, policy, quiesce, restore, scdump, schedule, umount, unquiesce, watchdog 
+summary: Snap Creator è costituito da alcuni costrutti diversi ed è importante comprendere il linguaggio e i concetti. 
+---
+= Terminologia di Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator è costituito da alcuni costrutti diversi ed è importante comprendere il linguaggio e i concetti.
+
+* *Azione*
++
+Snap Creator può eseguire varie azioni sui file di configurazione. Si tratta in genere di un flusso di lavoro definito per ottenere il risultato desiderato. Per eseguire un'azione, selezionare un file di configurazione dalla GUI, fare clic su *Action* e selezionare una delle seguenti azioni dall'elenco a discesa:
+
++
+** *Backup*
++
+Esegue il backup dell'ambiente specificato in un file di configurazione. Il flusso di lavoro di backup è un'azione multifase che cambia in base alle impostazioni del file di configurazione selezionato. Un esempio di un'azione di backup con un plug-in configurato potrebbe essere l'arresto di un'applicazione o di un database, l'esecuzione di una copia Snapshot di tutti i volumi definiti, l'annullamento dell'applicazione o del database selezionato, l'esecuzione di un aggiornamento di SnapVault e/o SnapMirror, l'esecuzione di policy di conservazione o l'esecuzione di eventuali impostazioni del registro di archiviazione.
+
+** *Clone del LUN*
++
+Crea una nuova copia Snapshot di un LUN e clona la nuova copia Snapshot.
+
+** *Clone del volume*
++
+Crea una nuova copia Snapshot di un volume e clona la nuova copia Snapshot.
+
+
+
+* *Agent Monitor*
++
+Agent Monitor interroga il server Snap Creator per tutti gli agenti definiti nei file di configurazione e chiede agli agenti di verificarne lo stato. Agent Monitor indica se l'agente è in esecuzione, la porta in attesa e la versione dell'agente in uso.
+
+* *Registro archivio*
++
+L'azione del registro di archiviazione agisce su qualsiasi impostazione nell'impostazione di gestione del registro di archiviazione del file di configurazione. In genere, questa azione elimina i registri non più necessari per Snap Creator.
+
+* *File di configurazione*
++
+Un file di configurazione è il cuore di Snap Creator. Configura Snap Creator, consente l'esecuzione dei plug-in dell'applicazione, imposta le variabili necessarie e definisce i volumi acquisiti nelle copie Snapshot. I file di configurazione sono composti da diversi parametri che possono essere impostati in modo da influire sul comportamento di Snap Creator. Il file di configurazione viene spesso abbreviato in configurazione o configurazione.
+
+* *Scoprire*
++
+L'azione Discover esegue il rilevamento a livello di storage nell'ambiente descritto nel file di configurazione. Non tutti i plug-in supportano il rilevamento.
+
+* *File di configurazione globale*
++
+Un file di configurazione che può agire a livello superglobale (i parametri influiscono su tutti i file di configurazione nell'intero ambiente Snap Creator Server) o a livello di profilo (i parametri influiscono su tutti i file di configurazione di un profilo specifico). I parametri superglobali verranno sovrascritti con qualsiasi parametro specificato in un globale a livello di profilo. Allo stesso modo, i parametri specificati in un file di configurazione sovrascriveranno qualsiasi parametro in un file di configurazione globale a livello di super o profilo. Il file di configurazione globale viene spesso abbreviato in Global config.
+
+* *Lavoro*
++
+Tutte le operazioni eseguite da Snap Creator sono considerate job. Alcune azioni possono essere costituite da più lavori. Tutti i lavori eseguiti da Snap Creator verranno elencati in Job Monitor.
+
+* *Job Monitor*
++
+Job Monitor è un'interfaccia dashboard di facile utilizzo che consente di visualizzare in modo semplice lo stato dei processi Snap Creator in esecuzione o eseguiti in precedenza. Il monitor dei lavori viene attivato al momento dell'installazione e può memorizzare da 1 a 1,000 lavori.
+
+* *Montare*
++
+L'azione di montaggio consente di specificare una copia Snapshot esistente che verrà clonata e montata.
+
+* *OSSV*
++
+L'azione OSSV (Open Systems SnapVault) esegue le operazioni OSSV.
+
+* *Profilo*
++
+Un profilo è essenzialmente una cartella utilizzata per organizzare i file di configurazione. I profili fungono anche da oggetti per RBAC (role-based access control), il che significa che è possibile accedere solo a determinati profili e ai file di configurazione contenuti in.
+
+* *Policy*
++
+Policy è l'abbreviazione di retention policy. In genere, una policy definisce le policy di conservazione Snapshot (numero di copie Snapshot da conservare) e l'età (età di una copia Snapshot prima di eliminarla). Ad esempio, una policy giornaliera potrebbe mantenere un valore di 30 giorni`' di copie Snapshot che devono avere almeno 30 giorni di vita. (L'impostazione del periodo di conservazione impedisce a più copie Snapshot eseguite lo stesso giorno di ignorare gli SLA che potrebbero indicare che una copia Snapshot deve avere 30 giorni di vita). Se si utilizza SnapVault, il criterio definirà anche le impostazioni di conservazione per la copia SnapVault. Attualmente, i criteri possono essere memorizzati direttamente in un file di configurazione o come parte di un oggetto policy. Se un criterio fa parte di un file di configurazione, potrebbe essere definito policy di conservazione locale.
+
+* *Oggetto policy*
++
+Un oggetto policy è un criterio di conservazione che può essere applicato a livello di profilo. Come un criterio, un oggetto criterio definisce i criteri di conservazione, ma può anche definire una pianificazione e un'etichetta. Di seguito sono riportati i componenti di un oggetto policy:
+
++
+** *Tipo di backup*
++
+Un tipo di backup è un'etichetta che può essere impostata dall'oggetto policy.
+
+** *Assegnazioni policy*
++
+Le assegnazioni dei criteri assegnano un criterio (creato nella gestione dei criteri) a un profilo specifico di profili.
+
+** *Gestione delle policy*
++
+La gestione dei criteri crea una policy all'interno dell'oggetto policy. Ciò consente di definire il numero di conservazione e l'età delle copie Snapshot. Se si utilizza SnapVault, è possibile impostare anche il conteggio e l'età di conservazione associati. La gestione delle policy consente inoltre la selezione opzionale di una pianificazione delle policy e di un tipo di backup.
+
+** *Programmi delle policy*
++
+Le pianificazioni delle policy definiscono un'azione da intraprendere in base a una pianificazione specifica.
+
+
+
+* *Quiesce*
++
+L'azione quiesce esegue le azioni necessarie per posizionare un'applicazione o un database in uno stato coerente. Sebbene l'azione sia denominata quiesce, potrebbe non essere una vera e propria operazione di quiesce a seconda dell'impostazione del plug-in o del file di configurazione. Ad esempio, il plug-in Domino esegue chiamate API Domino per mettere i database Domino in uno stato di avvio del backup, mentre il plug-in DB2 esegue il comando di sospensione in scrittura DB2.
+
+* *Ripristina*
++
+L'azione di ripristino esegue un'operazione di ripristino di un volume o di un singolo file su uno o più volumi specificati nel file di configurazione. A seconda del plug-in utilizzato nei file di configurazione, potrebbero essere disponibili ulteriori operazioni di ripristino.
+
+* *scdump*
++
+Scdump è un'operazione di troubleshooting che raccoglie tutti i file di configurazione e di log a livello di profilo, oltre a raccogliere alcuni log standard di Snap Creator Server e informazioni sull'ambiente. Tutti i file raccolti vengono compressi in un file zip, che viene richiesto di scaricare. Il file zip di scdump può quindi essere inviato per e-mail o caricato al supporto per l'analisi.
+
+* *Programmi*
++
+Snap Creator Server contiene uno scheduler centralizzato. Ciò consente di pianificare i lavori di Snap Creator tramite una pianificazione delle policy (parte di oggetti policy) o direttamente tramite lo scheduler. Lo scheduler esegue fino a 10 lavori contemporaneamente e mette in coda altri lavori fino al completamento di un lavoro in esecuzione.
+
+* *Agente Snap Creator*
++
+Snap Creator Agent viene in genere installato sullo stesso host in cui è installata un'applicazione o un database. L'agente è il punto in cui si trovano i plug-in. L'agente viene talvolta abbreviato in scAgent all'interno di Snap Creator.
+
+* *Snap Creator Framework*
++
+Snap Creator è un framework e il nome completo del prodotto è NetApp Snap Creator Framework.
+
+* *Plug-in Snap Creator*
++
+I plug-in vengono utilizzati per mettere le applicazioni o i database in uno stato coerente. Snap Creator contiene diversi plug-in già presenti nel file binario e che non richiedono alcuna installazione aggiuntiva.
+
+* *Snap Creator Server*
++
+SNAP Creator Server viene in genere installato su un host fisico o virtuale. Il server ospita la GUI di Snap Creator e i database necessari per memorizzare informazioni su processi, pianificazioni, utenti, ruoli, profili, file di configurazione e metadati dai plug-in. Il server viene talvolta abbreviato in scServer all'interno di Snap Creator.
+
+* *Umount*
++
+L'azione umount consente di specificare un punto di montaggio esistente da smontare.
+
+* *Senza richieste*
++
+L'azione continua esegue le azioni necessarie per riportare un'applicazione o un database alla normale modalità operativa. Sebbene l'azione sia denominata unquiesce, potrebbe non essere un'operazione vera e propria a seconda dell'impostazione del plug-in o del file di configurazione. Ad esempio, il plug-in Domino esegue chiamate API Domino per mettere i database Domino in uno stato di arresto del backup, mentre il plug-in DB2 esegue il comando write resume.
+
+* *Watchdog*
++
+Watchdog fa parte di Snap Creator Agent che monitora lo stato dei processi in esecuzione dall'agente. Se l'agente non risponde entro un periodo di tempo specificato, il watchdog può riavviare l'agente o terminare azioni specifiche. Ad esempio, se un'operazione di quiesce supera il valore di timeout, il watchdog può interrompere l'azione di quiesce e avviare una richiesta per riportare il database alla normale modalità operativa.
+
+

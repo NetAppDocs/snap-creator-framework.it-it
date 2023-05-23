@@ -1,0 +1,22 @@
+---
+permalink: administration/task_deleting_scheduled_jobs.html 
+sidebar: sidebar 
+keywords: delete, schedule, job, management 
+summary: È possibile eliminare un processo pianificato. 
+---
+= Eliminazione dei processi pianificati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eliminare un processo pianificato.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *Management* > *Schedules*.
+. Dalla scheda programmi, selezionare un processo dall'elenco dei processi pianificati e fare clic su *Elimina*.
+. Fare clic su *Sì* nella finestra di conferma.
++
+Il processo pianificato viene eliminato dall'elenco.
+
+

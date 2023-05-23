@@ -1,0 +1,59 @@
+---
+permalink: sap-hana-ops/task_resuming_a_snapvault_relationship_with_clustered_data_ontap.html 
+sidebar: sidebar 
+keywords: resuming, resume, snapvault, relationship, clustered, data, ontap 
+summary: Se si esegue il ripristino utilizzando un backup Snapshot diverso da quello più recente, è necessario ripristinare la relazione SnapVault in modo che Snap Creator possa continuare a eseguire i backup. 
+---
+= Ripresa di una relazione SnapVault con Clustered Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si esegue il ripristino utilizzando un backup Snapshot diverso da quello più recente, è necessario ripristinare la relazione SnapVault in modo che Snap Creator possa continuare a eseguire i backup.
+
+. Ricreare e risincronizzare la relazione SnapVault.
++
+[listing]
+----
+hana::> snapmirror create -source-path hana1a:hana_data -destination-path
+hana2b:backup_hana_data -type XDP
+Operation succeeded: snapmirror create the relationship with destination
+hana2b:backup_hana_data.
+
+hana::> snapmirror resync -destination-path hana2b:backup_hana_data -type XDP
+
+Warning: All data newer than Snapshot copy sc-backup-daily_20140430121000 on volume
+hana2b:backup_hana_data will be deleted.
+Do you want to continue? {y|n}: y
+[Job 6554] Job is queued: initiate snapmirror resync to destination "hana2b:backup_hana_data".
+[Job 6554] Job succeeded: SnapMirror Resync Transfer Queued
+----
+. Per riavviare effettivamente il trasferimento SnapVault, è necessaria una copia Snapshot manuale.
++
+[listing]
+----
+hana::> snapshot create -vserver hana1a -volume hana_data -snapshot sv_resync
+
+hana::> snapshot modify -vserver hana1a -volume hana_data -snapshot sv_resync -snapmirror-label daily
+
+hana::> snapmirror update -destination-path hana2b:backup_hana_data
+Operation is queued: snapmirror update of destination hana2b:backup_hana_data.
+----
+. Verificare che la relazione SnapVault venga visualizzata nell'elenco di destinazione.
++
+[listing]
+----
+hana::> snapmirror list-destinations -source-path hana1a:hana_data
+                                                  Progress
+Source             Destination         Transfer   Last         Relationship
+Path         Type  Path         Status Progress   Updated      Id
+----------- ----- ------------ ------- --------- ------------ ---------------
+hana1a:hana_data
+            XDP   hana2b:backup_hana_data
+                               Transferring
+                                       38.46KB   04/30 18:15:54
+                                                              9137fb83-cba9-11e3-85d7-123478563412
+----
+

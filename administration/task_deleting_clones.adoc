@@ -1,0 +1,22 @@
+---
+permalink: administration/task_deleting_clones.html 
+sidebar: sidebar 
+keywords: unmount, delete, clone, gui, snap, creator, management, configuration, action, snapshot, copy, controller, volume 
+summary: 'È possibile smontare (o eliminare) i cloni.' 
+---
+= Smontare i cloni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile smontare (o eliminare) i cloni.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *Gestione* > *configurazioni*.
+. Dalla scheda *configurazioni*, selezionare un file di configurazione, quindi selezionare *azioni* > *Disinstalla*.
+. Dalla finestra Additional Parameters (parametri aggiuntivi), selezionare il controller, il volume, la policy di copia Snapshot contenente il backup montato e il nome della copia Snapshot specifica in cui è stato creato il clone, quindi fare clic su *OK*.
++
+Il clone viene dismontato; la copia Snapshot non viene eliminata.
+
+

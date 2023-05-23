@@ -1,0 +1,22 @@
+---
+permalink: administration/task_editing_scheduled_jobs.html 
+sidebar: sidebar 
+keywords: edit, schedule, job, snap, creator, gui 
+summary: È possibile modificare un processo pianificato. 
+---
+= Modifica dei processi pianificati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare un processo pianificato.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *Management* > *Schedules*.
+. Dalla scheda programmi, selezionare un processo dall'elenco dei processi pianificati e fare clic su *Modifica*.
+. Modificare i campi desiderati e fare clic su *Salva*.
++
+Il lavoro pianificato viene salvato con le modifiche.
+
+

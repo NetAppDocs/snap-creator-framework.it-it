@@ -1,0 +1,23 @@
+---
+permalink: administration/reference_error_messages.html 
+sidebar: sidebar 
+keywords: error, messages, scf, repo, storage, agt, gui 
+summary: È necessario conoscere i messaggi di errore associati alle diverse operazioni di Snap Creator. 
+---
+= Messaggi di errore
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È necessario conoscere i messaggi di errore associati alle diverse operazioni di Snap Creator.
+
+Ogni messaggio di errore include un prefisso e un identificatore univoco a 5 cifre, AD esempio ERROR: [<area code>-<unique area error identifier>] <error message>. Il prefisso identifica il punto in cui si è verificato l'errore. I diversi prefissi sono i seguenti:
+
+* `scf`: Framework di Snap Creator
+* `REPO`: Repository
+* `STORAGE`: Storage
+* `agt`: Agente Snap Creator
+* `gui`: Interfaccia grafica utente (GUI) di Snap Creator
+

@@ -1,0 +1,22 @@
+---
+permalink: domino-ops/concept_ibm_domino_plug_in_overview.html 
+sidebar: sidebar 
+keywords: domino, ibm, plug-in, overview 
+summary: Il plug-in IBM Domino per Snap Creator Framework offre una soluzione completa di backup e ripristino per i database Domino sullo storage NetApp. Con il plug-in IBM Domino, è possibile eseguire il backup dei database in modo efficiente e ripristinarli in base alle necessità senza dover disattivare i server di database. Il plug-in utilizza API fornite da IBM per garantire la coerenza delle applicazioni. 
+---
+= Panoramica del plug-in IBM Domino
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il plug-in IBM Domino per Snap Creator Framework offre una soluzione completa di backup e ripristino per i database Domino sullo storage NetApp. Con il plug-in IBM Domino, è possibile eseguire il backup dei database in modo efficiente e ripristinarli in base alle necessità senza dover disattivare i server di database. Il plug-in utilizza API fornite da IBM per garantire la coerenza delle applicazioni.
+
+Con le principali tecnologie di protezione dei dati NetApp strettamente integrate in Snap Creator Framework, è possibile utilizzare il plug-in IBM Domino per:
+
+* Creazione di copie Snapshot coerenti con l'applicazione sullo storage primario
+* Replica delle copie Snapshot sullo storage secondario per il disaster recovery e l'archiviazione
+
+
+Le tecnologie integrate includono Snapshot, SnapMirror e SnapVault.

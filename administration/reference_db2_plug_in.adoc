@@ -1,0 +1,66 @@
+---
+permalink: administration/reference_db2_plug_in.html 
+sidebar: sidebar 
+keywords: db2, plug-in, communicate, database 
+summary: Il plug-in DB2 utilizza il comando db2 per comunicare con il database. 
+---
+= Plug-in DB2
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il plug-in DB2 utilizza il comando db2 per comunicare con il database.
+
+La seguente tabella elenca i parametri del plug-in DB2, fornisce le impostazioni dei parametri e descrive i parametri.
+
+|===
+| Parametro | Impostazione | Descrizione 
+
+
+ a| 
+NOME_APP
+ a| 
+db2
+ a| 
+Fornisce il nome dell'applicazione.
+
+
+
+ a| 
+DB2_DATABASES
+ a| 
+db_name:nome_utente
+ a| 
+Elenca i database DB2 e il nome utente.è possibile specificare più database e nomi utente come elenco separato da punto e virgola: Ad esempio, `db1:user1;db2:user2`.
+
+
+
+ a| 
+DB2_CMD
+ a| 
+percorso_db2cli_cmd
+ a| 
+Specifica il percorso utilizzato per inizializzare la connessione al database in modo da poter eseguire ulteriori comandi sul database.
+
+* Ambiente basato su UNIX:``db2_install_directory/sqllib/bin/db2``
++
+Ad esempio: `/home/db2inst1/sqllib/bin/db2`
+
+* Finestre: `db2_install_directory\SQLLIB\BIN\db2cmd.exe`
++
+Ad esempio: `C:\"Program Files"\IBM\SQLLIB\BIN\db2cmd.exe`
+
+
+
+Se non viene specificato un percorso, come percorso viene utilizzato sqllib/db2.
+
+|===
+*Nota:* il plug-in DB2 gestisce per impostazione predefinita le operazioni di Write Anywhere file Layout (WAFL). Se si desidera eseguire il backup di un backup di un gruppo di coerenza con il plug-in DB2, impostare il parametro su NTAP_CONSISTENCY_GROUP_WAFL_SYNC Parameter su N. Se si imposta questo parametro su Y, vengono eseguite operazioni di sincronizzazione aggiuntive e ridondanti.
+
+Per informazioni aggiornate sul supporto o per visualizzare le matrici di compatibilità, consultare la matrice di interoperabilità.
+
+*Informazioni correlate*
+
+http://mysupport.netapp.com/matrix["Matrice di interoperabilità Tool: mysupport.netapp.com/matrix"]

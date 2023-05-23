@@ -1,0 +1,60 @@
+---
+permalink: administration/concept_what_snap_creator_server_overview.html 
+sidebar: sidebar 
+keywords: snap, creator, server, framework, overview, gui 
+summary: Snap Creator Server è il motore principale di Snap Creator Framework. 
+---
+= Panoramica di Snap Creator Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator Server è il motore principale di Snap Creator Framework.
+
+In genere, Snap Creator Server viene installato su un host fisico o virtuale. Il server ospita l'interfaccia grafica utente (GUI) di Snap Creator e i database necessari per la memorizzazione delle informazioni relative a processi, pianificazioni, utenti, ruoli, profili, e i file di configurazione, nonché i metadati dei plug-in. Il server Snap Creator viene talvolta abbreviato in scServer all'interno di Snap Creator.
+
+La seguente illustrazione mostra l'architettura di Snap Creator Server:
+
+image::../media/scfw_server_architecture.gif[architettura del server scfw]
+
+Il componente Snap Creator Server, scritto in Java, viene generalmente installato su un server di backup centrale. Negli ambienti più piccoli, questo componente può essere installato sull'host su cui è installata l'applicazione o il database che si desidera gestire. Il componente Snap Creator Server include le seguenti parti:
+
+* *Motore del flusso di lavoro*
++
+Esegue tutte le attività e i comandi di Snap Creator. Il motore di workflow multi-threaded basato su XML è il componente centrale di Snap Creator.
+
+* *API (Application Programming Interface) di Snap Creator*
++
+Utilizzato dalla GUI di Snap Creator e dall'interfaccia della riga di comando (CLI).
+
+* *Repository Snap Creator*
++
+Contiene informazioni sui profili e sui file di configurazione di Snap Creator, incluse le configurazioni globali e le configurazioni globali a livello di profilo.
+
+* *Repository esteso di Snap Creator*
++
+Fornisce una posizione del database per ogni processo eseguito in Snap Creator, incluse informazioni importanti sul processo e metadati generati dai plug-in.
+
+* *Database Snap Creator*
++
+Memorizza le informazioni relative a pianificazioni e processi di Snap Creator, nonché gli utenti e i ruoli RBAC (role-based access control).
+
+* *Interfaccia storage*
++
+Funge da interfaccia Snap Creator comune per i sistemi storage NetApp, che utilizza le API Data ONTAP per gestire operazioni come la creazione di copie Snapshot, gli aggiornamenti SnapVault e gli aggiornamenti SnapMirror.
+
+* *Interfaccia Active IQ Unified Manager*
++
+Per la comunicazione opzionale con NetAppActive IQ Unified Manager, questa interfaccia utilizza le API di Unified Manager invece delle API di Data ONTAP per operazioni come la creazione di copie Snapshot, gli aggiornamenti di SnapVault e gli aggiornamenti di SnapMirror.
+
+* *Interfaccia agente*
++
+Comunica con gli agenti di Snap Creator. Sebbene Snap Creator Agent e Snap Creator Server siano solitamente installati su host fisici o virtuali diversi, entrambi possono essere installati sullo stesso host.
+
++
+
+NOTE: Snap Creator Server 4.3.0 supporta solo Snap Creator Agent4.1.x e 4.3.x. Snap Creator Server 4.3.0 non supporta le versioni di Snap Creator Agent precedenti alla 4.1.x.
+
+

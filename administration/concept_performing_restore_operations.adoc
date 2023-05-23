@@ -1,0 +1,16 @@
+---
+permalink: administration/concept_performing_restore_operations.html 
+sidebar: sidebar 
+keywords: snap, creator, gui, snapdrive, windows 
+summary: 'È possibile eseguire operazioni di ripristino del volume, ripristino di un singolo file e ripristino definito dall"applicazione utilizzando la GUI di Snap Creator.' 
+---
+= Esecuzione di operazioni di ripristino
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eseguire operazioni di ripristino del volume, ripristino di un singolo file e ripristino definito dall'applicazione utilizzando la GUI di Snap Creator.
+
+Se si utilizza SnapDrive per Windows, è necessario utilizzare SnapDrive per eseguire operazioni di ripristino, che devono essere eseguite al di fuori di Snap Creator.

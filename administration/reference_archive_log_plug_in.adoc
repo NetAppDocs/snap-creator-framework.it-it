@@ -1,0 +1,68 @@
+---
+permalink: administration/reference_archive_log_plug_in.html 
+sidebar: sidebar 
+keywords: archive, log, plug-in, snap, creator, archive 
+summary: Il plug-in Archive log funziona con i log di Snap Creator Archive e non con i log di qualsiasi applicazione o database. 
+---
+= Plug-in del log di archiviazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il plug-in Archive log funziona con i log di Snap Creator Archive e non con i log di qualsiasi applicazione o database.
+
+La seguente tabella elenca i parametri del plug-in del registro di archiviazione, fornisce le relative impostazioni e le descrive:
+
+|===
+| Parametro | Impostazione | Descrizione 
+
+
+ a| 
+ARCHIVE_LOG_ENABLE
+ a| 
+(Y
+| N 
+
+
+| policy:età)  a| 
+Attiva la gestione dei log di archiviazione (eliminazione dei log di archiviazione precedenti).
+ a| 
+ARCHIVE_LOG_RETENTION
+
+
+
+ a| 
+numero_di_giorni
+ a| 
+Specifica il numero di giorni in cui i registri di archiviazione vengono conservati. Questa impostazione deve essere uguale o superiore a NTAP_SNAPSHOT_ RETENTIONS.
+ a| 
+ARCHIVE_LOG_DIR
+
+
+
+ a| 
+change_info_directory/logs
+ a| 
+Specifica il percorso della directory che contiene i log di archiviazione.
+ a| 
+ARCHIVE_LOG_EXT
+
+
+
+ a| 
+estensione_file
+ a| 
+Specifica l'estensione del file dei log di archiviazione. Ad esempio, se i log di archiviazione sono 10192091019.log, specificare questa impostazione di parametro su LOG.
+ a| 
+ARCHIVE_LOG_RECURSIVE_SEARCH
+
+
+
+ a| 
+(Y
+| N)  a| 
+Attiva la gestione dei log di archiviazione all'interno delle sottodirectory. Se i log di archiviazione si trovano sotto le sottodirectory, utilizzare questo parametro.
+
+|===

@@ -1,0 +1,22 @@
+---
+permalink: sap-hana-ops/task_modifying_configuration_for_file_based_backup.html 
+sidebar: sidebar 
+keywords: sap, hana, modifying, modify, change, changing, configuration, file-based, backup 
+summary: È possibile modificare i parametri configurati per il backup basato su file. La successiva operazione di backup pianificata o on-demand basata su file riflette le informazioni aggiornate. 
+---
+= Modifica della configurazione per il backup basato su file
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile modificare i parametri configurati per il backup basato su file. La successiva operazione di backup pianificata o on-demand basata su file riflette le informazioni aggiornate.
+
+. Fare clic sul profilo SAP HANA.
+. Selezionare la configurazione che si desidera modificare e fare clic su *HANA file Based Backup Settings* (Impostazioni backup basato su file HANA).
++
+image::../media/modifying_file_based_backup_configuration.gif[Modifica della configurazione del backup basato su file]
+
+. Modificare le informazioni e fare clic su *Salva*.
+

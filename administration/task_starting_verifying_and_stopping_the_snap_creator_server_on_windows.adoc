@@ -1,0 +1,66 @@
+---
+permalink: administration/task_starting_verifying_and_stopping_the_snap_creator_server_on_windows.html 
+sidebar: sidebar 
+keywords: snap, creator, server, service, start, verify, stop, windows 
+summary: È possibile avviare e arrestare il servizio Snap Creator Server e verificare se il servizio Snap Creator Server è in esecuzione sul sistema Windows. 
+---
+= Avvio, verifica e arresto di Snap Creator Server su Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile avviare e arrestare il servizio Snap Creator Server e verificare se il servizio Snap Creator Server è in esecuzione sul sistema Windows.
+
+. Se l'interfaccia grafica utente (GUI) di Snap Creator non è aperta, aprirla:
++
+.. Inserire l'URL del server Snap Creator in un browser Web: "https://IP_address:gui_port"[]
++
+Per impostazione predefinita, la porta è 8443.
+
+.. Accedere utilizzando le credenziali per l'interfaccia grafica di Snap Creator.
+
+
++
+Se si apre la GUI di Snap Creator, il servizio Snap Creator Server è in esecuzione.
+
+. Dal prompt dei comandi, avviare o arrestare il servizio Snap Creator Server o verificare se il servizio Snap Creator Server è in esecuzione, a seconda dei casi:
++
+|===
+| Se si desidera... | Immettere quanto segue... 
+
+
+ a| 
+Avviare il servizio Snap Creator Server
+ a| 
+sc avvia snapcreatorserverservice
+
+
+
+ a| 
+Verificare che il servizio Snap Creator Server sia in esecuzione
+ a| 
+sc query snapcreatorserverservice
+
+
+
+ a| 
+Arrestare il servizio Snap Creator Server
+ a| 
+sc arrestare snapcreatorserverservice
+
+|===
++
+Se si desidera eseguire Snap Creator in primo piano, invece di utilizzare il comando sc start, attenersi alla seguente procedura:
+
++
+.. Aprire un prompt dei comandi sull'host in cui è installato Snap Creator Server, quindi accedere alla directory Snap Creator Serverdirectory: `cd \install_path\scServer4.3.0\bin\`
+.. Per avviare Snap Creator Server, eseguire lo script batch:
+`scServer.bat start`
++
+La chiusura del prompt dei comandi interrompe il servizio Snap Creator Server. Poiché lo script batch (scServer.bat) esegue Snap Creator in primo piano, Snap Creator Server viene eseguito solo finché il prompt dei comandi è aperto. Per eseguire Snap Creator in background, utilizzare il comando del servizio Snap Creator Server.
+
+
+
+

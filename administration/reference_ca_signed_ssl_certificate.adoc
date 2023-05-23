@@ -1,0 +1,48 @@
+---
+permalink: administration/reference_ca_signed_ssl_certificate.html 
+sidebar: sidebar 
+keywords: ca-signed, ssl, certificate, snap, creator, framework 
+summary: Per Snap Creator Framework è richiesto un certificato SSL con firma CA 
+---
+= Per Snap Creator Framework è richiesto un certificato SSL con firma CA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+* *Problema*
++
+Il certificato SSL firmato dall'autorità di certificazione (CA) è necessario per Snap Creator Framework.
+
+* *Causa*
++
+Il certificato X.509 del server non dispone di una firma di un'autorità di certificazione pubblica nota.
+
+* *Azione correttiva*
++
+Snap Creator Framework supporta l'installazione di un certificato di terze parti.
+
++
+.. Aggiornare i seguenti valori dei parametri nei file snapcreator.properties e agent.properties:
++
+file snapcreator.properties:
+
++
+SNAPCREATOR_KEYSTORE_PASS
+
++
+SNAPCREATOR_KEYSTORE_PATH
+
++
+file agent.properties:
+
++
+FILE_KEYSTORE
+
++
+KEYSTORE_PASS
+
+.. Riavviare il server e i servizi dell'agente.
+
+
+

@@ -1,0 +1,27 @@
+---
+permalink: sap-hana-ops/concept_setup_assumptions_in_this_guide.html 
+sidebar: sidebar 
+keywords: setup, assumptions 
+summary: 'Anche se una tipica installazione di Snap Creator presuppone che il server sia installato su un host e che l"agente sia installato su un host diverso, la configurazione utilizzata in questa guida si basa su un"appliance multinodo SAP HANA.' 
+---
+= Presupposti per la configurazione in questa guida
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Anche se una tipica installazione di Snap Creator presuppone che il server sia installato su un host e che l'agente sia installato su un host diverso, la configurazione utilizzata in questa guida si basa su un'appliance multinodo SAP HANA.
+
+In questa configurazione, il database SAP HANA viene eseguito su una configurazione del nodo di database 3+1 e tutti i componenti software di Snap Creator (Server, Agent e plug-in) vengono installati sullo stesso host.
+
+I sistemi storage NetApp utilizzati in questa configurazione eseguono Data ONTAP in 7-Mode. Una coppia di controller ad alta disponibilità (ha) viene utilizzata sul layer di storage. I volumi di dati e log dei tre nodi di database SAP HANA vengono distribuiti a entrambi i controller di storage. Con la configurazione di esempio, uno storage controller di un'altra coppia di controller ha viene utilizzato come storage secondario. Ciascun volume di dati viene replicato in un volume di backup dedicato sullo storage secondario. Le dimensioni dei volumi di backup dipendono dal numero di backup che verranno conservati nello storage secondario.
+
+Tutte le operazioni di Snap Creator e SAP HANA Studio descritte di seguito sono identiche a quelle dei sistemi storage che eseguono Clustered Data ONTAP. Tuttavia, la configurazione iniziale di SnapVault sui sistemi storage e tutti i comandi SnapVault che devono essere eseguiti direttamente sullo storage sono diversi con Clustered Data ONTAP. Le differenze sono evidenziate e descritte in questa guida.
+
+La figura seguente mostra i volumi di dati sullo storage primario e il percorso di replica dello storage secondario:
+
+image::../media/sap_hana_multimode_setup.gif[Mostra i volumi di dati sullo storage primario e il percorso di replica dello storage secondario.]
+
+
+NOTE: Tutti i volumi di cui è necessario eseguire il backup devono essere creati nel controller dello storage secondario. In questo esempio, i volumi backup_data_00001, backup_data_00002 e backup_data_00003 vengono creati nel controller dello storage secondario.

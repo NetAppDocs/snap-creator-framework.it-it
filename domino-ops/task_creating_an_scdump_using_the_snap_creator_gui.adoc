@@ -1,0 +1,87 @@
+---
+permalink: domino-ops/task_creating_an_scdump_using_the_snap_creator_gui.html 
+sidebar: sidebar 
+keywords: domino, ibm, using scdump, gathering, logs, compressed, format 
+summary: 'È possibile utilizzare l"azione Snap Creatorscdump per raccogliere i log in un archivio di file compresso. Puoi quindi inviare l"archivio al supporto tecnico o a un esperto di Snap Creator per la revisione.' 
+---
+= Utilizzo di scdump per raccogliere i log in un formato compresso
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare l'azione Snap Creatorscdump per raccogliere i log in un archivio di file compresso. Puoi quindi inviare l'archivio al supporto tecnico o a un esperto di Snap Creator per la revisione.
+
+Dovrebbe essere stato creato un file di configurazione di backup e ripristino.
+
+Uno scdump include i seguenti file:
+
+|===
+| File | Descrizione 
+
+
+ a| 
+scdump.txt
+ a| 
+Contiene la versione dell'agente Snap Creator e il sistema operativo host, la release di Data ONTAP e la versione di Domino.
+
+
+
+ a| 
+engine.log
+ a| 
+Contiene informazioni sulle operazioni del motore del flusso di lavoro di Snap Creator.
+
+
+
+ a| 
+gui.log
+ a| 
+Contiene informazioni sulle operazioni e sui messaggi della GUI di Snap Creator. Possono essere inclusi più registri.
+
+
+
+ a| 
+sc_server.log
+ a| 
+Contiene informazioni dettagliate sulle operazioni di Snap Creator Server. Possono essere inclusi più registri.
+
+
+
+ a| 
+disconnette
+ a| 
+Contiene informazioni a livello dettagliato per i lavori. Vengono inclusi i log di output per tutte le configurazioni nel profilo selezionato.
+
+
+
+ a| 
+log di debug
+ a| 
+Contengono informazioni a livello dettagliato e informazioni utili per il debug. I log di debug per tutte le configurazioni nel profilo selezionato sono inclusi.
+
+
+
+ a| 
+log degli errori
+ a| 
+Contiene informazioni sugli errori per i registri. I registri degli errori per tutte le configurazioni nel profilo selezionato sono inclusi.
+
+
+
+ a| 
+file di configurazione
+ a| 
+Tutti i file di configurazione nel profilo selezionato sono inclusi, inclusi i file di configurazione globale.
+
+|===
+
+NOTE: Sebbene un file di configurazione sia l'input per scdump, l'utility raccoglie le informazioni per tutte le configurazioni nel profilo padre.
+
+. Nel riquadro profili e configurazioni, selezionare un file di configurazione e fare clic su *azioni* > *scdump*.
++
+scdump raccoglie log e altri file in un archivio di file compresso.
+
+. Nella finestra di dialogo del download, fare clic su *Apri* o *Salva* come richiesto.
+

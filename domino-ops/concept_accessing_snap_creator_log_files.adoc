@@ -1,0 +1,64 @@
+---
+permalink: domino-ops/concept_accessing_snap_creator_log_files.html 
+sidebar: sidebar 
+keywords: domino, ibm, viewing, job, status, logs, accessing, snap, creator, log, files 
+summary: È possibile visualizzare lo stato di un lavoro in Snap Creator Job Monitor. È possibile visualizzare un registro delle azioni del lavoro nel pannello Console mentre il lavoro è in esecuzione o nel Log out del lavoro. Sono inoltre disponibili diversi log specializzati. 
+---
+= Visualizzazione dello stato e dei registri dei lavori
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare lo stato di un lavoro in Snap Creator Job Monitor. È possibile visualizzare un registro delle azioni del lavoro nel pannello Console mentre il lavoro è in esecuzione o nel Log out del lavoro. Sono inoltre disponibili diversi log specializzati.
+
+Nella GUI è possibile visualizzare i seguenti registri:
+
+|===
+| Log (Registro) | Descrizione 
+
+
+ a| 
+Fuori
+ a| 
+Fornire informazioni a livello dettagliato per un lavoro.
+
+
+
+ a| 
+Debug
+ a| 
+Fornisce informazioni a livello dettagliato e informazioni utili per il debug.
+
+
+
+ a| 
+GUI
+ a| 
+Fornisce informazioni sulle azioni della GUI di Snap Creator.
+
+
+
+ a| 
+Stderr
+ a| 
+Fornisce informazioni sugli errori scritti in errori standard (solo nel riquadro Report).
+
+
+
+ a| 
+Errore
+ a| 
+Fornisce tutte le informazioni sugli errori (solo nel riquadro Report).
+
+|===
+È possibile visualizzare tutti i registri in un editor di testo se si preferisce non utilizzare il pannello Job Monitor o Report. I registri risiedono nella directory di installazione di Snap Creator Server.
+
+*Informazioni correlate*
+
+xref:task_using_the_snap_creator_job_monitor_to_review_logs.adoc[Visualizzazione dello stato del lavoro e dei registri in Job Monitor]
+
+xref:task_using_the_snap_creator_reports_option_to_view_logs.adoc[Visualizzazione dei registri nel riquadro Report]
+
+xref:task_creating_an_scdump_using_the_snap_creator_gui.adoc[Utilizzo di scdump per raccogliere i log in un formato compresso]

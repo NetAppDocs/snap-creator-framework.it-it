@@ -1,0 +1,31 @@
+---
+permalink: domino-ops/task_using_the_snap_creator_reports_option_to_view_logs.html 
+sidebar: sidebar 
+keywords: domino, ibm, viewing, view, logs, report pane 
+summary: È possibile visualizzare i registri nel riquadro Snap CreatorReports, nello stesso formato utilizzato per visualizzarli nel pannello Console. È possibile visualizzare i registri degli errori e i registri standard nel riquadro Report. 
+---
+= Visualizzazione dei registri nel riquadro Report
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare i registri nel riquadro Snap CreatorReports, nello stesso formato utilizzato per visualizzarli nel pannello Console. È possibile visualizzare i registri degli errori e i registri standard nel riquadro Report.
+
+. Nella parte superiore della finestra di Snap Creator Framework, fare clic su *Report* > *Logs*.
+. Nel riquadro Report, selezionare il profilo, il file di configurazione, il tipo di log e il file di log. dove i tipi di log sono i seguenti:
++
+** I *out Logs* forniscono informazioni a livello dettagliato per un lavoro.
+** *I registri di debug* forniscono informazioni a livello dettagliato e informazioni utili per il debug.
+** *Stderr Logs* fornisce informazioni sugli errori scritti in errori standard.
+** *Error Logs* fornisce tutte le informazioni sugli errori. *Nota:* a seconda delle dimensioni del lavoro, la scelta di *Registro debug* può causare rallentamenti o problemi di risposta del browser.
+
+
+. Fare clic su:
++
+** *Download Selected Log* (Scarica registro selezionato) per scaricare il registro selezionato.
+** *Scaricare i log GUI* per scaricare i log GUI. Nella finestra di dialogo del download, fare clic su *Apri* o *Salva* come richiesto.
+
+
+

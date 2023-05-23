@@ -1,0 +1,43 @@
+---
+permalink: administration/concept_using_the_plug_in_framework_to_create_custom_plug_ins.html 
+sidebar: sidebar 
+keywords: plug-in, framework, snap, creator, reuse, quiesce, unquiesce, discover, scdump, restore, restore, clone, describe, restore 
+summary: Il framework del plug-in consente di creare plug-in personalizzati per Snap Creator o di riutilizzare i plug-in esistenti. Il plug-in fornisce a Snap Creator le procedure per la gestione del backup e del ripristino di una determinata applicazione. 
+---
+= Utilizzo del framework del plug-in per creare plug-in personalizzati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il framework del plug-in consente di creare plug-in personalizzati per Snap Creator o di riutilizzare i plug-in esistenti. Il plug-in fornisce a Snap Creator le procedure per la gestione del backup e del ripristino di una determinata applicazione.
+
+Il framework del plug-in definisce i seguenti metodi:
+
+* Quiesce - metodo per la gestione di quiesce per un determinato plug-in dell'applicazione
+* Unquiesce - metodo per la gestione di informazioni non richieste per un determinato plug-in dell'applicazione
+* Discover - metodo per gestire il rilevamento di oggetti storage per un determinato plug-in dell'applicazione
+* Scdump - metodo per gestire la raccolta di informazioni di supporto, database, sistema operativo e SnapDrive
+* Restore - metodo per la gestione del ripristino per un determinato plug-in dell'applicazione
+* Restore_pre - metodo per gestire le operazioni di prerestore per un determinato plug-in dell'applicazione (può utilizzare la CLI di ripristino integrata di Snap Creator)
+* Restore_post - metodo per la gestione delle operazioni di post-ripristino per un determinato plug-in dell'applicazione (può utilizzare la CLI di ripristino integrata di Snap Creator)
+* Clone_pre - metodo per la gestione delle operazioni di preclone per un determinato plug-in dell'applicazione
+* Clone_post - metodo per la gestione delle operazioni post-clone per un determinato plug-in dell'applicazione
+* Descrivi - metodo per descrivere ciò che un plug-in implementa. Questo è opzionale per i plug-in Perl, ma necessario per i plug-in nativi sotto plug-in/nativi.
+* Clone_all - metodo per gestire la clonazione per un determinato plug-in dell'applicazione (non è possibile utilizzare l'interfaccia di clonazione integrata)
+* Clone_cleanup - metodo per la gestione della cleanup in caso di errore di un'operazione di cloni
+* Restore_Cleanup - metodo per la gestione della pulizia in caso di errore di un'operazione di ripristino
+
+
+
+NOTE: Il framework del plug-in supporta Perl, PowerShell, Java, UNIX Shell e Python per la programmazione. NOTA: Il framework del plug-in consente di implementare oggetti e funzioni esistenti in Snap Creator.
+
+Ad esempio, è disponibile la gestione degli errori, il che significa che il plug-in può utilizzare l'implementazione standard utilizzata da Snap Creator. In questo modo si riduce il lavoro necessario per creare un plug-in.
+
+* I plug-in Perl sono installati in /plug-in/PLUG-IN-name/PLUG-IN.pm.
+* I plug-in nativi vengono installati in /plug-in/native/plug-in.sh,plug-in.java.plug-in.bat e così via.
+* Il plug-in deve essere installato nel punto in cui deve essere eseguito. Può essere Snap Creator Server o Snap Creator Agent a seconda dell'impostazione di Snap Creator.
+
+
+Per ulteriori informazioni sul framework di plug-in, sui plug-in e sulle guide utente di un plug-in, consultare la http://community.netapp.com/t5/Snap-Creator-Framework-Discussions/bd-p/snap-creator-framework-discussions["Forum della community di discussione su Snap Creator Framework"].

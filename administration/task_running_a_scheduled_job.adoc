@@ -1,0 +1,18 @@
+---
+permalink: administration/task_running_a_scheduled_job.html 
+sidebar: sidebar 
+keywords: schedule, job, run, snap, creator, gui 
+summary: È possibile eseguire un processo pianificato. 
+---
+= Esecuzione di processi pianificati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eseguire un processo pianificato.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *Management* > *Schedules*.
+. Dalla scheda programmi, selezionare un processo dall'elenco dei processi pianificati e fare clic su *Esegui*.
+

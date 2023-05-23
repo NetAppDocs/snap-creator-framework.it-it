@@ -1,0 +1,57 @@
+---
+permalink: administration/reference_parameters_to_set_up_operations_manager_console.html 
+sidebar: sidebar 
+keywords: parameter, required, operation, manager, host, user, pwd, port 
+summary: Per configurare la console di Operations Manager sono necessari diversi parametri. 
+---
+= Parametri per impostare la console di Operations Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per configurare la console di Operations Manager sono necessari diversi parametri.
+
+|===
+| Parametro | Impostazione | Descrizione 
+
+
+ a| 
+OM_HOST
+ a| 
+ a| 
+Il nome o l'indirizzo IP dell'host della console di Operations Manager.
+
+
+
+ a| 
+OM_USER
+ a| 
+ a| 
+Il nome utente di un utente della console di Operations Manager autorizzato a creare eventi.
+
+
+
+ a| 
+OM_PWD
+ a| 
+ a| 
+La password per l'utente della console di Operations Manager. *Nota:* la password deve contenere almeno due caratteri.
+
+
+
+ a| 
+PORTA_OM
+ a| 
+ a| 
+La porta da utilizzare per le comunicazioni con la console di Operations Manager; 8088 è la porta HTTP predefinita e 8488 è la porta HTTPS predefinita utilizzata dalla console di Operations Manager.
+
+
+
+ a| 
+OM_EVENT_GENERATE
+ a| 
+(Y
+| N) 
+|===

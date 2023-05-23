@@ -1,0 +1,37 @@
+---
+permalink: domino-ops/task_using_the_snap_creator_job_monitor_to_review_logs.html 
+sidebar: sidebar 
+keywords: domino, ibm, viewing, view, job, status, logs, monitor 
+summary: 'Snap Creator Job Monitor è un"interfaccia simile a una dashboard per i lavori di Snap Creator. È possibile utilizzare Job Monitor per visualizzare lo stato del processo e scaricare i registri.' 
+---
+= Visualizzazione dello stato del lavoro e dei registri in Job Monitor
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator Job Monitor è un'interfaccia simile a una dashboard per i lavori di Snap Creator. È possibile utilizzare Job Monitor per visualizzare lo stato del processo e scaricare i registri.
+
+Il monitor del processo indica lo stato del processo come indicato di seguito:
+
+* image:../media/scfw_domino_icon_job_in_progress.gif["Questa immagine viene spiegata dal testo circostante."] indica un lavoro in corso.
+* image:../media/scfw_domino_icon_job_successful.gif["Questa immagine viene spiegata dal testo circostante."] indica un processo che è stato completato correttamente.
+* image:../media/scfw_domino_icon_job_completed_with_errors.gif["Questa immagine viene spiegata dal testo circostante."] indica un lavoro completato con errori.
+* image:../media/scfw_domino_icon_job_failed.gif["Questa immagine viene spiegata dal testo circostante."] indica un lavoro che non è riuscito.
++
+.. Nel riquadro profili e configurazioni, selezionare il file di configurazione e fare clic su *Gestione* > *monitoraggio del processo* nella parte superiore della finestra di Snap Creator Framework.
++
+Viene visualizzato il pannello Job Monitor, in cui è possibile visualizzare lo stato del lavoro.
+
+.. Selezionare un processo, quindi fare clic su *Download Logs* > *Log_Type*, dove Log_Type è una delle seguenti opzioni:
++
+*** I *out Logs* forniscono informazioni a livello dettagliato per un lavoro.
+*** *I registri di debug* forniscono informazioni a livello dettagliato e informazioni utili per il debug.
+*** *GUI Logs* fornisce informazioni sulle azioni della GUI di Snap Creator.il log della GUI non è specifico del lavoro selezionato.
+
+
+.. Nella finestra di dialogo del download, fare clic su *Apri* o *Salva* come richiesto.
+
+
+

@@ -1,0 +1,31 @@
+---
+permalink: domino-ops/concept_backup_operations_using_domino_plug_in.html 
+sidebar: sidebar 
+keywords: domino, ibm, backup, operations, ibm, understanding 
+summary: 'A differenza di altre tecnologie di backup, il plug-in IBM Domino consente la scrittura dei dati nel database durante le operazioni di backup. Garantisce che il backup sia coerente con i dati dell"applicazione registrando eventuali modifiche al database durante le operazioni di backup in una directory temporanea chiamata changeinfo. Al momento del ripristino, applica queste modifiche al database dopo il ripristino dei dati dalla copia Snapshot.' 
+---
+= Informazioni sulle operazioni di backup del plug-in IBM Domino
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A differenza di altre tecnologie di backup, il plug-in IBM Domino consente la scrittura dei dati nel database durante le operazioni di backup. Garantisce che il backup sia coerente con i dati dell'applicazione registrando eventuali modifiche al database durante le operazioni di backup in una directory temporanea chiamata changeinfo. Al momento del ripristino, applica queste modifiche al database dopo il ripristino dei dati dalla copia Snapshot.
+
+Durante le operazioni di backup, si dice che i file di database siano in modalità di backup. Sebbene Snap Creator Framework faccia riferimento a questi file come "`quiesced`", non è così. I dati continuano a essere scritti nei file durante la copia Snapshot.
+
+Le fasi di alto livello sono le seguenti:
+
+. Elencare database, modelli e caselle postali nei volumi di cui eseguire il backup.
+. Mettere i file in modalità di backup, un database alla volta.
+. Verificare la presenza di database incoerenti o corrotti.
++
+
+NOTE: È possibile forzare il plug-in a procedere con le operazioni di backup nonostante gli errori, come descritto al punto link:task_using_the_gui_to_create_a_configuration_file.md#STEP_AA41331683A24598B7845367CB967F99["Task_using_the_gui_to_create_a_Configuration_file.MD STEP_AA41331683A24598B7845367CB967F99"].
+
+. Creare una copia Snapshot di ciascun volume.
+. Se la registrazione delle transazioni Domino è in uso, archiviare le copie dei registri delle transazioni Domino da utilizzare nelle operazioni di ripristino aggiornate al minuto.
+. Estrarre i file dalla modalità di backup, un database alla volta.
+. Registrare le modifiche apportate al database da quando i file sono stati messi in modalità di backup nella directory changeinfo.
+

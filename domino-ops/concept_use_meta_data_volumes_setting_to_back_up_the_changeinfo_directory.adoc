@@ -1,0 +1,38 @@
+---
+permalink: domino-ops/concept_use_meta_data_volumes_setting_to_back_up_the_changeinfo_directory.html 
+sidebar: sidebar 
+keywords: domino, ibm, backing up, backup, changeinfo, directory 
+summary: Se si intende eseguire il backup della directory changeinfo, è necessario configurare il volume contenente la directory come volume di metadati. In questo modo, il plug-in IBM Domino crea una copia Snapshot del volume changeinfo dopo aver creato la copia Snapshot per i file di database. 
+---
+= Backup della directory changeinfo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si intende eseguire il backup della directory changeinfo, è necessario configurare il volume contenente la directory come volume di metadati. In questo modo, il plug-in IBM Domino crea una copia Snapshot del volume changeinfo _dopo_ la creazione della copia Snapshot per i file di database.
+
+Il volume changeinfo dovrebbe essere già stato identificato come volume di cui eseguire il backup al momento della creazione del file di configurazione. Per ulteriori informazioni, vedere il passo link:task_using_the_gui_to_create_a_configuration_file.md#STEP_2036E43A6921415985798979F2226786["attività utilizzando la gui per creare una configurazione"].
+
+Il parametro META_DATA_VOLUME nel file di configurazione consente di identificare il volume changeinfo come volume di metadati. Il parametro non è disponibile nella GUI.
+
+. Aprire il file di configurazione in un editor di testo.
++
+I file di configurazione si trovano nella directory di installazione di Snap Creator, in una sottodirectory denominata per il profilo. Su un host Windows, ad esempio, C: File di programma NetApp Snap Creator Framework scServer4.1.x motore Domino Fuji15.conf, dove Domino è il nome del profilo e Fuji15.conf è il nome del file di configurazione.
+
+. Inserire il nome del volume changeinfo nel parametro META_DATA_VOLUME.
++
+Il volume changeinfo dovrebbe essere già elencato nel parametro VOLUMES.
+
++
+Nell'esempio seguente viene illustrato come configurare Fuji15_DomChangeInfo come volume di metadati:
+
++
+[listing]
+----
+VOLUMES=domino_vserver:Fuji15_DomDAOS,Fuji15_DomChangeInfo,
+Fuji15_DomTxn,Fuji15_DomData
+META_DATA_VOLUME=domino_vserver:Fuji15_DomChangeInfo
+----
+

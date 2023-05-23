@@ -1,0 +1,105 @@
+---
+permalink: administration/task_creating_policies.html 
+sidebar: sidebar 
+keywords: create, retention, policy, snap, creator, gui, guideline, policy, management 
+summary: È possibile creare un nuovo criterio di conservazione utilizzando la GUI di Snap Creator per configurare più criteri Snapshot con un numero di conservazione diverso. 
+---
+= Creazione di policy
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare un nuovo criterio di conservazione utilizzando la GUI di Snap Creator per configurare più criteri Snapshot con un numero di conservazione diverso.
+
+Devi comprendere le linee guida per la definizione delle policy di Snap Creator.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *Policy* > *Policy Management*.
+. Dalla scheda *Policy Manager*, fare clic su *Create* (Crea).
+. Inserire i dettagli, quindi fare clic su *Salva*.
++
+image::../media/create_new_policy.gif[creare una nuova policy]
+
++
+|===
+| Campo | Descrizione 
+
+
+ a| 
+Nome policy
+ a| 
+Specificare il nome del criterio.
+
+
+
+ a| 
+Tipo di backup
+ a| 
+(Facoltativo) selezionare il tipo di backup.
+
+
+
+ a| 
+Tipo di policy
+ a| 
+Selezionare il tipo di policy:
+
+** *LOCALE*
++
+Copia Snapshot sullo storage primario. Selezionare questo tipo se non sono presenti relazioni SnapMirror o SnapVault.
+
+** SnapVault
++
+Crea una copia Snapshot sullo storage primario ed esegue un aggiornamento del SnapVault. L'aggiornamento SnapVault deve essere attivato per tutti i volumi nella configurazione.
+
+** SNAPMIRROR
++
+Crea una copia Snapshot sullo storage primario ed esegue un aggiornamento di SnapMirror. L'aggiornamento di SnapMirror deve essere attivato per tutti i volumi della configurazione.
+
+
+
+
+
+ a| 
+Pianificazione delle policy
+ a| 
+(Facoltativo) selezionare la pianificazione dei criteri da utilizzare. Se non viene specificata alcuna pianificazione delle policy, queste azioni non vengono eseguite automaticamente.
+
+
+
+ a| 
+Conteggio conservazione snapshot
+ a| 
+Inserire il numero di backup da conservare.
+
+
+
+ a| 
+Età di conservazione delle snapshot
+ a| 
+Inserire l'età minima per cui i backup devono essere conservati prima di poter essere cancellati.
+
+
+
+ a| 
+Numero di conservazione SnapVault
+ a| 
+Se è stato selezionato SnapVault come tipo di criterio, immettere il numero di conservazione per SnapVault.
+
+
+
+ a| 
+SnapVault Retention Age
+ a| 
+Se è stato selezionato SnapVault come tipo di criterio, inserire l'età di conservazione per SnapVault.
+
+
+
+ a| 
+Aggiungere/sovrascrivere i parametri
+ a| 
+Alcuni parametri possono essere ignorati per un criterio. Se lo si desidera, selezionare questa casella di controllo, quindi aggiungere i parametri da ignorare.
+
+|===
+

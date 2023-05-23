@@ -1,0 +1,25 @@
+---
+permalink: administration/task_creating_policy_schedules.html 
+sidebar: sidebar 
+keywords: policy, schedule, snap, creator, gui 
+summary: È possibile creare pianificazioni di policy utilizzando la GUI di Snap Creator. 
+---
+= Creazione di pianificazioni di policy
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare pianificazioni di policy utilizzando la GUI di Snap Creator.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *Policy* > *Policy Schedules*.
+. Dalla scheda *Policy Schedules*, fare clic su *Create* (Crea).
+. Inserire il nome del programma e selezionare l'azione e la frequenza, quindi fare clic su *Salva*.
++
+A seconda della frequenza selezionata, è necessario selezionare i campi relativi all'ora appropriati per l'esecuzione del processo pianificato.
+
++
+image::../media/add_policy_schedule.gif[aggiungere la pianificazione delle policy]
+
+

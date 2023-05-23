@@ -1,0 +1,78 @@
+---
+permalink: domino-ops/concept_restore_operations_using_domino_plug_in.html 
+sidebar: sidebar 
+keywords: domino, ibm, understanding, plug-in, restore 
+summary: 'Il plug-in IBM Domino ripristina i file di database dalla copia Snapshot del volume su cui è memorizzato il database. Una volta completata l"operazione di ripristino Snapshot, il plug-in applica le modifiche registrate nella directory changeinfo.' 
+---
+= Informazioni sulle operazioni di ripristino del plug-in IBM Domino
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il plug-in IBM Domino ripristina i file di database dalla copia Snapshot del volume su cui è memorizzato il database. Una volta completata l'operazione di ripristino Snapshot, il plug-in applica le modifiche registrate nella directory changeinfo.
+
+Le fasi di alto livello sono le seguenti:
+
+. Ripristinare i file di database dalle copie Snapshot.
+. Applicare le modifiche registrate nella directory changeinfo.
+. Applicare le informazioni del log delle transazioni, se disponibili.
+
+
+
+
+== Opzioni di ripristino
+
+Il plug-in offre un'ampia gamma di opzioni di ripristino:
+
+|===
+
+
+| Tipo di ripristino | Descrizione 
+
+
+ a| 
+Ripristino del volume (point-in-time)
+ a| 
+Ripristina lo stato dell'intero volume al momento della copia Snapshot.
+
+
+
+ a| 
+Ripristino del volume (up-to-the-minute)
+ a| 
+Ripristina lo stato dell'intero volume al momento della copia Snapshot, quindi riproduce i registri delle transazioni Domino nella copia più recente.
+
+
+
+ a| 
+Ripristino del volume (selezionabile fino al minuto)
+ a| 
+Ripristina lo stato dell'intero volume al momento della copia Snapshot, quindi riproduce i registri delle transazioni Domino a un orario specificato.
+
+
+
+ a| 
+Ripristino di un singolo file (point-in-time)
+ a| 
+Ripristina un singolo file al suo stato al momento della copia Snapshot (solo NFS).
+
+
+
+ a| 
+Ripristino di un singolo file (up-to-the-minute)
+ a| 
+Ripristina uno stato di un singolo file al momento della copia Snapshot, quindi inoltra i registri delle transazioni Domino alla copia più recente (solo NFS).
+
+
+
+ a| 
+Ripristino di un singolo file (selezionabile fino al minuto)
+ a| 
+Ripristina uno stato di un singolo file al momento della copia Snapshot, quindi riproduce i registri delle transazioni Domino a un orario specificato (solo NFS).
+
+|===
+*Nota:* per ripristini up-to-the-minute e selezionabili up-to-the-minute, è necessario abilitare la registrazione delle transazioni Domino.
+
+I registri delle transazioni possono essere riprodotti solo in avanti. Se si seleziona un orario prima della creazione della copia Snapshot, si verifica un errore di ripristino.

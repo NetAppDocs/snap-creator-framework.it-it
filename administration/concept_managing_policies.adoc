@@ -1,0 +1,18 @@
+---
+permalink: administration/concept_managing_policies.html 
+sidebar: sidebar 
+keywords: managing, retention, policies, list, delete, policies, snapshot, snapvault 
+summary: È possibile creare policy di conservazione, nonché elencare ed eliminare le policy. 
+---
+= Gestione delle policy di conservazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare policy di conservazione, nonché elencare ed eliminare le policy.
+
+Un criterio di conservazione definisce in genere le impostazioni di conservazione delle snapshot, ad esempio il numero di copie Snapshot da conservare e per quanto tempo. Ad esempio, una policy giornaliera potrebbe conservare 30 giorni di copie Snapshot che devono avere almeno 30 giorni di vita. (L'impostazione del periodo di conservazione impedisce a più copie Snapshot create lo stesso giorno di ignorare gli SLA (Service Level Agreement) che potrebbero indicare che una copia Snapshot deve avere 30 giorni di vita).
+
+Se si utilizza SnapVault, il criterio definisce anche le impostazioni di conservazione per la copia SnapVault.

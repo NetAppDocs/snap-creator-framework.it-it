@@ -1,0 +1,36 @@
+---
+permalink: domino-ops/task_using_snapdrive_for_windows_to_mount_snapshot_copy.html 
+sidebar: sidebar 
+keywords: domino, ibm, using, snapdrive, mount, snapshot, copy 
+summary: È possibile utilizzare SnapDrive per montare la copia Snapshot del file che si desidera ripristinare. È quindi possibile copiare manualmente il file nella directory di ripristino dei dati. 
+---
+= Utilizzo di SnapDrive per montare una copia Snapshot
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare SnapDrive per montare la copia Snapshot del file che si desidera ripristinare. È quindi possibile copiare manualmente il file nella directory di ripristino dei dati.
+
+La seguente procedura illustra come utilizzare SnapDrive per Windows per montare una copia Snapshot su un host Windows Server 2008. SnapDrive per Windows e l'agente Snap Creator devono essere in esecuzione sull'host.
+
+. In Gestione server, fare clic su *Storage* > *SnapDrive* > *Physical_server_name* > *Disks*.
+. Nel pannello Disk Identification (identificazione disco), accedere alla copia Snapshot contenente la copia del file che si desidera ripristinare e scegliere *Connect Disk* (Connetti disco) dal menu di scelta rapida.
++
+Viene visualizzata la procedura guidata Connect Disk.
+
++
+Durante la procedura guidata Connect Disk, fare clic su *Next* (Avanti) per passare alla pagina successiva. Fare clic su *Indietro* per tornare alla pagina precedente.
+
++
+
+TIP: Annotare il nome della copia Snapshot. Il nome sarà necessario quando si copia il file nella directory di ripristino dei dati.
+
+. Nella pagina fornire un nome di sistema di storage, un percorso e un nome, immettere facoltativamente il testo descrittivo per il LUN.
+. Nella pagina selezionare un tipo di LUN, lasciare l'impostazione predefinita.
+. Nella pagina Select LUN Properties (Seleziona proprietà LUN), selezionare la lettera dell'unità o il punto di montaggio per la copia Snapshot.
+. Nella pagina iSCSI Initiator/FC host bus adapter (HBA), selezionare iSCSI Initiator o FC host bus adapter (HBA).
+. Nella pagina Management Type (tipo di gestione), selezionare il tipo di gestione da utilizzare per il mapping al LUN: Automatic (automatico) o MANUAL (manuale).
+. Fare clic su *fine* per montare la copia Snapshot nel punto di montaggio specificato.
+

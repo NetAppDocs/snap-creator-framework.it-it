@@ -1,0 +1,27 @@
+---
+permalink: sap-hana-ops/concept_housekeeping_of_log_backups.html 
+sidebar: sidebar 
+keywords: housekeeping, log, backups 
+summary: 'La gestione dei backup dei log in SAP HANA si basa su una funzione all"interno di HANA Studio o su un"istruzione SQL che consente di eliminare tutti i backup meno recenti di un backup selezionato.' 
+---
+= Pulizia dei backup dei log
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La gestione dei backup dei log in SAP HANA si basa su una funzione all'interno di HANA Studio o su un'istruzione SQL che consente di eliminare tutti i backup meno recenti di un backup selezionato.
+
+Snap Creator gestisce la gestione dei backup dei dati (copie Snapshot) eliminando le copie Snapshot sullo storage primario o secondario e eliminando le voci corrispondenti all'interno del catalogo HANA, in base a una policy di conservazione definita.
+
+I backup dei log precedenti all'ultimo backup dei dati vengono cancellati perché non sono necessari.
+
+Snap Creator gestisce la gestione dei backup dei file di log a livello di file system e all'interno del catalogo di backup SAP HANA. Come parte di ogni backup Snapshot con Snap Creator, vengono eseguiti i seguenti passaggi:
+
+* Leggere il catalogo di backup e ottenere l'ID di backup dei dati meno recenti o del backup Snapshot.
+* Eliminare tutti i backup meno recenti.
+
+
+
+NOTE: Snap Creator gestisce solo le operazioni di pulizia per i backup in base alle copie Snapshot. Se vengono creati backup aggiuntivi basati su file, è necessario assicurarsi che i backup basati su file vengano eliminati dal catalogo di backup e dal file system. Se un backup di dati di questo tipo non viene eliminato manualmente dal catalogo di backup, può diventare il backup dei dati meno recente e l'operazione di manutenzione del backup del registro non riesce.

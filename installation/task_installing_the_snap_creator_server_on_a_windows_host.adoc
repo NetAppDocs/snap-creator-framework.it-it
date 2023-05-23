@@ -1,0 +1,113 @@
+---
+permalink: installation/task_installing_the_snap_creator_server_on_a_windows_host.html 
+sidebar: sidebar 
+keywords: installing, install, snap, creator, server, windows, hosts 
+summary: È possibile installare Snap Creator Server su un host Windows utilizzando il programma di installazione di Windows. 
+---
+= Installazione di Snap Creator Server su un host Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile installare Snap Creator Server su un host Windows utilizzando il programma di installazione di Windows.
+
+* È necessario installare JRE 1.8 Update 72 o versione successiva.
+* La persona che esegue l'installazione deve disporre dei privilegi di amministratore per eseguire l'installazione.
+* La porta predefinita per Snap Creator Server deve essere 8443.
++
+È possibile utilizzare netstat o uno strumento simile per verificare che la porta di rete che si desidera utilizzare (purché la porta supporti HTTPS) sia disponibile e non sia già in uso (ad esempio, Windows: `netstat -na | find "8443"`).
+
+* È necessario aver già scaricato Snap Creator.
++
+.. Fare doppio clic sul file Snap_Creator_Frameworkrelease-Windowsversion.exe.
++
+Per avviare il programma di installazione di Snap Creator, utilizzare Snap_Creator_Framework4.1.0-Windows64.exe.
+
+.. Nella pagina di benvenuto, fare clic su *Avanti* per avviare l'installazione.
+.. Leggere e accettare i termini del contratto di licenza.
+.. Nella pagina *Choose Install Type* (scegliere il tipo di installazione), modificare le impostazioni in modo che si adattino ai vari tipi di installazione, quindi fare clic su *Next* (Avanti).
++
+image::../media/choose_install_type_page.gif[scegliere la pagina del tipo di installazione]
+
++
+*** *Selezionare il tipo di installazione*
++
+Selezionare *Server*. Sia Snap Creator Server che Snap Creator Agent possono essere installati contemporaneamente se si desidera entrambi sullo stesso sistema.
+
+*** *Avvia server come servizio*
++
+Selezionare questa opzione per installare e avviare automaticamente il servizio snapcreatorserverservice subito dopo il completamento del processo di installazione. Se non è selezionato, il campo *porta server* è disattivato.
+
++
+
+NOTE: Se non si seleziona questa opzione, il servizio non viene installato ed è necessario avviare manualmente Snap Creator Server eseguendo uno script batch da un prompt dei comandi.
+
+*** *Inserire l'IP di sistema*
++
+Selezionare questa opzione per fornire l'indirizzo IP del sistema su cui è installato Snap Creator Server o Snap Creator Agent. Questa opzione viene utilizzata per generare il certificato SSL durante l'installazione di Snap Creator.
+
+*** *Inserire IL percorso Java bin*
++
+Selezionare questa opzione per fornire il percorso Java bin per individuare l'utility keytool. Keytool viene utilizzato per generare un certificato SSL durante l'installazione di Snap Creator.
+
+*** *Porta del server*
++
+Accettare la porta predefinita di `8443` oppure specificare il numero della porta.
+
+
+
+.. Configurare la pagina *Configurazione profilo*, quindi fare clic su *Avanti*.
++
+Le informazioni inserite nella pagina *Profile Setup* (Configurazione profilo) vengono utilizzate per impostare il profilo richiesto per l'interfaccia grafica di Snap Creator.
+
++
+*** *Numero di serie del controller di storage*
++
+Questo parametro è facoltativo. Inserire il numero di serie di uno dei controller di storage. Quando vengono fornite queste informazioni, il numero di serie del controller viene incorporato nel file di proprietà di Snap Creator e incluso negli output di supporto e log. Queste informazioni possono essere utilizzate per risolvere eventuali problemi che si verificano in futuro.
+
+*** *Nome utente*
++
+Immettere il nome dell'amministratore di Snap Creator Server.
+
+*** *Password e conferma*
++
+Inserire la password per l'amministratore di Snap Creator Server.
+
+*** *Attiva job monitor*
++
+Se si desidera attivare il monitoraggio dei processi, selezionare la casella di controllo *Enable job monitor* (attiva monitoraggio processi). Job Monitor è una sezione separata della GUI che monitora tutti i lavori eseguiti da Snap Creator e lo stato di tali lavori.
+
+*** *Dimensione registro lavori*
++
+Inserire il numero di lavori da conservare nella cronologia del log dei lavori. L'impostazione predefinita è `100`; la dimensione deve essere compresa tra 1 e 1000.
+
++
+
+NOTE: Sebbene il valore massimo accettato per la dimensione del registro lavori sia 10,000, la dimensione massima consigliata è 1000.
+
+
+
+.. Nella pagina *Scegli percorso di installazione*, immettere il percorso di installazione di Snap Creator o accettare il percorso predefinito (C: File di programma NetApp Snap Creator Framework), quindi fare clic su *Avanti*.
+.. Nella pagina *Scegli cartella menu Start*, personalizzare la cartella in cui Snap Creator deve essere visualizzato nel menu Start di Windows o accettare l'impostazione predefinita, quindi fare clic su *Installa*.
+.. Al termine dell'installazione, fare clic su *Avanti*.
++
+Durante l'installazione del servizio Snap Creator Server, viene visualizzato un prompt dei comandi se è stato selezionato un servizio come parte delle opzioni di installazione. Questo processo tenta di avviare i servizi esistenti; pertanto, è comune vedere i messaggi di errore elencati come parte di questo passaggio.
+
+.. Fare clic su *fine* per chiudere il programma di installazione di Windows.
+.. Convalidare l'avvio della GUI di Snap Creator Framework accedendo all'host locale sulla porta specificata (https://IP_address:gui_port[]).
++
+È necessario connettersi utilizzando HTTPS; in caso contrario, la connessione non viene automaticamente reindirizzata a una connessione HTTPS e la GUI non funziona.
+
+
+
+
+
+*Informazioni correlate*
+
+xref:task_installing_java_on_snap_creator_hosts.adoc[Installazione di Java su host Snap Creator]
+
+xref:task_downloading_the_snap_creator_software.adoc[Download del software Snap Creator]
+
+xref:task_starting_the_server_from_a_command_prompt.adoc[Avvio del server da un prompt dei comandi]

@@ -1,0 +1,19 @@
+---
+permalink: administration/task_viewing_permissions_assigned_to_a_role_by_using_the_gui.html 
+sidebar: sidebar 
+keywords: snap, creator, permission, gui, role, management 
+summary: È possibile visualizzare un elenco di tutte le autorizzazioni di Snap Creator assegnate a un ruolo utilizzando la GUI di Snap Creator. 
+---
+= Visualizzazione delle autorizzazioni di Snap Creator assegnate a un ruolo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare un elenco di tutte le autorizzazioni di Snap Creator assegnate a un ruolo utilizzando la GUI di Snap Creator.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *utenti e ruoli* > *gestione dei ruoli*.
+. Nella scheda**role management**, selezionare il ruolo desiderato.
+. Selezionare il ruolo desiderato e visualizzare le autorizzazioni assegnate nel riquadro ruolo e autorizzazioni assegnate.
+

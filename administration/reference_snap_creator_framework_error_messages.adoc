@@ -1,0 +1,669 @@
+---
+permalink: administration/reference_snap_creator_framework_error_messages.html 
+sidebar: sidebar 
+keywords: snap, creator, framework, error, message, troubleshoot, issue, scf, serial, number, plug-in, snapcreator, application 
+summary: I messaggi di errore di Snap Creator Framework consentono di risolvere eventuali problemi. 
+---
+= Messaggi di errore di SNAP Creator Framework
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I messaggi di errore di Snap Creator Framework consentono di risolvere eventuali problemi.
+
+|===
+| Codice di errore | Messaggio di errore | Descrizione/risoluzione 
+
+
+ a| 
+scf-00001
+ a| 
+Impossibile ottenere il numero di serie [%s]
+ a| 
+Il comando di installazione di Snap Creator non viene eseguito. Eseguire il comando snapcreator --profile setup. Assicurarsi che il numero di serie sia vuoto o impostato su un valore numerico.
+
+
+
+ a| 
+scf-00002
+ a| 
+Gestione del backup del plug-in [%s] non riuscita con errore [%s] e codice di uscita [%s], uscita.
+ a| 
+Backup dell'applicazione non riuscito a causa di un errore dell'applicazione. Controllare i registri e le impostazioni dell'applicazione.
+
+
+
+ a| 
+scf-00003
+ a| 
+La gestione della pulizia del backup del plug-in [%s] non è riuscita con l'errore [%s] e il codice di uscita [%s], in uscita.
+ a| 
+La pulizia del backup dell'applicazione non è riuscita a causa di un errore dell'applicazione. Controllare i registri e le impostazioni dell'applicazione.
+
+
+
+ a| 
+scf-00004
+ a| 
+La gestione del clone del plug-in [%s] non è riuscita con l'errore [%s] e il codice di uscita [%s], in uscita.
+ a| 
+Clone dell'applicazione non riuscito a causa di un errore dell'applicazione. Controllare i registri e le impostazioni dell'applicazione.
+
+
+
+ a| 
+scf-00005
+ a| 
+Gestione cloni cleanup del plug-in [%s] non riuscita con errore [%s] e codice di uscita [%s], uscita!
+ a| 
+Pulitura clone applicazione non riuscita a causa di un errore dell'applicazione. Controllare i registri e le impostazioni dell'applicazione.
+
+
+
+ a| 
+scf-00006
+ a| 
+Gestione pre-clone di [%s] non riuscita con errore [%s] e codice di uscita [%s], uscita.
+ a| 
+Operazione di pre-clone dell'applicazione non riuscita a causa di un errore dell'applicazione. Controllare i registri e le impostazioni dell'applicazione.
+
+
+
+ a| 
+scf-00007
+ a| 
+Gestione post-clone del plug-in [%s] non riuscita con errore [%s] e codice di uscita [%s], uscita.
+ a| 
+Operazione post-clone dell'applicazione non riuscita a causa di un errore dell'applicazione. Controllare i registri e le impostazioni dell'applicazione.
+
+
+
+ a| 
+scf-00008
+ a| 
+Clonato LUN igroup map di [%s] to igroup [%s] on [%s] failed, exiting!
+ a| 
+La mappatura igroup per il clone LUN non è riuscita. Controllare i registri degli errori. Potrebbe essere presente un errore nella soluzione NetApp Manageability SDK. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+scf-00009
+ a| 
+Fine dell'elenco di backup della console di gestione NetApp per il set di dati [%s] non riuscita con codice di uscita [%s], chiusura!
+ a| 
+Snap Creator ha avviato l'operazione di eliminazione del backup nella console di gestione NetApp, ma non è riuscito ad elencare le copie Snapshot. Assicurarsi che Snap Creator stia registrando i backup e controllare la configurazione dei parametri NTAP_PM_UPDATE e NTAP_DFM_DATA_SET.
+
+
+
+ a| 
+scf-00010
+ a| 
+L'elenco di backup di NetApp Management Console non è definito, non esistono backup per il dataset [%s], in uscita!
+ a| 
+Snap Creator ha avviato l'operazione di eliminazione del backup nella NetApp Management Console, ma esistono copie Snapshot. Assicurarsi che Snap Creator stia registrando i backup e controllare la configurazione dei parametri NTAP_PM_UPDATE e NTAP_DFM_DATA_SET.
+
+
+
+ a| 
+scf-00011
+ a| 
+ID versione backup di NetApp Management Console [%s] Timestamp [%s] Elimina per dataset [%s] non riuscito con codice di uscita [%s], uscita!
+ a| 
+Assicurarsi che Snap Creator stia registrando i backup e controllare la configurazione dei parametri NTAP_PM_UPDATE e NTAP_DFM_DATA_SET.
+
+
+
+ a| 
+scf-00012
+ a| 
+Recupero dello stato del dataset di NetApp Management Console per il dataset [%s] non riuscito con codice di uscita [%s], chiusura!
+ a| 
+Assicurarsi che il dataset esista e che lo stato sia conforme. Assicurarsi inoltre che il set di dati sia stato creato da Snap Creator. I set di dati non creati da Snap Creator non sono set di dati dell'applicazione; questi set di dati non funzionano.
+
+
+
+ a| 
+scf-00013
+ a| 
+Impossibile registrare le copie Snapshot con il set di dati [%s] codice di uscita [%s]
+ a| 
+Controllare la configurazione dei parametri NTAP_PM_UPDATE e NTAP_DFM_DATA_SET.
+
+
+
+ a| 
+scf-00014
+ a| 
+Avvio del backup di NetApp Management Console per [%s] ([%s]) non riuscito, uscita!
+ a| 
+Controllare la configurazione dei parametri NTAP_PM_UPDATE e NTAP_DFM_DATA_SET.
+
+
+
+ a| 
+scf-00015
+ a| 
+Backup di NetApp Management Console per ID processo [%s] completato con errori - [%s]
+| [%s] 
+
+
+| [%s] | [%s]  a| 
+Snap Creator ha avviato il backup di NetApp Management Console, ma l'avanzamento dell'operazione di backup non è riuscito. Controllare la configurazione dei parametri NTAP_PM_UPDATE e NTAP_DFM_DATA_SET.
+
+
+
+ a| 
+scf-00016
+ a| 
+Stato di SnapMirror per [%s] non riuscito, uscita in corso.
+ a| 
+Snap Creator non è riuscito a trovare relazioni SnapMirror per il controller specificato. Accedere al controller di storage ed eseguire il comando snapmirror status e verificare che la relazione esista.
+
+
+
+ a| 
+scf-00017
+ a| 
+Relazione SnapMirror per [%s]:[%s] inesistente, in uscita.
+ a| 
+Snap Creator non è stato in grado di trovare le relazioni SnapMirror per i volumi controller dati. Accedere al controller di storage, eseguire il comando snapmirror status e verificare che esistano le relazioni per il nome del controller specificato. Se viene utilizzato un nome diverso, è necessario configurare IL parametro SECONDARY_INTERFACESper informare Snap Creator sulle mappature al controller di storage.
+
+
+
+ a| 
+scf-00018
+ a| 
+Elenco stato SnapVault per [%s] non riuscito. Chiusura in corso.
+ a| 
+Snap Creator non è riuscito a trovare relazioni SnapVault per il controller specificato.accedere al controller di storage ed eseguire il comando SnapVault status. Assicurarsi che la relazione SnapVault esista.
+
+
+
+ a| 
+scf-00019
+ a| 
+Relazione SnapVault per [%s]:[%s] inesistente, in uscita.
+ a| 
+Impossibile trovare la relazione SnapVault.accedere al controller di storage ed eseguire il comando SnapVault status. Assicurarsi che la relazione SnapVault per il nome del controller specificato esista. Se viene utilizzato un nome diverso, è necessario configurare IL parametro SECONDARY_INTERFACES per indicare a Snap Creator le mappature al controller di storage.
+
+
+
+ a| 
+scf-00020
+ a| 
+Esecuzione dell'aggiornamento del SnapVault sulla destinazione [%s] utilizzando l'origine [%s] non riuscita.
+ a| 
+Impossibile avviare l'aggiornamento di SnapVault. Accedere allo storage controller ed eseguire il comando SnapVault status. Assicurarsi che la relazione SnapVault per il nome del controller specificato esista. Se viene utilizzato un nome diverso, è necessario configurare IL parametro SECONDARY_INTERFACES per indicare a Snap Creator le mappature al controller di storage.
+
+
+
+ a| 
+scf-00021
+ a| 
+Rilevato errore di trasferimento SnapMirror - [%s], uscita in corso!
+ a| 
+Verificare le impostazioni relative all'errore e al controller dello storage per SnapMirror.
+
+
+
+ a| 
+scf-00022
+ a| 
+Aggiornamento di SnapMirror sull'origine [%s] non completato tra [%s] minuti, chiusura in corso.
+ a| 
+L'aggiornamento di SnapMirror ha richiesto più tempo del tempo di attesa configurato. È possibile regolare il tempo di attesa aumentando il valore di NTAP_SNAPMIRROR_WAIT nel file di configurazione.
+
+
+
+ a| 
+scf-00023
+ a| 
+Aggiornamento del SnapVault sull'origine [%s] non completato tra [%s] minuti, chiusura in corso.
+ a| 
+L'aggiornamento del SnapVault ha richiesto più tempo del tempo di attesa configurato. È possibile regolare il tempo di attesa aumentando il valore di NTAP_SNAPVAULT_WAIT nel file di configurazione.
+
+
+
+ a| 
+scf-00024
+ a| 
+Rilevato errore di trasferimento SnapVault - [%s], chiusura in corso!
+ a| 
+Controllare le impostazioni del controller di storage e dell'errore per SnapVault.
+
+
+
+ a| 
+scf-00025
+ a| 
+Gestione post-ripristino del plug-in [%s] non riuscita con errore [%s] e codice di uscita [%s]
+ a| 
+Operazione di post-ripristino dell'applicazione non riuscita a causa di un errore dell'applicazione. Controllare i registri e le impostazioni dell'applicazione.
+
+
+
+ a| 
+scf-00026
+ a| 
+Ripristino della gestione della pulizia del plug-in [%s] non riuscito con errore [%s] e codice di uscita [%s]
+ a| 
+L'operazione di pulitura del ripristino dell'applicazione non è riuscita a causa di un errore dell'applicazione. Controllare i registri e le impostazioni dell'applicazione.
+
+
+
+ a| 
+scf-00027
+ a| 
+Gestione pre-ripristino del plug-in [%s] non riuscita con errore [%s] e codice di uscita [%s]
+ a| 
+Operazione di pre-ripristino dell'applicazione non riuscita a causa di un errore dell'applicazione. Controllare i registri e le impostazioni dell'applicazione.
+
+
+
+ a| 
+scf-00028
+ a| 
+Rilevamento automatico del plug-in [%s] non riuscito con errore [%s] e codice di uscita [%s], uscita.
+ a| 
+Rilevamento dell'applicazione non riuscito a causa di un errore dell'applicazione. Controllare i registri e le impostazioni dell'applicazione. Inoltre, è possibile disattivare la ricerca automatica impostando APP_AUTO_DISCOVERY=N e commentando VALIDATE_VOLUMES.
+
+
+
+ a| 
+scf-00029
+ a| 
+Rilevamento automatico del plug-in [%s] non riuscito perché l'ambiente è vuoto, in uscita.
+ a| 
+Il plug-in dell'applicazione non supporta l'utilizzo del rilevamento automatico. Disattivare il rilevamento automatico impostando APP_AUTO_DISCOVERY=N.
+
+
+
+ a| 
+scf-00030
+ a| 
+Chiusura del file system per il plug-in [%s] non riuscita con errore [%s] e codice di uscita [%s], uscita.
+ a| 
+Impossibile interrompere il file system a causa di un errore del file system. Controllare i registri e le impostazioni del file system. Per ignorare gli errori e procedere con il backup, è possibile impostare APP_IGNORE_ERROR=Y.
+
+
+
+ a| 
+scf-00031
+ a| 
+Errore rilevato dalla chiusura del file system per il plug-in [%s], codice di uscita [%s], procedere con il backup.
+ a| 
+Impossibile interrompere il file system a causa di un errore del file system. Tuttavia, APP_IGNORE_ERROR=Y; Snap Creator procederà con il backup. Controllare i registri e le impostazioni del file system.
+
+
+
+ a| 
+scf-00032
+ a| 
+Impossibile interrompere l'applicazione a causa di un errore dell'applicazione. Per ignorare gli errori dell'applicazione e procedere con il backup, è possibile impostare APP_IGNORE_ERROR=Y
+ a| 
+Controllare i registri e le impostazioni dell'applicazione.
+
+
+
+ a| 
+scf-00033
+ a| 
+Richiesta applicazione per plug-in [%s] non riuscita con codice di uscita [%s], procedere con il backup.
+ a| 
+L'applicazione non ha avuto esito positivo a causa di un errore dell'applicazione. Tuttavia, APP_IGNORE_ERROR=Y; Snap Creator procede con il backup. Controllare i registri e le impostazioni dell'applicazione.
+
+
+
+ a| 
+scf-00034
+ a| 
+Creazione del clone LUN di [%s] da [%s] su [%s]:[%s] non riuscita, uscita!
+ a| 
+Creazione del clone del LUN non riuscita. Controllare i registri degli errori. Potrebbe essere presente un errore di gestione NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+scf-00035
+ a| 
+Inventario LUN su [%s] non riuscito, uscita in corso.
+ a| 
+Creazione dell'elenco LUN non riuscita. Controllare i registri degli errori. Potrebbe essere presente un errore di gestione NetApp. I registri potrebbero rivelare la causa del problema.
+
+
+
+ a| 
+scf-00036
+ a| 
+Chiusura dell'applicazione per il plug-in [%s] non riuscita, nessun codice di uscita restituito dal plug-in, chiusura.
+ a| 
+La chiusura dell'applicazione è terminata senza codice di uscita. Controllare i registri e le impostazioni dell'applicazione.
+
+
+
+ a| 
+scf-00037
+ a| 
+Chiusura dell'applicazione per il plug-in [%s] non riuscita con errore [%s] e codice di uscita [%s], chiusura.
+ a| 
+Impossibile interrompere l'applicazione a causa di un errore dell'applicazione. Controllare i registri e le impostazioni dell'applicazione. Per ignorare gli errori dell'applicazione e procedere con il backup, è possibile impostare APP_IGNORE_ERROR=Y.
+
+
+
+ a| 
+scf-00038
+ a| 
+Interruzione dell'applicazione per il plug-in [%s] non riuscita con codice di uscita [%s], continuando con il backup.
+ a| 
+Impossibile interrompere l'applicazione a causa di un errore dell'applicazione. Tuttavia, APP_IGNORE_ERROR=Y; Snap Creator procede con il backup. Controllare i registri e le impostazioni dell'applicazione.
+
+
+
+ a| 
+scf-00039
+ a| 
+Il controller [%s] specificato non corrisponde ad alcun controller specificato nella configurazione. Controllare il parametro NTAP_USERS nel file di configurazione.
+ a| 
+Controllare NTAP_USERS e assicurarsi che il controller dello storage sia definito nel file di configurazione.
+
+
+
+ a| 
+scf-00040
+ a| 
+Il volume [%s] specificato non corrisponde ad alcun sistema o volume di storage specificato nella configurazione. Controllare il parametro VOLUMES nel file di configurazione.
+ a| 
+Controllare l'impostazione DEI VOLUMI nel file di configurazione e assicurarsi che siano configurati i volumi del controller corretti.
+
+
+
+ a| 
+scf-00041
+ a| 
+Clustered Data ONTAP rilevato ma CMODE_CLUSTER_NAME non è configurato correttamente. Controllare il parametro di configurazione, uscendo!
+ a| 
+Il parametro CMODE_CLUSTER_NAME è obbligatorio e utilizzato per AutoSupport e SnapMirror. Definire correttamente questo parametro nel file di configurazione.
+
+
+
+ a| 
+scf-00042
+ a| 
+Clustered Data ONTAP rilevato, ma CMODE_CLUSTER_USERS non è configurato correttamente. Controllare il parametro di configurazione, uscendo!
+ a| 
+I parametri CMODE_CLUSTER_NAME e CMODE_CLUSTER_USERS sono richiesti e utilizzati per AutoSupport e SnapMirror. È necessario definire correttamente questi parametri nel file di configurazione.
+
+
+
+ a| 
+scf-00043
+ a| 
+SnapVault non è supportato in Clustered Data ONTAP, impostare NTAP_SNAPVAULT_UPDATE su N nella configurazione.
+ a| 
+Controllare la configurazione e modificare il parametro. Clustered Data ONTAP non supporta SnapVault.
+
+
+
+ a| 
+scf-00044
+ a| 
+Il parametro META_DATA_VOLUME è definito, ma lo storage system:volume specificato non corrisponde a quanto configurato nel parametro VOLUMES. Controllare la configurazione.
+ a| 
+Il parametro META_DATA_VOLUME non è specificato nei VOLUMI. Aggiungere il volume di metadati ai VOLUMI.
+
+
+
+ a| 
+scf-00045
+ a| 
+Il parametro META_DATA_VOLUME è definito, ma non può essere l'unico volume specificato nel parametro VOLUMES. Il volume di metadati deve essere un volume separato.
+ a| 
+Il volume specificato in META_DATA_VOLUME è l'unico volume presente nei VOLUMI. Dovrebbero esserci anche altri volumi. Non utilizzare META_DATA_VOLUME per il normale funzionamento di Snapshot.
+
+
+
+ a| 
+scf-00046
+ a| 
+NetApp Management Console supporta solo copie Snapshot con data e ora.
+ a| 
+Aggiornare il file di configurazione e impostare L'opzione SNAP_TIMESTAMP_ONLY su Y.
+
+
+
+ a| 
+scf-00047
+ a| 
+Sono state selezionate impostazioni incompatibili. Le opzioni NTAP_SNAPVAULT_UPDATE e NTAP_SNAPVAULT_SNAPSHOT non possono essere attivate
+ a| 
+Modificare il file di configurazione e disattivare una delle due opzioni.
+
+
+
+ a| 
+scf-00048
+ a| 
+Gestione del montaggio del plug-in [%s] non riuscita con errore [%s] e codice di uscita [%s], uscita.
+ a| 
+Errore di montaggio dell'applicazione a causa di un errore dell'applicazione. Controllare i registri e le impostazioni dell'applicazione.
+
+
+
+ a| 
+scf-00049
+ a| 
+Gestione disinstallazione del plug-in [%s] non riuscita con errore [%s] e codice di uscita [%s], uscita.
+ a| 
+Disinstallazione dell'applicazione non riuscita a causa di un errore dell'applicazione. Controllare i registri e le impostazioni dell'applicazione.
+
+
+
+ a| 
+scf-00050
+ a| 
+L'azione personalizzata è supportata solo per i plug-in dell'applicazione
+ a| 
+Il parametro APP_NAME non è impostato nel file di configurazione. Questo parametro determina quale plug-in utilizzare. L'azione personalizzata è supportata solo con un plug-in dell'applicazione.
+
+
+
+ a| 
+scf-00051
+ a| 
+Creazione del set di dati di NetApp Management Console non riuscita per [%s] con codice di uscita [%s], chiusura!
+ a| 
+Controllare il messaggio di errore di debug. Potrebbe essersi verificato un problema durante la comunicazione con il server Active IQ Unified Manager.
+
+
+
+ a| 
+scf-00052
+ a| 
+Ripristino gestione del plug-in [%s] non riuscito con errore [%s] codice di uscita [%s], uscita!
+ a| 
+Ripristino non riuscito a causa di un errore dell'applicazione. Controllare i registri e le impostazioni dell'applicazione.
+
+
+
+ a| 
+scf-00053
+ a| 
+Impossibile eseguire la query del file system per il plug-in [%s]. Errore [%s] e codice di uscita [%s]. Chiusura in corso.
+ a| 
+Impossibile interrompere il file system a causa di un errore del file system. Tuttavia, APP_IGNORE_ERROR=Y; Snap Creator procede con il backup. Controllare i registri e le impostazioni del file system.
+
+
+
+ a| 
+scf-00054
+ a| 
+Errore rilevato dal file system per il plug-in [%s], codice di uscita [%s], procedere con il backup.
+ a| 
+Impossibile interrompere il file system a causa di un errore del file system. Tuttavia, APP_IGNORE_ERROR=Y; Snap Creator procede con il backup. Controllare i registri e le impostazioni del file system.
+
+
+
+ a| 
+scf-00055
+ a| 
+Backup basato su NetApp Management Console [%s] del set di dati [%s] con policy [%s] sul controller dello storage [%s]
+ a| 
+N/A.
+
+
+
+ a| 
+scf-00056
+ a| 
+Creazione del backup basato su NetApp Management Console [%s] del set di dati [%s] con la policy [%s] sul controller di storage [%s] completata correttamente
+ a| 
+N/A.
+
+
+
+ a| 
+scf-00057
+ a| 
+Creazione del backup basato su NetApp Management Console [%s] del set di dati [%s] con la policy [%s] sul controller di storage [%s] non riuscita con errore [%s]
+ a| 
+Controllare la configurazione dei parametri NTAP_PM_UPDATE e NTAP_DFM_DATA_SET.
+
+
+
+ a| 
+scf-00058
+ a| 
+Aggiornamento della configurazione con il valore rilevato dall'applicazione non riuscito per [%s], chiusura in corso.
+ a| 
+Impossibile aggiornare il file a causa di un problema di permessi o di un errore nell'analisi dei valori restituiti dall'applicazione. Verificare le autorizzazioni dell'utente che esegue Snap Creator e assicurarsi che siano corrette.
+
+
+
+ a| 
+scf-00059
+ a| 
+[%s] dump per il plug-in [%s] non riuscito con codice di uscita [%s], uscita!
+ a| 
+L'azione scdump non è riuscita a causa di un errore dell'applicazione. Controllare i registri e le impostazioni dell'applicazione.
+
+
+
+ a| 
+scf-00060
+ a| 
+DTO non valido: [%s]
+ a| 
+Un campo obbligatorio nel DTO non è impostato o non è valido, causando un errore di convalida durante l'elaborazione del DTO. Correggere il problema e inviare nuovamente il DTO.
+
+
+
+ a| 
+scf-00061
+ a| 
+Eliminazione log archivio non riuscita con errore [%s], uscita in corso.
+ a| 
+Snap Creator non è riuscito a eliminare i registri di archiviazione per l'applicazione. Verificare le autorizzazioni per l'utente di Snap Creator, ad esempio Snap Creator Server o Snap Creator Agent, a seconda della configurazione.
+
+
+
+ a| 
+scf-00062
+ a| 
+Autenticazione non riuscita.
+ a| 
+Autenticazione non riuscita perché l'utente non dispone dell'autorizzazione per eseguire l'operazione.
+
+
+
+ a| 
+scf-00063
+ a| 
+Rilevamento per [%s] non riuscito con codice di ritorno [%s] e messaggio [%s]
+ a| 
+Rilevamento dell'applicazione mediante VALIDATE_VOLUMES=DATI non riuscito a causa di un errore dell'applicazione. Controllare i registri e le impostazioni dell'applicazione.
+
+
+
+ a| 
+scf-00064
+ a| 
+Discovery non ha rilevato oggetti di storage
+ a| 
+Rilevamento dell'applicazione mediante VALIDATE_VOLUMES=DATI non riuscito. Snap Creator non è riuscito a rilevare alcun volume di dati residente nel sistema di storage. Per disattivare la ricerca automatica, commentare VALIDATE_VOLUMES.
+
+
+
+ a| 
+scf-00065
+ a| 
+Il volume [%s] su [%s] non è incluso nel file di configurazione
+ a| 
+Il rilevamento dell'applicazione ha rilevato la mancanza di alcuni volumi. Controllare i volumi mancanti e aggiungerli al parametro VOLUMES in modo che possano essere inclusi nel backup.
+
+
+
+ a| 
+scf-00066
+ a| 
+Convalida dell'agente non riuscita per [%s] con errore [%s]
+ a| 
+L'agente configurato non è raggiungibile. L'agente potrebbe essere inattivo o potrebbe esserci un problema di firewall locale. Controllare il parametro di configurazione SC_AGENT.
+
+
+
+ a| 
+scf-00067
+ a| 
+Impossibile elencare copia Snapshot esterna per [%s] con schema nome [%s]
+ a| 
+Snap Creator non ha trovato una copia Snapshot esterna basata sul modello regex NTAP_EXTERNAL_SNAPSHOT_REGEX. Accedere al controller e far corrispondere l'output dell'elenco snap con il modello regex.
+
+
+
+ a| 
+scf-00068
+ a| 
+Pre_restore del file system per il plug-in [%s] non riuscito con codice di uscita [%s], uscita.
+ a| 
+Il pre-ripristino del file system non è riuscito a causa di un errore del file system. Controllare i registri e le impostazioni del file system.
+
+
+
+ a| 
+scf-00069
+ a| 
+Il file system pre_restore per il plug-in [%s] ha rilevato errori codice di uscita [%s], procedendo con il backup.
+ a| 
+Il pre-ripristino del file system non è riuscito a causa di un errore del file system. Tuttavia, APP_IGNORE_ERROR=Y; Snap Creator procede con altre operazioni. Controllare i registri e le impostazioni del file system.
+
+
+
+ a| 
+scf-00070
+ a| 
+Post_restore del file system per il plug-in [%s] non riuscito con codice di uscita [%s], uscita.
+ a| 
+Il post-ripristino del file system non è riuscito a causa di un errore del file system. Controllare i registri e le impostazioni del file system.
+
+
+
+ a| 
+scf-00071
+ a| 
+Il file system post_restore per il plug-in [%s] ha rilevato errori, codice di uscita [%s], procedere con il backup.
+ a| 
+Il post-ripristino del file system non è riuscito a causa di un errore del file system. Tuttavia, APP_IGNORE_ERROR=Y; Snap Creator procede con altre operazioni. Controllare i registri e le impostazioni del file system.
+
+
+
+ a| 
+scf-00072
+ a| 
+La policy [%s] non è una policy di conservazione delle copie Snapshot definita nella configurazione, in uscita.
+ a| 
+Il criterio in uso non è valido. Controllare il file di configurazione e configurare correttamente NTAP_SNAPSHOT_RETENTIONS.
+
+|===

@@ -1,0 +1,85 @@
+---
+permalink: installation/task_installing_snap_creator_agent_on_windows.html 
+sidebar: sidebar 
+keywords: installing, install, snap, creator, agent, windows 
+summary: È possibile installare Snap Creator Agent sugli host Windows utilizzando il programma di installazione di Windows. 
+---
+= Installazione di Snap Creator Agent su Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile installare Snap Creator Agent sugli host Windows utilizzando il programma di installazione di Windows.
+
+* È necessario installare JRE 1.8 Update 72 o versione successiva.
+* È necessario disporre di privilegi di amministratore.
+* La porta predefinita (9090) o un'altra porta di rete deve essere disponibile.
+* È necessario scaricare Snap Creator.
++
+.. Avviare il programma di installazione di Snap Creator facendo doppio clic sull'icona del file Snap_Creator_Frameworkrelease-Windowsversion.exe (ad esempio, Snap_Creator_Framework4.1.0-Windows64.exe).
+.. Nella pagina di benvenuto, fare clic su *Avanti* per avviare l'installazione.
+.. Leggere e accettare i termini del contratto di licenza.
+.. Nella pagina Choose Install Type (Scegli tipo di installazione), configurare le seguenti impostazioni per adattarsi ai vari tipi di installazione:
++
+*** *Selezionare il tipo di installazione*
++
+Selezionare *Agent*.
+
+*** *Avvia agente come servizio*
++
+Selezionare questa opzione per installare e avviare *snapcreatoragentservice* subito dopo il completamento del processo di installazione.
+
++
+Se questa opzione non è selezionata, il campo porta agente è disattivato.
+
++
+
+NOTE: Se non si seleziona questa opzione, il servizio non viene installato ed è necessario avviare manualmente Snap Creator Agent eseguendo uno script batch da un prompt dei comandi.
+
+*** *Inserire l'IP di sistema*
++
+Selezionare questa opzione per fornire l'indirizzo IP del sistema su cui è installato Snap Creator Server o Snap Creator Agent. Questa opzione viene utilizzata per generare il certificato SSL durante il processo di installazione di Snap Creator.
+
+*** *Inserire IL percorso Java bin*
++
+Selezionare questa opzione per fornire il percorso Java bin per individuare l'utility keytool. L'utility keytool viene utilizzata per generare un certificato SSL durante il processo di installazione di Snap Creator.
+
+*** *Porta dell'agente*
++
+Accettare la porta predefinita (9090) o specificare un numero di porta.
+
+
+
+
+
++
+image::../media/choose_install_type_page.gif[scegliere la pagina del tipo di installazione]
+
++
+.. Fare clic su *Avanti*.
+.. Nella pagina Choose Install Location (Scegli percorso di installazione), inserire un percorso di installazione di Snap Creator o accettare il percorso predefinito (C: Programmi/NetApp/Snap_Creator_Framework), quindi fare clic su *Next* (Avanti).
++
+
+NOTE: Se si intende utilizzare il plug-in IBM Domino, è necessario selezionare una posizione diversa dalla cartella dei dati Domino.
+
+.. Nella pagina Choose Start Menu Folder (Scegli cartella menu Start), personalizzare la cartella in cui Snap Creator deve essere visualizzato nel menu Start di Windows o accettare l'opzione predefinita della cartella, quindi fare clic su *Install* (Installa).
+.. Al termine dell'installazione, fare clic su *Avanti*.
++
+Durante l'installazione del servizio Snap Creator Agent, viene visualizzato un prompt dei comandi se è stato selezionato un servizio come parte delle opzioni di installazione. Questo processo tenta di avviare i servizi esistenti; pertanto, è comune vedere i messaggi di errore elencati come parte di questo passaggio, che è necessario ignorare.
+
+.. Fare clic su *fine* per chiudere il programma di installazione di Windows.
+
+
+
+
+Se non è stata selezionata l'opzione *Avvia agente come servizio* durante il processo di installazione, è necessario avviare manualmente Snap Creator Agent.
+
+*Informazioni correlate*
+
+xref:task_installing_java_on_snap_creator_hosts.adoc[Installazione di Java su host Snap Creator]
+
+xref:task_downloading_the_snap_creator_software.adoc[Download del software Snap Creator]
+
+xref:task_starting_the_agent_from_a_command_prompt.adoc[Avvio dell'agente da un prompt dei comandi]

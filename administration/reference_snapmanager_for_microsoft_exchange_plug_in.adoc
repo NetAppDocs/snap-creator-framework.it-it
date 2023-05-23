@@ -1,0 +1,64 @@
+---
+permalink: administration/reference_snapmanager_for_microsoft_exchange_plug_in.html 
+sidebar: sidebar 
+keywords: snapmanager, microsoft, exchange, plug-in, centralize, backup, operation 
+summary: Il plug-in SnapManager per Microsoft Exchange viene utilizzato per centralizzare le operazioni di backup per Microsoft Exchange Server tramite Snap Creator. Questo plug-in consente di configurare decine o centinaia di server SnapManager per Exchange tramite Snap Creator, consentendo di visualizzare tutti i processi e gli stati di backup di SnapManager per Exchange da una singola interfaccia. 
+---
+= Plug-in SnapManager per Microsoft Exchange
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il plug-in SnapManager per Microsoft Exchange viene utilizzato per centralizzare le operazioni di backup per Microsoft Exchange Server tramite Snap Creator. Questo plug-in consente di configurare decine o centinaia di server SnapManager per Exchange tramite Snap Creator, consentendo di visualizzare tutti i processi e gli stati di backup di SnapManager per Exchange da una singola interfaccia.
+
+A differenza degli altri plug-in, i plug-in SnapManager (SnapManager per Microsoft SQL Server e SnapManager per Microsoft Exchange) utilizzano PowerShell per comunicare con un'installazione esistente di SnapManager. I plug-in di SnapManager richiedono che i prodotti SnapManager siano già installati e funzionanti. I plug-in di SnapManager utilizzano il cmdlet PowerShell di nuovo backup per creare un backup tramite SnapManager. Tutte le azioni di cloning e ripristino devono continuare ad essere eseguite tramite l'interfaccia SnapManager.
+
+
+NOTE: Per informazioni aggiornate sul supporto o per visualizzare le matrici di compatibilità, consultare la matrice di interoperabilità.
+
+Il plug-in di SnapManager per Microsoft Exchange richiede l'installazione di Snap Creator Agent sullo stesso host di SnapManager per Microsoft Exchange. Impostare il valore SC_AGENT_TIMEOUT su 900 o superiore.
+
+La seguente tabella fornisce i parametri del plug-in SnapManager per Microsoft Exchange, le relative impostazioni e le descrive:
+
+|===
+| Parametro | Impostazione | Descrizione 
+
+
+ a| 
+SME_PS_CONF
+ a| 
+Esempio: "C: File di programma NetApp SnapManager for Exchange.smeShell.psc1"
+ a| 
+Specifica il percorso del file di configurazione PowerShell per SnapManager per Microsoft Exchange.
+
+
+
+ a| 
+OPZIONI_BACKUP_SME
+ a| 
+Esempio: `Server 'EX2K10-DAG01' -GenericNaming -ManagementGroup 'Standard' -NoTruncateLogs $False -RetainBackups 8 -StorageGroup 'dag01_db01' -BackupCopyRemoteCCRNode $False`
+ a| 
+Specifica le opzioni di backup di SnapManager per Microsoft Exchange.Snap Creator utilizza un cmdlet PowerShell per un nuovo backup.
+
+
+
+ a| 
+NOME_SERVER_SME
+ a| 
+Esempio: `EX2K10-DAG01`
+ a| 
+Specifica l'SnapManager per il nome del server Microsoft Exchange.
+
+
+
+ a| 
+SME_32bit
+ a| 
+(Y
+| N) 
+|===
+*Informazioni correlate*
+
+http://mysupport.netapp.com/matrix["Matrice di interoperabilità Tool: mysupport.netapp.com/matrix"]

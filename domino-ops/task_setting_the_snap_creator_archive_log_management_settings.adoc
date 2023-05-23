@@ -1,0 +1,74 @@
+---
+permalink: domino-ops/task_setting_the_snap_creator_archive_log_management_settings.html 
+sidebar: sidebar 
+keywords: domino, ibm, cleaning up, purging, archives, archived, copies, transaction, logs 
+summary: 'Se si utilizza la registrazione delle transazioni Domino, il plug-in IBM Domino archivia le copie dei registri delle transazioni Domino nella directory changeinfo per l"utilizzo in operazioni di ripristino aggiornate al minuto. È necessario attivare la gestione del log delle transazioni prima che Snap Creator pulisca le copie dei log delle transazioni non più necessarie.' 
+---
+= Pulizia delle copie archiviate dei registri delle transazioni Domino
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si utilizza la registrazione delle transazioni Domino, il plug-in IBM Domino archivia le copie dei registri delle transazioni Domino nella directory changeinfo per l'utilizzo in operazioni di ripristino aggiornate al minuto. È necessario attivare la gestione del log delle transazioni prima che Snap Creator pulisca le copie dei log delle transazioni non più necessarie.
+
+Il plug-in Domino memorizza i file changeinfo e le copie archiviate dei log delle transazioni Domino nella directory changeinfo. Il plug-in elimina automaticamente i file .info in base ai criteri di conservazione della configurazione. Non pulisce le copie non necessarie dei log delle transazioni a meno che non si abiliti esplicitamente la gestione del log delle transazioni in Snap Creator.
+
+Durante l'impostazione della gestione del log delle transazioni, assicurarsi di trovare un giusto equilibrio tra il numero di copie archiviate dei log delle transazioni che si desidera conservare per operazioni di ripristino aggiornate al minuto e le dimensioni del volume contenente la directory changeinfo.
+
+
+IMPORTANT: Non impostare il parametro Archive Log directory sul percorso dei log delle transazioni Domino. In questo modo si rischia di danneggiare l'ambiente Domino.
+
+. Nel riquadro profili e configurazioni, selezionare il file di configurazione e fare clic sulla scheda *Archive Log Management*.
+. Nella scheda *Archive Log Management*, specificare i seguenti valori per le impostazioni di gestione del log delle transazioni:
++
+|===
+| Parametro | Impostazione | Descrizione 
+
+
+ a| 
+Abilitazione log archivio
+ a| 
+Y
+ a| 
+Attiva la pulizia del log delle transazioni.
+
+
+
+ a| 
+Conservazione del registro di archiviazione
+ a| 
+Immettere un valore maggiore o uguale al numero di giorni in cui le copie Snapshot vengono conservate.
+ a| 
+Il numero di giorni in cui conservare i registri delle transazioni.
+
+
+
+ a| 
+Directory del registro di archiviazione
+ a| 
+changeinfo/log
+ a| 
+La directory da pulire. *Importante:* non specificare il percorso dei log delle transazioni Domino. In questo modo si rischia di danneggiare l'ambiente Domino.
+
+
+
+ a| 
+Archive Log Extension
+ a| 
+ a| 
+L'estensione per le copie dei file di log delle transazioni Domino.
+
+
+
+ a| 
+Archive Log Recursive Search
+ a| 
+N
+ a| 
+Il plug-in Snap Creator inserisce i file .txn nella sottodirectory logs della directory changeinfo, in modo da non richiedere una ricerca ricorrente.
+
+|===
+. Fare clic su *Save* (Salva) nel pannello Configuration Content (contenuto configurazione) per salvare le modifiche.
+

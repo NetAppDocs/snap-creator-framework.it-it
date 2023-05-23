@@ -1,0 +1,26 @@
+---
+permalink: administration/task_deleting_retention_policies.html 
+sidebar: sidebar 
+keywords: delete, retention, policy, snap, creator, gui 
+summary: È possibile eliminare i criteri di conservazione. 
+---
+= Eliminazione dei criteri di conservazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eliminare i criteri di conservazione.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *Policy* > *Policy Management*.
+. Dalla scheda *Policy Manager*, selezionare un criterio e fare clic su *Delete* (Elimina).
++
+
+NOTE: Se si tenta di eliminare un criterio assegnato a un file di configurazione, nella GUI viene visualizzato il seguente messaggio di errore: Impossibile eliminare il criterio poiché il nome del criterio viene applicato alla configurazione.utilizzare il criterio di scollegamento e quindi eliminare il criterio.
+
+. Fare clic su *Sì* nella finestra di conferma.
++
+Il criterio viene rimosso dalla scheda Policy Manager.
+
+

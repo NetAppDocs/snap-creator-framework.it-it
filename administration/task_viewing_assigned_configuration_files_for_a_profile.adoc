@@ -1,0 +1,21 @@
+---
+permalink: administration/task_viewing_assigned_configuration_files_for_a_profile.html 
+sidebar: sidebar 
+keywords: configuration, file, assign, profile 
+summary: È possibile visualizzare un elenco di file di configurazione assegnati a un profilo. 
+---
+= Visualizzazione di un elenco di file di configurazione assegnati a un profilo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare un elenco di file di configurazione assegnati a un profilo.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *Gestione* > *configurazioni*.
+. Dal riquadro profili e configurazioni, espandere il contenuto del profilo.
++
+I file di configurazione assegnati al profilo sono elencati sotto il nome del profilo.
+
+

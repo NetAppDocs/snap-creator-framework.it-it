@@ -1,0 +1,24 @@
+---
+permalink: sap-hana-ops/task_scheduling_file_based_backup.html 
+sidebar: sidebar 
+keywords: sap, hana, scheduling, file-based, backup 
+summary: 'Per le configurazioni SAP HANA, è possibile pianificare operazioni aggiuntive come backup basato su file e controlli dell"integrità del database. È possibile pianificare l"esecuzione dell"operazione di backup basata su file a intervalli specifici.' 
+---
+= Pianificazione del backup basato su file
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per le configurazioni SAP HANA, è possibile pianificare operazioni aggiuntive come backup basato su file e controlli dell'integrità del database. È possibile pianificare l'esecuzione dell'operazione di backup basata su file a intervalli specifici.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *Management* > *Schedules* e fare clic su *Create*.
+. Nella finestra nuovo lavoro, immettere i dettagli del lavoro.
++
+Il criterio di backup basato su file è impostato su "`none`" per impostazione predefinita.
+
++
+image::../media/creating_file_based_backup_schedules.gif[Creazione di pianificazioni di backup basate su file]
+
+

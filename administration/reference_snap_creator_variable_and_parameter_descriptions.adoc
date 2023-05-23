@@ -1,0 +1,298 @@
+---
+permalink: administration/reference_snap_creator_variable_and_parameter_descriptions.html 
+sidebar: sidebar 
+keywords: snap, creator, built-in, variable, parameter, basic, configuration, description, snap, type, time, action 
+summary: Snap Creator include variabili e parametri integrati richiesti in una configurazione di base. 
+---
+= Descrizione delle variabili e dei parametri di Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator include variabili e parametri integrati richiesti in una configurazione di base.
+
+|===
+| Variabili | Descrizione 
+
+
+ a| 
+%SNAP_TYPE
+ a| 
+Utilizzato quando si esegue Snap Creator e si tratta della policy di conservazione (giornaliera, settimanale, mensile)
+
+
+
+ a| 
+%SNAP_TIME
+ a| 
+Il timestamp (YYYYMMDDhhmmss) utilizzato per la denominazione delle copie Snapshot per creare un nome univoco garantito per ogni copia Snapshot. Viene inoltre utilizzato per assegnare un nome ai report di backup e ai log delle transazioni Sybase.
+
+
+
+ a| 
+%AZIONE
+ a| 
+L'elenco delle azioni che è possibile eseguire quando si esegue Snap Creator: (Backup
+
+
+
+| CloneVol | CloneLun 
+
+
+| arch | ripristinare 
+
+
+| Backupdel | Elenco di supporto 
+
+
+| CloneList | pmsetup 
+
+
+| ossv)  a| 
+%MSG
+
+
+
+ a| 
+Utilizzato per inviare un messaggio di errore a un altro programma, ad esempio e-mail o Tivoli, può essere utilizzato solo con la funzione SENDTRAP.
+ a| 
+%DEFINITO DALL'UTENTE
+
+|===
+La seguente tabella elenca e descrive i parametri di Snap Creator utilizzati in una configurazione di base:
+
+|===
+
+
+| Parametro | Impostazione | Descrizione 
+
+
+ a| 
+NOME
+ a| 
+ a| 
+Specifica la convenzione di naming delle copie Snapshot che deve essere univoca. Le copie Snapshot vengono eliminate in base alla convenzione di denominazione.
+
+
+
+ a| 
+SNAP_TIMESTAMP_ONLY
+ a| 
+(Y
+| N) 
+
+
+ a| 
+Imposta la convenzione di naming Snapshot. Se impostata su Y, le copie Snapshot terminano con YYYYYMMDGHHMMSS. In caso contrario, le nuove copie Snapshot vengono rinominate in fine con YYYYYMMDGHHMMSS.
+ a| 
+VOLUMI
+ a| 
+
+
+
+ a| 
+Elenca i controller e i volumi di storage primari di cui si desidera creare una copia Snapshot, ad esempio:
+
+[listing]
+----
+controller1:vol1,vol2,vol3;
+controller2:vol1;
+controller3:vol2,vol3
+---- a| 
+GRUPPI_VOLUMI
+ a| 
+vol_1,vol_2,vol_n
+
+
+
+ a| 
+Definisce più volumi in un singolo gruppo. I volumi multipli vengono specificati come elenco separato da virgole. Esempio:
+
+[listing]
+----
+VOLUMES_01=filer1:vol1,vol2,vol3;filer2:vol1
+VOLUMES_02=filer1:vol3,vol4
+VOLUMES_03=filer2:vol3,vol4
+VOLUME_GROUPS=VOLUMES_01,VOLUMES_02,VOLUMES_03
+----
+
+NOTE: VOLUME_GROUPS è supportato solo per le operazioni di backup. Se questo parametro è impostato, il parametro VOLUMES (VOLUMI) viene ignorato durante il backup.
+ a| 
+NTAP_SNAPSHOT_RETENTIONS
+ a| 
+
+
+
+ a| 
+Determina il numero di copie Snapshot da conservare per una data polyPer esempio:
+
+[listing]
+----
+daily:7,weekly:4,monthly:1
+---- a| 
+NTAP_USERS
+ a| 
+
+
+
+ a| 
+Elenca i sistemi di storage e i relativi nomi utente e passwordePer esempio:
+
+[listing]
+----
+controller1:joe/password1;
+controller2:bob/password2;
+controller3:ken/password3
+----
+
+NOTE: La password deve contenere almeno due caratteri.
+ a| 
+NTAP_PWD_PROTECTION
+ a| 
+(Y
+
+
+
+| N)  a| 
+Attiva o disattiva la protezione tramite password. È necessario crittografare tutte le password (sistema di storage e applicazioni o plug-in) e salvare le password crittografate nel file di configurazione.
+ a| 
+TRASPORTO
+
+
+
+ a| 
+HTTP
+| HTTPS  a| 
+Consente di utilizzare HTTP o HTTPS per connettersi al controller di storage**Nota:** HTTPS potrebbe richiedere librerie openssl-devel.
+
+
+
+ a| 
+PORTA
+ a| 
+ a| 
+Configura il numero di porta utilizzato dai controller di storage; normalmente: 80 e 443
+
+
+
+ a| 
+LOG_NUM
+ a| 
+ a| 
+Specifica il numero di report .debug e .out che Snap Creator deve conservare
+
+
+
+ a| 
+TIPO_CONFIG
+ a| 
+PLUG-IN
+| STANDARD 
+
+
+ a| 
+Specifica il tipo di configuraCi sono due tipi di configurazioni: Plug-in e standard. È possibile utilizzare più configurazioni plug-in per creare complessi flussi di lavoro di quiesce e backup senza problemi.
+ a| 
+CMODE_CLUSTER_USERS
+ a| 
+
+
+
+ a| 
+(Obbligatorio per Clustered Data ONTAP) Elenca i cluster Data ONTAP primari e secondari e i relativi nomi utente e passwordsPer esempio:
+
+[listing]
+----
+cluster1:joe/password1;
+cluster2:bob/password2
+----
+
+NOTE: La password deve contenere almeno due caratteri.
+ a| 
+CMODE_CLUSTER_NAME
+ a| 
+
+
+
+ a| 
+(Obbligatorio per Clustered Data ONTAP) specifica il nome del cluster Data ONTAP primario
+ a| 
+CMODE_SNAPSHOT_FORCE_DELETE
+ a| 
+(Y
+
+
+
+| N)  a| 
+Garantisce l'eliminazione delle copie Snapshot che devono essere eliminate in base alla policy di copia Snapshot in Clustered Data ONTAP, le copie Snapshot non vengono eliminate se presentano dipendenze, come ad esempio un clone.
+ a| 
+LOG_TRACE_ENABLE
+
+
+
+ a| 
+(Y
+| N)  a| 
+Attiva o disattiva la registrazione di tutti gli eventi se questa opzione è disattivata, gli oggetti dei risultati della soluzione Gestisci ONTAP non vengono registrati.
+
+
+
+ a| 
+NTAP_TIMEOUT
+ a| 
+Secondi
+ a| 
+Imposta il valore di timeout per tutte le chiamate di soluzione ONTAP gestite dal controller di storage; il valore predefinito è 60 secondi
+
+
+
+ a| 
+USE_GLOBAL_CONFIG
+ a| 
+(Y
+| N) 
+
+
+ a| 
+Consente di utilizzare la configurazione globale per memorizzare i valori
+ a| 
+FEDERATED_APPLICATIONS
+ a| 
+
+
+
+ a| 
+Elenca la configurazione e i nomi dei profili per le applicazioni federate nella configurazione, ad esempio:
+
+[listing]
+----
+databases@db2;databases@oracle
+---- a| 
+CMODE_SET
+ a| 
+(Y
+
+
+
+| N)  a| 
+Definisce se la configurazione è per Clustered Data ONTAP o Data ONTAP che opera in 7-Mode
+ a| 
+ALLOW_DUPLICATE_SNAME
+
+
+
+ a| 
+(Y
+| N)  a| 
+(Facoltativo) attiva o disattiva la possibilità di creare un file di configurazione con un nome Snapshot duplicato. Questo parametro non funziona con i file di configurazione globali (Super Global o Profile Global).
+
+
+
+ a| 
+SNAPCREATOR_MISSEDJOB_RUN
+ a| 
+(Y
+| N) 
+|===

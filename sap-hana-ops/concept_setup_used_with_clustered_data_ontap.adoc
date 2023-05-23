@@ -1,0 +1,17 @@
+---
+permalink: sap-hana-ops/concept_setup_used_with_clustered_data_ontap.html 
+sidebar: sidebar 
+keywords: setup, sap, hana, clustered, data, ontap 
+summary: Installazione utilizzata con Clustered Data ONTAP 
+---
+= Installazione utilizzata con Clustered Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+La figura seguente mostra il setup utilizzato con Clustered Data ONTAP. L'installazione si basa su una configurazione SAP HANA a nodo singolo con le macchine virtuali di storage (SVM) e i nomi dei volumi mostrati nella seguente illustrazione.
+
+image::../media/sap_hana_cdot_setup.gif[Mostra il setup utilizzato con Clustered Data ONTAP. L'installazione si basa su una configurazione SAP HANA a nodo singolo con le macchine virtuali di storage (SVM) e i nomi dei volumi.]
+
+Le modalità di preparazione, avvio, ripristino e ripristino delle operazioni SnapVault sono diverse in Clustered Data ONTAP e Data ONTAP che operano in 7-Mode. Queste differenze sono indicate nelle sezioni corrispondenti di questa guida.

@@ -1,0 +1,20 @@
+---
+permalink: installation/concept_set_up_the_hosts_to_be_in_sync_with_the_same_ntp_server.html 
+sidebar: sidebar 
+keywords: synchronizing, synchronize, time, snap, creator, server, agent, hosts 
+summary: 'Prima di installare Snap Creator, assicurarsi che l"ora sull"host di Snap Creator Server sia sincronizzata con quella sull"host dell"agente. È possibile eseguire questa operazione sincronizzando l"ora degli host con lo stesso server NTP (Network Time Protocol).' 
+---
+= Sincronizzazione dell'ora su host Snap Creator Server e Agent
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Prima di installare Snap Creator, assicurarsi che l'ora sull'host di Snap Creator Server sia sincronizzata con quella sull'host dell'agente. È possibile eseguire questa operazione sincronizzando l'ora degli host con lo stesso server NTP (Network Time Protocol).
+
+Per ulteriori informazioni, consultare la seguente documentazione:
+
+* Clustered Data ONTAP--_Guida all'installazione del software Clustered Data ONTAP_ per la versione di Data ONTAP in uso; in particolare, fare riferimento alle informazioni relative alla verifica dell'ora del sistema e alla sincronizzazione dell'ora del sistema nel cluster.
+* Data ONTAP in 7-Mode - articolo della Knowledge base 1011954 come configurare la sincronizzazione dell'ora NTP su link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_set_up_NTP_time_synchronization_in_Data_ONTAP_7-Mode["Come impostare la sincronizzazione dell'ora NTP in modalità Data ONTAP 7"].
+

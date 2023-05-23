@@ -1,0 +1,35 @@
+---
+permalink: administration/concept_requirements_for_vcloud_vapp_backup_and_restore_operations_using_the_vmware_plug_in.html 
+sidebar: sidebar 
+keywords: snap, creator, backup, vcloud, vapp, vmware, director, api, vsphere, director, vcenter, vdc 
+summary: 'Snap Creator supporta il backup di vCloud vApp tramite il plug-in VMware. Le copie di backup di vApp e macchine virtuali vengono eseguite dal plug-in VMware tramite l"API vCloud Director e l"API vSphere, che vengono richiamate rispettivamente su VMware vCloud Director e sul server VMware vCenter.' 
+---
+= Requisiti per le operazioni di backup e ripristino vCloud vApp utilizzando il plug-in VMware
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator supporta il backup di vCloud vApp tramite il plug-in VMware. Le copie di backup di vApp e macchine virtuali vengono eseguite dal plug-in VMware tramite l'API vCloud Director e l'API vSphere, che vengono richiamate rispettivamente su VMware vCloud Director e sul server VMware vCenter.
+
+Per eseguire correttamente le operazioni di backup e ripristino di vApp, è necessario fornire i seguenti dettagli nel file di configurazione:
+
+* IP vCloud e credenziali
+* Organizzazioni vCloud, data center virtuali (VDC) e nomi vApp
+
+
+
+NOTE: Se a vCloud sono collegati più vCenter, la password per tutti i server vCenter deve essere la stessa.
+
+Quando si eseguono le operazioni di backup e ripristino di vCloud, è necessario prendere in considerazione quanto segue:
+
+* I processi di backup e ripristino per VMware e vCloud sono molto simili, ad eccezione del processo di rilevamento, in cui i backup vCloud richiedono un rilevamento aggiuntivo dei metadati di vCloud Director utilizzando API REST (Representational state Transfer).
+* È necessario fornire i dettagli di vCloud con le organizzazioni, i VDC e le vApp di cui eseguire il backup.
+* Se viene visualizzato un VDC, viene eseguito il backup di tutte le vApp presenti in VDC.
+* Il modulo vCloud rileva le macchine virtuali associate a qualsiasi vApp di cui è necessario eseguire il backup e le inserisce in un elenco di backup.
+* Se una vApp selezionata per il backup è contenuta all'interno di un'organizzazione o un VDC selezionato anche per il backup, il backup di vApp viene eseguito una sola volta.
+
+
+
+NOTE: Per le operazioni di ripristino del Virtual Machine file System (VMFS) utilizzando il plug-in VMware, è necessario che nel volume sia presente spazio sufficiente per creare un clone LUN pari alle dimensioni del LUN.

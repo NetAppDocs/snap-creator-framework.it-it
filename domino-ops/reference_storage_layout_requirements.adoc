@@ -1,0 +1,73 @@
+---
+permalink: domino-ops/reference_storage_layout_requirements.html 
+sidebar: sidebar 
+keywords: domino, ibm, storage, layout, requirements, 
+summary: Un ambiente IBM Domino tipico dispone di almeno tre volumi Domino, uno per i dati Domino, i registri delle transazioni Domino e la directory changeinfo del plug-in. Molti siti dispongono anche di volumi per Domino DAOS e per la ricostruzione delle viste. 
+---
+= Requisiti di layout dello storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un ambiente IBM Domino tipico dispone di almeno tre volumi Domino, uno per i dati Domino, i registri delle transazioni Domino e la directory changeinfo del plug-in. Molti siti dispongono anche di volumi per Domino DAOS e per la ricostruzione delle viste.
+
+Il plug-in IBM Domino utilizza la directory changeinfo per le modifiche registrate durante le operazioni di backup e per le copie dei log delle transazioni utilizzate nelle operazioni di ripristino aggiornate al minuto. È consigliabile memorizzare la directory changeinfo su un volume separato, per evitare di sovrascrivere inavvertitamente le informazioni e semplificare il backup.
+
+Potrebbe anche essere utile disporre di volumi separati per Domino DAOS (se abilitato) e per le ricostruzioni delle viste. Quando Domino ricostruisce una vista (ad esempio, quando un utente apre una vista il cui indice è stato cancellato o quando viene eseguito updall --R), può generare file temporanei per ordinare i dati per una rapida ricostruzione della vista.
+
+Per impostazione predefinita, questi file temporanei si trovano nella cartella temporanea del sistema o nella cartella dei dati Domino. IBM consiglia di modificare la posizione dei file temporanei in un'unità diversa per distribuire l'i/o del disco e garantire uno spazio adeguato per ricostruire le viste. Per modificare la cartella temporanea utilizzata per le ricostruzioni delle viste, aggiungere l'impostazione View_Rebuild_Dir al file notes.ini.
+
+La seguente tabella mostra il layout del volume preferito:
+
+|===
+| Volume | Contenuto | Note 
+
+
+ a| 
+Volume 1
+ a| 
+Dati Domino
+ a| 
+Dischi FC, SAS o SSD preferiti.
+
+
+
+ a| 
+Volume 2
+ a| 
+Registri delle transazioni Domino
+ a| 
+Dischi FC, SAS o SSD preferiti.
+
+
+
+ a| 
+Volume 3
+ a| 
+changeinfo
+ a| 
+Memorizza le modifiche registrate durante le operazioni di backup e le copie dei log delle transazioni per l'utilizzo in operazioni di ripristino aggiornate al minuto.
+
+
+
+ a| 
+Volume 4
+ a| 
+Ricostruzione della vista
+ a| 
+Opzionale. Memorizza i file temporanei creati durante gli aggiornamenti dell'indice. Può utilizzare un disco RAM. Aggiungere l'impostazione View_Rebuild_Dir al file notes.ini.
+
+
+
+ a| 
+Volume 5
+ a| 
+Repository DAOS
+ a| 
+Opzionale. Contiene i file .dlo di DAOS. I bassi requisiti di i/o lo rendono un buon candidato per i dischi SATA.
+
+|===
+
+NOTE: Negli ambienti virtuali, è preferibile utilizzare dischi montati su guest.

@@ -1,0 +1,146 @@
+---
+permalink: domino-ops/task_performing_point_in_time_single_file_restore_with_nfs.html 
+sidebar: sidebar 
+keywords: snap creator, ibm, domino, plug-in, perfomring, single-file, single, file restore 
+summary: È possibile utilizzare il plug-in IBM Domino per eseguire ripristini singoli file point-in-time, up-to-the-minute o selezionabili per database in ambienti NFS. 
+---
+= Ripristino di un singolo file
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile utilizzare il plug-in IBM Domino per eseguire ripristini singoli file point-in-time, up-to-the-minute o selezionabili per database in ambienti NFS.
+
+È necessario impostare il parametro Data Restore Directorynel file di configurazione sulla sottodirectory corretta del volume di dati Domino.
+
+
+NOTE: Non è necessario arrestare il server Domino per il ripristino di un singolo file.
+
+Le opzioni di ripristino di un singolo file sono le seguenti:
+
+|===
+| Tipo di ripristino | Descrizione 
+
+
+ a| 
+Ripristino di un singolo file (point-in-time)
+ a| 
+Ripristina un singolo file al suo stato al momento della copia Snapshot (solo NFS).
+
+
+
+ a| 
+Ripristino di un singolo file (up-to-the-minute)
+ a| 
+Ripristina uno stato di un singolo file al momento della copia Snapshot, quindi inoltra i registri delle transazioni Domino alla copia più recente (solo NFS).
+
+
+
+ a| 
+Ripristino di un singolo file (selezionabile fino al minuto)
+ a| 
+Ripristina uno stato di un singolo file al momento della copia Snapshot, quindi riproduce i registri delle transazioni Domino a un orario specificato (solo NFS).
+
+|===
+
+NOTE: Per ripristini point-in-time up-to-the-minute e selezionabili, è necessario attivare la registrazione delle transazioni Domino.
+
+I registri delle transazioni possono essere riprodotti solo in avanti. Se si seleziona un orario prima della creazione della copia Snapshot, si verifica un errore di ripristino.
+
+. Nel riquadro profili e configurazioni, selezionare il file di configurazione, quindi fare clic su *azioni* > *Ripristina*.
++
+Selezionando *Restore* viene avviata automaticamente la procedura guidata di ripristino di Snap Creator Framework. Durante la procedura guidata di ripristino, fare clic su *Avanti* per passare alla pagina successiva e fare clic su *Indietro* per tornare alla pagina precedente.
+
++
+
+NOTE: Se si esegue il ripristino da una copia SnapVault, viene richiesto di eseguire il ripristino dallo storage primario o secondario. La scelta dipende dalla modalità di gestione della limitazione descritta in link:concept_domino_database_restore_overview.md#GUID-4D864E27-DE54-43BF-9B9F-EF2F240F65D9["Concept_domino_database_restore_Overview.MD GUID-4D864E27-DE54-43BF-9B9F-EF2F240F65D9"].
+
+. Nella pagina Restore details (Dettagli ripristino), specificare i dettagli del ripristino:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Nome controller/Vserver
+ a| 
+Selezionare la SVM sul sistema di storage da cui si desidera eseguire il ripristino.
+
+
+
+ a| 
+Ripristinare il nome del volume
+ a| 
+Selezionare il volume da cui si desidera eseguire il ripristino.
+
+
+
+ a| 
+Policy
+ a| 
+Selezionare il criterio per il backup da cui si desidera eseguire il ripristino.
+
+
+
+ a| 
+Copie Snap Creator Snapshot/tutte le copie Snapshot
+ a| 
+Lasciare l'impostazione predefinita.
+
+
+
+ a| 
+Ripristinare il nome della copia Snapshot
+ a| 
+Selezionare la copia Snapshot da cui si desidera eseguire il ripristino.
+
+
+
+ a| 
+Tipo di ripristino
+ a| 
+Selezionare *Single file Restore*.
+
+|===
+. Nella pagina seguente, selezionare il file che si desidera ripristinare.
++
+Il file viene visualizzato con il nome completo del percorso nel campo *percorso di origine*.
+
++
+
+TIP: Copiare il nome del percorso negli Appunti per un utilizzo successivo.
+
+. Nella pagina seguente, selezionare la directory in cui si desidera ripristinare il file.
++
+Il nome della sottodirectory padre per il file deve essere identico al nome della sottodirectory padre nel percorso di origine. Se, ad esempio, il percorso di origine è /domino/data/mail/user1.nsf, il percorso di ripristino è /domino/data/restore/mail/user1.nsf.
+
++
+La directory viene visualizzata con il nome completo del percorso nel campo *percorso di destinazione*.
+
+. Nella pagina seguente, specificare il tipo di ripristino a file singolo:
++
+|===
+| Per questo campo... | Eseguire questa operazione... 
+
+
+ a| 
+Tipo di ripristino
+ a| 
+Fare clic sul tipo di ripristino a file singolo. Se si sceglie *selezionabile fino al minuto*, vengono visualizzati nuovi campi in cui è possibile specificare la data e l'ora in cui si desidera riprodurre i registri delle transazioni Domino. Fare clic su *Ignora convalida* se l'ora sul server Snap Creator non corrisponde all'ora sul controller dello storage.
+
+
+
+ a| 
+Disattivare la replica
+ a| 
+Selezionare questa casella per impostare un nuovo ID di replica Domino per il file di database ripristinato.
+
+|===
+. Esaminare il riepilogo, quindi fare clic su *fine*.
+. Nella finestra di dialogo Single file Restore (Ripristino singolo file), fare clic su *OK*.
++
+Snap Creator avvia il processo di ripristino. Le informazioni sul lavoro vengono visualizzate nel pannello Console.
+
+

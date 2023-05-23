@@ -1,0 +1,14 @@
+---
+permalink: installation/concept_upgrading_from_snap_creator_4_0_x.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, 4.0.x 
+summary: 'Quando si esegue l"aggiornamento da Snap Creator 4.0.x, lo schema del database viene aggiornato.' 
+---
+= Aggiornamento da Snap Creator 4.0.x
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando si esegue l'aggiornamento da Snap Creator 4.0.x, lo schema del database viene aggiornato.

@@ -1,0 +1,21 @@
+---
+permalink: administration/task_viewing_a_list_of_scheduled_jobs.html 
+sidebar: sidebar 
+keywords: schedule, job, view, list, snap, creator, gui 
+summary: 'È possibile visualizzare l"elenco dei processi pianificati.' 
+---
+= Visualizzazione di un elenco di processi pianificati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile visualizzare l'elenco dei processi pianificati.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *Management* > *Schedules*.
+. Dalla scheda programmi, esaminare l'elenco dei processi pianificati.
++
+Il campo risultato ultima esecuzione mostra lo stato dell'ultimo processo pianificato. Un segno di spunta verde nel campo indica che il processo è stato eseguito correttamente e una "X" rossa indica che si è verificato un errore.
+
+

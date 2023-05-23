@@ -1,0 +1,54 @@
+---
+permalink: administration/concept_scf_component_plug_ins_ag.html 
+sidebar: sidebar 
+keywords: plug-in, applications, databases, snap, creator, plug-ins, binary, installation, integration, db2, ibm, domino, maxdb, mysql 
+summary: I plug-in vengono utilizzati per mettere le applicazioni o i database in uno stato coerente. Snap Creator contiene diversi plug-in che fanno parte del file binario e non richiedono alcuna installazione aggiuntiva. 
+---
+= Plug-in per l'integrazione delle applicazioni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+I plug-in vengono utilizzati per mettere le applicazioni o i database in uno stato coerente. Snap Creator contiene diversi plug-in che fanno parte del file binario e non richiedono alcuna installazione aggiuntiva.
+
+I tipi di applicazioni supportati includono database, e-mail, hypervisor e applicazioni personalizzate. I seguenti plug-in sono supportati per l'utilizzo con Snap Creator:
+
+* Plug-in di applicazioni e database:
++
+** DB2
+** IBM Domino (Domino)
+** Max db
+** MySQL
++
+
+NOTE: Il plug-in MySQL non supporta operazioni di backup e ripristino per più database.
+
+** Oracle
+** Appliance di analisi SAP ad alte performance (HANA)
+** Sybase Adaptive Server Enterprise (ASE)
+
+
+* Plug-in SnapManager:
++
+** SnapManager per Microsoft Exchange
+** SnapManager per Microsoft SQL Server
+
+
+* Plug-in dell'hypervisor:
++
+** Citrix XenServer
+** Red Hat kernel-based Virtual Machine (KVM)
+** VMware (vSphere per backup di singole macchine virtuali e vCloud Director per backup vApp)
+
+
+
+
+Per ulteriori informazioni, consulta le informazioni sui plug-in necessari per configurare Snap Creator.i plug-in personalizzati (denominati anche "plug-in della community") vengono creati dalla community di sviluppatori e possono essere attivati da Snap Creator; tuttavia, i plug-in personalizzati non sono supportati. Questi plug-in sfruttano l'interfaccia fornita da Snap Creator.
+
+Per ulteriori informazioni, vedere http://community.netapp.com/t5/Snap-Creator-Framework-Discussions/bd-p/snap-creator-framework-discussions["Forum della community di discussione su Snap Creator Framework"].
+
+*Informazioni correlate*
+
+xref:reference_information_required_to_configure_snap_creator.adoc[Informazioni sul plug-in necessarie per configurare Snap Creator]

@@ -1,0 +1,90 @@
+---
+permalink: installation/task_upgrading_the_snap_creator_server_4_0_x_on_windows.html 
+sidebar: sidebar 
+keywords: upgrading, upgrade, snap, creator, server, 4.0.x, windows 
+summary: 'È possibile eseguire l"aggiornamento direttamente da Snap Creator Server 4.0.x su Windows.' 
+---
+= Aggiornamento di Snap Creator Server 4.0.x su Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile eseguire l'aggiornamento direttamente da Snap Creator Server 4.0.x su Windows.
+
+* Se in Snap Creator sono presenti nomi utente contenenti caratteri speciali, è necessario rinominare tali utenti utilizzando solo caratteri alfabetici (da a a z e Da A a Z).
+* I servizi di Snap Creator devono essere stati interrotti (`snapcreatorserverservice` e. `snapcreatoragentservice`) Prima di eseguire il backup delle directory di Snap Creator per assicurarsi che i dati di cui è stato eseguito il backup siano completi.
++
+Ad esempio, è possibile utilizzare lo snap-in servizi per interrompere i servizi:
+
++
+.. Selezionare *Start* > *Esegui* e digitare `services.msc`.
+.. Individuare e selezionare il servizio Snap Creator, quindi interrompere il servizio. In alternativa, è possibile aprire un prompt dei comandi e immettere i seguenti comandi:
+
+
++
+[listing]
+----
+sc stop snapcreatorserverservice
+sc stop snapcreatoragentservice
+----
+* È necessario aver eseguito il backup delle seguenti directory e di tutte le sottodirectory e i file associati nella sottodirectory del motore di Snap Creator 4.0.x Server (C: File di programma NetApp Snap_Creator_Framework scServer4.0.x motore):
++
+** Database di Snap Creator (../snapcreator)
+** Proprietà del server di Snap Creator (..)
+** Profili e configurazione
+** Log (../logs) *Nota:* non è necessario eliminare le copie di backup di Snap Creator 4.0.x create.
+
+
+* (Facoltativo) se Snap Creator Agent è installato sullo stesso host del server Snap Creator, è necessario aver già eseguito il backup del file Agent.conf (C: File di programma NetApp Snap Creator Framework).
+
+
+I percorsi descritti di seguito fanno riferimento al percorso di installazione predefinito per Windows. Le informazioni sul percorso potrebbero differire dal percorso di installazione se non vengono utilizzate le impostazioni predefinite.
+
+Una volta completato il processo di aggiornamento, considerare i seguenti problemi:
+
+* Se il database Snap Creator aggiornato contiene alcune attività contrassegnate come "`in corso`", lo stato rimane invariato anche dopo il completamento del processo di aggiornamento.
+* L'amministratore predefinito nell'ultima versione di Snap Creator deve essere un amministratore in Snap Creator 4.0.x. Se l'utente 4.0.x non è un amministratore, l'aggiornamento assegna un ruolo operatore all'utente 4.0.x.
++
+.. Interrompere i servizi di Snap Creator se non è già stato fatto.
++
+Per informazioni sull'interruzione dei servizi, vedere i dettagli forniti in precedenza in questo argomento.
+
+.. Disinstallare Snap Creator (per Windows) selezionando *Start* > *programmi* > *Snap Creator* > *Disinstalla NetApp Snap Creator Framework*.
++
+Per ulteriori informazioni, consultare la sezione relativa alla disinstallazione di Snap Creator in Windows.
+
+.. Installare il server Snap Creator più recente.
++
+Per ulteriori informazioni, vedere le informazioni sull'installazione di Snap Creator Server su Windows.
+
+.. Se si è scelto di avviare Snap Creator Server come servizio quando è stato installato l'ultimo Snap Creator Server, arrestare il servizio.
++
+Per informazioni sull'interruzione del servizio, vedere i dettagli forniti in precedenza in questo argomento.
+
+.. Eliminare la cartella di database più recente di Snap Creator Server (C: File di programma/NetApp/Snap_Creator_Framework/scServer4.1.x/motore/snapcreator).
+.. Copiare la directory del database Snap Creator 4.0.x di cui è stato eseguito il backup nella posizione più recente (C: Programmi, NetApp, Snap_Creator_Framework, scServer4.1.x, motore e snapcreator).
+.. Copiare i profili Snap Creator 4.0.x di cui è stato eseguito il backup e la directory di configurazione nella posizione più recente (C: File di programma/NetApp/Snap_Creator_Framework/scServer4.1.x/motore/configurazioni).
+.. Copiare la directory dei registri di Snap Creator 4.0.x di cui è stato eseguito il backup nella posizione più recente (C: Programmi, NetApp, Snap_Creator_Framework, scServer4.1.x, motore, log).
+.. Aprire un prompt dei comandi e modificare la directory nella sottodirectory del motore nel percorso di installazione di Snap Creator (C: File di programma/NetApp/Snap_Creator_Framework/scServer4.1.x).
+.. Aggiornare Snap Creator immettendo il seguente comando: java -jar snapcreator.jar -upgrade
+
+
+
+
+Una volta completato il processo di aggiornamento, avviare il servizio Snap Creator Server effettuando una delle seguenti operazioni:
+
+* Utilizzare lo snap-in servizi e avviare il servizio.
+* Da un prompt dei comandi, immettere il seguente comando: `sc start snapcreatorserverservice`
+
+
+Inoltre, è necessario convalidare l'avvio della GUI di Snap Creator Framework accedendo all'host locale sulla porta specificata (https://IP_address:gui_port[]).
+
+È necessario connettersi utilizzando HTTPS; in caso contrario, la connessione non viene automaticamente reindirizzata a una connessione HTTPS e la GUI non funziona.
+
+*Informazioni correlate*
+
+xref:concept_installing_the_snap_creator_server.adoc[Installazione di Snap Creator Server]
+
+xref:task_uninstalling_snap_creator_on_windows.adoc[Disinstallazione di Snap Creator in Windows]

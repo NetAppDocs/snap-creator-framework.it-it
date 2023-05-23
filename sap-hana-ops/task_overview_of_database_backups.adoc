@@ -1,0 +1,27 @@
+---
+permalink: sap-hana-ops/task_overview_of_database_backups.html 
+sidebar: sidebar 
+keywords: snap, creator, backing, up, database, 
+summary: Quando Snap Creator esegue il backup del database, vengono eseguiti i seguenti passaggi. 
+---
+= Panoramica dei backup del database
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando Snap Creator esegue il backup del database, vengono eseguiti i seguenti passaggi.
+
+. Creare un punto di salvataggio di backup sincronizzato globale (copia Snapshot SAP HANA) per ottenere un'immagine coerente sul layer di persistenza.
+. Creare copie Snapshot dello storage per tutti i volumi di dati.
++
+Nell'esempio, sono disponibili tre volumi di dati, distribuiti a entrambi i controller di storage, hana1a e hana1b.
+
+. Registrare il backup Snapshot dello storage nel catalogo di backup SAP HANA.
+. Eliminare la copia Snapshot SAP HANA.
+. Avviare l'aggiornamento del SnapVault per tutti i volumi di dati.
+. Controllare lo stato SnapVault e attendere il termine o il timeout configurabile.
+. Eliminare le copie Snapshot dello storage ed eliminare i backup nel catalogo di backup SAP HANA in base alla policy di conservazione definita per i backup nello storage primario e secondario.
+. Eliminare tutti i backup dei log, che sono più vecchi del backup dei dati meno recente sul file system e all'interno del catalogo di backup SAP HANA.
+

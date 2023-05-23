@@ -1,0 +1,24 @@
+---
+permalink: sap-hana-ops/task_scheduling_database_integrity_checks.html 
+sidebar: sidebar 
+keywords: sap, hana, scheduling, schedule, database, integrity, checks 
+summary: 'Per le configurazioni SAP HANA, è possibile pianificare operazioni aggiuntive come backup basato su file e controlli dell"integrità del database. È possibile pianificare l"esecuzione dei controlli di integrità del database a intervalli specifici.' 
+---
+= Pianificazione dei controlli di integrità del database
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per le configurazioni SAP HANA, è possibile pianificare operazioni aggiuntive come backup basato su file e controlli dell'integrità del database. È possibile pianificare l'esecuzione dei controlli di integrità del database a intervalli specifici.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *Management* > *Schedules* e fare clic su *Create*.
+. Nella finestra nuovo lavoro, immettere i dettagli del lavoro.
++
+Il criterio di controllo dell'integrità è impostato su "`none`" per impostazione predefinita.
+
++
+image::../media/creating_database_integrity_checks_schedules.gif[Creazione di pianificazioni dei controlli di integrità del database]
+
+

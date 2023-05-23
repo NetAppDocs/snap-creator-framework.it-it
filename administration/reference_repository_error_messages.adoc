@@ -1,0 +1,568 @@
+---
+permalink: administration/reference_repository_error_messages.html 
+sidebar: sidebar 
+keywords: table, repository, error, message, global, configuration, repo 
+summary: La tabella seguente elenca i messaggi di errore del repository. 
+---
+= Messaggi di errore del repository
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La tabella seguente elenca i messaggi di errore del repository.
+
+|===
+| Codice di errore | Messaggio di errore | Descrizione/risoluzione 
+
+
+ a| 
+REPO-01001
+ a| 
+La configurazione globale non esiste
+ a| 
+Controllare se il file Global.conf esiste nella cartella configs.
+
+
+
+ a| 
+REPO-01002
+ a| 
+Configurazione globale già esistente
+ a| 
+Il file Global.conf esiste già nella cartella configs. Eliminare prima il file di configurazione globale o aggiornare il file esistente.
+
+
+
+ a| 
+REPO-01103
+ a| 
+Creazione della configurazione globale non riuscita con errore [%s]
+ a| 
+Impossibile creare il file Global.conf nella cartella configs. Verificare le autorizzazioni dell'utente che esegue Snap Creator rispetto alla directory.
+
+
+
+ a| 
+REPO-01203
+ a| 
+Aggiornamento della configurazione globale non riuscito con errore [%s]
+ a| 
+Impossibile aggiornare il file Global.conf nella cartella configs. Verificare le autorizzazioni dell'utente che esegue Snap Creator rispetto alla directory.
+
+
+
+ a| 
+REPO-01303
+ a| 
+Rimozione della configurazione globale non riuscita con errore [%s]
+ a| 
+Impossibile rimuovere il file Global.conf nella cartella configs. Controllare se il file è presente nella cartella configs o controllare i permessi dell'utente che esegue Snap Creator rispetto alla directory
+
+
+
+ a| 
+REPO-01403
+ a| 
+Esportazione della configurazione globale non riuscita con errore [%s]
+ a| 
+Impossibile leggere il file Global.conf nella cartella configs. Verificare che il file di configurazione globale sia stato eliminato.
+
+
+
+ a| 
+REPO-01503
+ a| 
+Importazione della configurazione globale [%s] non riuscita con errore [%s]
+ a| 
+Impossibile aggiornare il file Global.conf nella cartella configs. Verificare le autorizzazioni dell'utente che esegue Snap Creator rispetto alla directory.
+
+
+
+ a| 
+REPO-01603
+ a| 
+Recupero della configurazione globale non riuscito con errore [%s]
+ a| 
+Impossibile leggere il file Global.conf nella cartella configs. Verificare che il file di configurazione globale sia stato eliminato.
+
+
+
+ a| 
+REPO-02002
+ a| 
+Profilo [%s] già esistente, utilizzare un nome diverso.
+ a| 
+Il profilo con lo stesso nome esiste già. Se il profilo non è visibile, l'utente non dispone dell'autorizzazione per il profilo.
+
+
+
+ a| 
+REPO-02003
+ a| 
+Il profilo [%s] non esiste
+ a| 
+Controllare se il profilo viene rinominato o cancellato. Inoltre, l'utente potrebbe non disporre dell'autorizzazione per questo profilo.
+
+
+
+ a| 
+REPO-02103
+ a| 
+Creazione della configurazione del profilo globale [%s] non riuscita con errore [%s]
+ a| 
+Impossibile creare il file Global.conf nel profilo. Verificare le autorizzazioni dell'utente che esegue Snap Creator rispetto alla directory.
+
+
+
+ a| 
+REPO-02106
+ a| 
+Creazione della configurazione del profilo [%s] non riuscita con errore [%s]
+ a| 
+Impossibile creare il profilo nella cartella configs. Verificare le autorizzazioni dell'utente che esegue Snap Creator rispetto alla directory.
+
+
+
+ a| 
+REPO-02203
+ a| 
+Aggiornamento della configurazione del profilo [%s] non riuscito con errore [%s]
+ a| 
+Impossibile aggiornare il profilo nella cartella configs. Verificare le autorizzazioni dell'utente che esegue Snap Creator rispetto alla directory.
+
+
+
+ a| 
+REPO-02213
+ a| 
+Ridenominazione del profilo [%s] in [%s] non riuscita con errore [%s]
+ a| 
+Impossibile rinominare il profilo nella cartella configs. Verificare le autorizzazioni dell'utente che esegue Snap Creator rispetto alla directory o controllare se il profilo è già stato rinominato o cancellato.
+
+
+
+ a| 
+REPO-02303
+ a| 
+Rimozione della configurazione del profilo [%s] non riuscita
+ a| 
+
+
+
+ a| 
+REPO-02403
+ a| 
+Esportazione della configurazione del profilo [%s] non riuscita con errore [%s]
+ a| 
+
+
+
+ a| 
+REPO-02503
+ a| 
+Importazione della configurazione del profilo [%s] non riuscita con errore [%s]
+ a| 
+
+
+
+ a| 
+REPO-02603
+ a| 
+Recupero profilo globale non riuscito con errore [%s]
+ a| 
+
+
+
+ a| 
+REPO-02606
+ a| 
+Recupero profilo [%s] non riuscito con errore [%s]
+ a| 
+
+
+
+ a| 
+REPO-02703
+ a| 
+Impossibile elencare i profili con errore [%s]
+ a| 
+Impossibile elencare i profili. Controllare il percorso della cartella delle configurazioni.
+
+
+
+ a| 
+REPO-03002
+ a| 
+La configurazione [%s] esiste già per il profilo [%s]
+ a| 
+Il file di configurazione con lo stesso nome esiste già per il profilo specificato. Scegliere un nome diverso.
+
+
+
+ a| 
+REPO-03103
+ a| 
+Creazione della configurazione [%s] per il profilo [%s] non riuscita con errore [%s]
+ a| 
+
+
+
+ a| 
+REPO-03203
+ a| 
+Aggiornamento della configurazione [%s] per il profilo [%s] non riuscito con errore [%s]
+ a| 
+
+
+
+ a| 
+REPO-03212
+ a| 
+Ridenominazione della configurazione [%s] per il profilo [%s] in [%s] non riuscita
+ a| 
+Impossibile rinominare la configurazione dal profilo. Controllare se la configurazione viene rinominata o eliminata e controllare anche i permessi dell'utente che esegue Snap Creator rispetto alla directory.
+
+
+
+ a| 
+REPO-03303
+ a| 
+Rimozione della configurazione [%s] dal profilo [%s] non riuscita
+ a| 
+Impossibile eliminare la configurazione dal profilo nella cartella delle configurazioni. Verificare le autorizzazioni dell'utente che esegue Snap Creator rispetto alla directory.
+
+
+
+ a| 
+REPO-03403
+ a| 
+Esportazione della configurazione [%s] per il profilo [%s] non riuscita con errore [%s]
+ a| 
+
+
+
+ a| 
+REPO-03503
+ a| 
+Importazione della configurazione [%s] nel profilo [%s] non riuscita con errore [%s]
+ a| 
+
+
+
+ a| 
+REPO-03603
+ a| 
+Recupero della configurazione [%s] dal profilo [%s] non riuscito con errore [%s]
+ a| 
+
+
+
+ a| 
+REPO-03703
+ a| 
+Impossibile elencare le configurazioni dal profilo [%s] con errore [%s]
+ a| 
+
+
+
+ a| 
+REPO-04003
+ a| 
+Lettura catalogo per profilo [%s], configurazione [%s] e indicatore data e ora [%s] non riuscita con errore [%s]
+ a| 
+
+
+
+ a| 
+REPO-04103
+ a| 
+Scrittura catalogo per profilo [%s], configurazione [%s] e data/ora [%s] non riuscita con errore [%s]
+ a| 
+
+
+
+ a| 
+REPO-04203
+ a| 
+Eliminazione catalogo per profilo [%s], configurazione [%s] e data/ora [%s] non riuscita con errore [%s]
+ a| 
+
+
+
+ a| 
+REPO-04303
+ a| 
+Catalogo di Inventoring per il profilo [%s] e configurazione [%s] non riuscito con errore [%s]
+ a| 
+
+
+
+ a| 
+REPO-04304
+ a| 
+La configurazione [%s] non esiste
+ a| 
+
+
+
+ a| 
+REPO-04309
+ a| 
+Aggiunta oggetto policy non riuscita [%s]
+ a| 
+Errore del database; controllare la traccia dello stack per ulteriori informazioni.
+
+
+
+ a| 
+REPO-04313
+ a| 
+Rimozione dell'oggetto policy non riuscita per l'ID policy: %S.
+ a| 
+Errore del database; controllare la traccia dello stack per ulteriori informazioni.
+
+
+
+ a| 
+REPO-04315
+ a| 
+Aggiornamento dell'oggetto policy non riuscito: %S.
+ a| 
+Errore del database; controllare la traccia dello stack per ulteriori informazioni.
+
+
+
+ a| 
+REPO-04316
+ a| 
+Impossibile elencare i criteri
+ a| 
+Errore del database; controllare la traccia dello stack per ulteriori informazioni.
+
+
+
+ a| 
+REPO-04321
+ a| 
+Aggiunta oggetto tipo di backup non riuscita [%s]
+ a| 
+Errore del database; controllare la traccia dello stack per ulteriori informazioni.
+
+
+
+ a| 
+REPO-04323
+ a| 
+La voce del tipo di backup non esiste per l'id del tipo di backup: %S.
+ a| 
+Passare un tipo di backup valido.
+
+
+
+ a| 
+REPO-04325
+ a| 
+Rimozione dell'oggetto del tipo di backup non riuscita per l'ID del tipo di backup: %S.
+ a| 
+Errore del database; controllare la traccia dello stack per ulteriori informazioni.
+
+
+
+ a| 
+REPO-04327
+ a| 
+Aggiornamento dell'oggetto del tipo di backup non riuscito: %S.
+ a| 
+Errore del database; controllare la traccia dello stack per ulteriori informazioni.
+
+
+
+ a| 
+REPO-04328
+ a| 
+Impossibile elencare i tipi di backup
+ a| 
+Errore del database; controllare la traccia dello stack per ulteriori informazioni.
+
+
+
+ a| 
+REPO-04333
+ a| 
+Aggiunta oggetto lavoro scheduler non riuscita [%s]
+ a| 
+Errore del database; controllare la traccia dello stack per ulteriori informazioni.
+
+
+
+ a| 
+REPO-04335
+ a| 
+La voce del lavoro di pianificazione non esiste per l'id lavoro: %S.
+ a| 
+Passare un lavoro di scheduler valido.
+
+
+
+ a| 
+REPO-04337
+ a| 
+Rimozione oggetto processo scheduler non riuscita per ID processo: %S.
+ a| 
+Errore del database; controllare la traccia dello stack per ulteriori informazioni.
+
+
+
+ a| 
+REPO-04339
+ a| 
+Aggiornamento oggetto processo scheduler non riuscito: %S
+ a| 
+Errore del database; controllare la traccia dello stack per ulteriori informazioni.
+
+
+
+ a| 
+REPO-04340
+ a| 
+Impossibile elencare i lavori del pianificatore
+ a| 
+Errore del database; controllare la traccia dello stack per ulteriori informazioni.
+
+
+
+ a| 
+REPO-04341
+ a| 
+Aggiunta oggetto policy non riuscita, la policy [%s] con lo stesso nome esiste già
+ a| 
+Policy con lo stesso nome già esistente; provare con un nome diverso.
+
+
+
+ a| 
+REPO-04342
+ a| 
+Aggiunta oggetto tipo di backup non riuscita. Il tipo di backup [%s] con lo stesso nome esiste già
+ a| 
+Il tipo di backup con lo stesso nome esiste già; provare con un nome diverso.
+
+
+
+ a| 
+REPO-04343
+ a| 
+Aggiunta oggetto scheduler non riuscita, scheduler [%s] con lo stesso nome di task esiste già
+ a| 
+
+
+
+ a| 
+REPO-04344
+ a| 
+Impossibile aggiornare il profilo [%s]. Profilo vuoto.
+ a| 
+
+
+
+ a| 
+REPO-04345
+ a| 
+Il tipo di policy non può essere null durante l'aggiunta di nuovi criteri
+ a| 
+
+
+
+ a| 
+REPO-04346
+ a| 
+L'oggetto di storage non può essere nullo
+ a| 
+
+
+
+ a| 
+REPO-04347
+ a| 
+Aggiunta oggetto di storage non riuscita. Lo storage [%s] con lo stesso nome/IP esiste già
+ a| 
+
+
+
+ a| 
+REPO-04348
+ a| 
+Impossibile recuperare i dettagli dello storage. Errore database.
+ a| 
+
+
+
+ a| 
+REPO-04349
+ a| 
+Nome host non valido. Lo storage con il nome host/IP [%s] non esiste
+ a| 
+
+
+
+ a| 
+REPO-04350
+ a| 
+Il nome host non può essere nullo
+ a| 
+Nome host non valido
+
+
+
+ a| 
+REPO-04351
+ a| 
+Eliminazione dello storage [%s] non riuscita con errore [%s]
+ a| 
+Impossibile eliminare lo storage. Errore database.
+
+
+
+ a| 
+REPO-04355
+ a| 
+Aggiornamento dello storage [%s] non riuscito con errore [%s]
+ a| 
+Impossibile aggiornare lo storage. Errore database.
+
+
+
+ a| 
+REPO-04356
+ a| 
+L'oggetto cluster non può essere nullo
+ a| 
+
+
+
+ a| 
+REPO-04358
+ a| 
+Aggiunta dello storage [%s] non riuscita con errore [%s]
+ a| 
+
+
+
+ a| 
+REPO-04359
+ a| 
+Aggiornamento del cluster [%s] non riuscito con errore [%s]
+ a| 
+
+
+
+ a| 
+REPO-04360
+ a| 
+Aggiunta oggetto cluster non riuscita. Il cluster [%s] con lo stesso nome/IP esiste già
+ a| 
+Il cluster con lo stesso nome host esiste già
+
+|===

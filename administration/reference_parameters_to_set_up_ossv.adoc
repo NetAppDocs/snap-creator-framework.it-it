@@ -1,0 +1,53 @@
+---
+permalink: administration/reference_parameters_to_set_up_ossv.html 
+sidebar: sidebar 
+keywords: parameter, open, system, snapvault, ossv, enable, homedir, snapshot 
+summary: 'Per configurare Open Systems SnapVault (OSSV) sono necessari diversi parametri.' 
+---
+= Parametri per impostare OSSV
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per configurare Open Systems SnapVault (OSSV) sono necessari diversi parametri.
+
+|===
+| Parametro | Impostazione | Descrizione 
+
+
+ a| 
+NTAP_OSSV_ENABLE
+ a| 
+(Y
+| N) 
+
+
+ a| 
+Abilita l'integrazione OSSV. Questo parametro deve essere utilizzato in combinazione con il parametro NTAP_OSSV_HOMEDIR. OSSV è richiesto anche sull'host che esegue Snap Creator. In OSSV, la logica di conservazione dei criteri gestisce solo i criteri basati sui criteri predefiniti di Snap Creator. Non supporta alcun oggetto policy.
+
+
+NOTE: Quando questo parametro OSSV è attivato, il percorso viene specificato come volumi. Quando si specificano i percorsi in Windows per OSSV, i due punti (:) non devono essere utilizzati. Ad esempio, se il percorso è e:/DB, deve essere utilizzato come e/DB.
+ a| 
+NTAP_OSSV_HOMEDIR
+ a| 
+/usr/snapvault
+
+
+
+ a| 
+Imposta il percorso della home directory di OSSV (/usr/snapvault).
+ a| 
+NTAP_OSSV_FS_SNAPSHOT
+ a| 
+(Y
+
+
+
+| N)  a| 
+Necessario per impostare il parametro NTAP_OSSV_FS_SNAPSHOT_CREATE_CMD.consente di creare una copia Snapshot del file system utilizzando il comando Open System o file system. La copia Snapshot del file system viene quindi trasferita al sistema di storage mediante SnapVault.
+ a| 
+NTAP_OSSV_FS_SNAPSHOT_CREATE_CMD
+
+|===

@@ -1,0 +1,121 @@
+---
+permalink: administration/reference_citrix_xen_plug_in.html 
+sidebar: sidebar 
+keywords: snap, creator, support, backup, restore, citrix, xenserver, virtual, machine, vm, citrix, xenserver, plug-in 
+summary: Snap Creator supporta il backup e il ripristino delle macchine virtuali Citrix XenServer utilizzando il plug-in Citrix XenServer. 
+---
+= Plug-in Citrix XenServer
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator supporta il backup e il ripristino delle macchine virtuali Citrix XenServer utilizzando il plug-in Citrix XenServer.
+
+
+NOTE: Per informazioni aggiornate sulle matrici di supporto o compatibilità, consulta la matrice di interoperabilità.
+
+Il plug-in Citrix XenServer supporta Windows e XenServer.
+
+Quando si utilizza il plug-in Citrix XenServer, considerare quanto segue:
+
+* Il server Active IQ Unified Manager come proxy non è supportato.
+* Le operazioni di montaggio, smontaggio e backup con Open Systems SnapVault e la gestione dei log di archiviazione non sono supportate.
+* Le operazioni di ripristino dei volumi non sono supportate; sono supportate solo le operazioni di ripristino definite dall'applicazione.
+* È possibile ripristinare le macchine virtuali eliminate.
+* Snap Creator Agent deve essere installato sull'host in cui è installato XenCenter e Snap Creator Server non deve essere installato su XenServer.
+* Il valore SC_AGENT_TIMEOUT deve essere maggiore del valore predefinito: 600 o superiore.
+* Se IL valore DI APP_DEFINED_RESTORE è Y, l'operazione di ripristino di SnapVault utilizzando la GUI non è supportata.
+* Se il pool master non funziona in un pool di server, il file di configurazione di Snap Creator deve essere modificato manualmente con il nuovo server master per ulteriori attività.
+* Gli strumenti XenServer devono essere installati su tutte le macchine virtuali.
+* Per Fibre Channel in un ambiente SAN (Storage Area Network), lo strumento plink.exe deve essere installato su un host in cui è installato Snap Creator Agent e il percorso plink.exe deve essere aggiunto alla variabile di ambiente del sistema.
++
+Per informazioni dettagliate su come aggiungere il percorso plink.exe alla variabile di ambiente di sistema, fare riferimento alla _Guida all'installazione di Snap Creator Framework_.
+
+* Le operazioni di pausa e di riattesa delle macchine virtuali vengono eseguite in modo seriale.
++
+Per più macchine virtuali, la durata della macchina virtuale in stato di pausa durante l'operazione di backup dipende dal numero di macchine virtuali.
+
+* È supportato il rilevamento automatico dei volumi.
+
+
+
+
+== Configurazioni Citrix XenServer supportate
+
+Sono supportate le seguenti configurazioni di Citrix XenServer:
+
+* SAN
++
+** Supporta macchine virtuali guest con un'immagine disco virtuale (VDI) per repository di storage.
+** Supporta dischi dati con un VDI per repository di storage
+
+
+* NAS
++
+** Supporta le macchine virtuali guest installate sui montaggi NFS.
+** Supporta i dischi dati sui montaggi NFS.
+
+
+
+
+
+
+== Parametri
+
+La seguente tabella elenca e descrive i parametri del plug-in Citrix XenServer:
+
+|===
+
+
+| Parametro | Impostazione | Descrizione 
+
+
+ a| 
+XEN_VMS
+ a| 
+IP host: N. VM
+ a| 
+Elenca le macchine virtuali di un particolare host, separate da una barra (/). Ad esempio: 10.10.10.192:VM1/VM2/VM3
+
+
+
+ a| 
+XEN_HOST_USERS
+ a| 
+Host IP (IP host): Nome utente/password
+ a| 
+Elenca gli host Xen e il nome utente e la password corrispondenti.
+
+
+
+ a| 
+PERCORSO_BIN_XEN
+ a| 
+Ad esempio: c: File di programma Citrix XenCenter xe.exe
+ a| 
+Specifica il percorso dell'eseguibile XenServer (xe). La console XenCenter è necessaria per importare ed esportare i metadati delle macchine virtuali.
+
+
+
+ a| 
+PERCORSO_METADATI_XEN
+ a| 
+Ad esempio: c:/scmetadata
+ a| 
+Specifica il percorso sul server in cui è possibile scaricare i metadati della macchina virtuale.
+
+
+
+ a| 
+XEN_RESTORE_VMS
+ a| 
+Ad esempio: Xenserver1:vm1,vm2;xenserver2:vm1,vm2
+ a| 
+Contiene le macchine virtuali che devono essere ripristinate. Questo parametro è necessario solo durante un'operazione di ripristino.
+
+|===
+*Informazioni correlate*
+
+http://mysupport.netapp.com/matrix["Matrice di interoperabilità Tool: mysupport.netapp.com/matrix"]

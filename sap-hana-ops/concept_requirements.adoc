@@ -1,0 +1,35 @@
+---
+permalink: sap-hana-ops/concept_requirements.html 
+sidebar: sidebar 
+keywords: requirements, sap, hana, plug-in, create, backups, point-in-time, recovery, databases 
+summary: Il plug-in SAP HANA consente di creare backup ed eseguire il ripristino point-in-time dei database HANA. 
+---
+= Requisiti
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il plug-in SAP HANA consente di creare backup ed eseguire il ripristino point-in-time dei database HANA.
+
+Il supporto per il plug-in SAP HANA è il seguente:
+
+* Sistema operativo host: SUSE Linux Enterprise Server (SLES), 32 bit e 64 bit
+* Clustered Data ONTAP o Data ONTAP in 7-Mode
+* Almeno un nodo di database SAP HANA collegato tramite NFS
+* SAP HANA con Service Pack Stack (SPS) 7 o versione successiva
+
+
+
+NOTE: Per informazioni aggiornate sul supporto o per visualizzare le matrici di compatibilità, consultare la http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"].
+
+*Licenze richieste*
+
+I controller di storage primari devono disporre di una licenza SnapRestore and SnapVault installata. Lo storage secondario deve disporre di una licenza SnapVault installata.
+
+Non è richiesta alcuna licenza per Snap Creator e il plug-in SAP HANA di Snap Creator.
+
+*Requisiti di capacità per i backup Snapshot*
+
+È necessario considerare un tasso di cambiamento dei blocchi più elevato sul layer di storage rispetto al tasso di cambiamento con i database tradizionali. A causa del processo di Unione delle tabelle dell'archivio di colonne, sul disco vengono scritti molti più dati rispetto alle sole modifiche apportate ai blocchi. Fino a quando non saranno disponibili più dati sui clienti, la stima corrente per il tasso di cambiamento è dal 20% al 50% al giorno.

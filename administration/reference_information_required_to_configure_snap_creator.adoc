@@ -1,0 +1,204 @@
+---
+permalink: administration/reference_information_required_to_configure_snap_creator.html 
+sidebar: sidebar 
+keywords: snap, creator, built-in, native, plug-in, oracle, db2, mysql, sybase, ase, domino, snapmanager, micorsoft, sql 
+summary: 'Snap Creator supporta i seguenti plug-in integrati (o nativi): Oracle, DB2, MySQL, Sybase ASE, Domino, SnapManager per Microsoft SQL Server, SnapManager per Microsoft Exchange, MaxDB, VMware (vSphere e vCloud Director), Red Hat KVM, Citrix XenServer e SAP HANA. I plug-in della community non sono inclusi nel pacchetto e devono essere scaricati separatamente.' 
+---
+= Informazioni sul plug-in necessarie per configurare Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snap Creator supporta i seguenti plug-in integrati (o nativi): Oracle, DB2, MySQL, Sybase ASE, Domino, SnapManager per Microsoft SQL Server, SnapManager per Microsoft Exchange, MaxDB, VMware (vSphere e vCloud Director), Red Hat KVM, Citrix XenServer e SAP HANA. I plug-in della community non sono inclusi nel pacchetto e devono essere scaricati separatamente.
+
+La seguente tabella elenca e descrive i parametri e le impostazioni del plug-in:
+
+|===
+| Parametri | Impostazione | Descrizione 
+
+
+ a| 
+NOME_APP
+ a| 
+oracle
+| db2 
+
+
+| mysql | domino | vibrazione 
+
+
+| smsql | pmi | sybase 
+
+
+| max db | kvm | xen 
+
+
+| <plug-in>  a| 
+Determina quale applicazione viene sottoposta a backup. Snap Creator dispone di un supporto integrato per le applicazioni elencate. Puoi utilizzare APP_NAME o configurare APP_QUIESCE_CMDXX, APP_UNQUIESCE_CMDXX e PRE_EXIT_CMDXX. Se l'applicazione non è supportata direttamente in Snap Creator, è possibile utilizzare un plug-in o eseguire comandi o script di quiesce o unquiesce dell'applicazione. <PLUG-IN>: Copiare il plug-in in /path_to_scServer
+| Directory scAgent/plug-in e specificare il plug-in nel parametro APP_NAME. Comandi o script: ---- APP_QUIESCE_CMD01=percorso_a_quiesceCMD APP_UNQUIESCE_CMD01=percorso_a_unquiesceCMD PRE_EXIT_CMD01=percorso_a_unquiesceCMD ---- 
+
+
+ a| 
+APP_IGNORE_ERROR
+ a| 
+(Y
+| N) 
+
+
+ a| 
+Determina se Snap Creator deve ignorare gli errori dei plug-in dell'applicazione. Ciò è utile quando si desidera eseguire il backup di più database e non si desidera interrompere il backup in caso di errore delle operazioni di quiete o di interruzione di un database.
+ a| 
+BACKUP_DEFINITO_APP
+ a| 
+(Y
+
+
+
+| N)  a| 
+Si prevede che il plug-in dell'applicazione esegua l'intera operazione di backup, tra cui la chiusura, la creazione di una copia Snapshot e l'eliminazione delle informazioni. I plug-in integrati non supportano questo tipo di backup.
+ a| 
+RIPRISTINO_DEFINITO_APP
+
+
+
+ a| 
+(Y
+| N)  a| 
+Consente operazioni di ripristino basate sull'applicazione. In caso di operazione di ripristino, Snap Creator invia una richiesta al plug-in dell'applicazione e gestisce la richiesta.
+
+
+
+ a| 
+APP_DEFINED_MOUNT
+ a| 
+(Y
+| N) 
+
+
+ a| 
+Le capacità di montaggio integrate di Snap Creator vengono ignorate. Il plug-in è invece responsabile di tutte le attività di montaggio, inclusa la creazione di un volume o di un clone LUN. I plug-in integrati non supportano questo tipo di montaggio.
+ a| 
+APP_DEFINED_UMOUNT
+ a| 
+(Y
+
+
+
+| N)  a| 
+Le capacità di smontaggio integrate di Snap Creator vengono ignorate. Il plug-in è invece responsabile della gestione di tutte le attività di disinstallazione, inclusa l'eliminazione di un clone del volume o del LUN. I plug-in integrati non supportano questo tipo di operazione di disinstallazione.
+ a| 
+APP_AUTO_DISCOVERY
+
+
+
+ a| 
+(Y
+| N)  a| 
+Attiva il rilevamento automatico delle applicazioni. Snap Creator invia una richiesta di rilevamento al plug-in dell'applicazione e il plug-in è responsabile del rilevamento della configurazione dello storage. Questo può essere fatto in modo dinamico o reso persistente utilizzando IL parametro APP_CONF_PERSISTENCE, se le informazioni devono essere salvate nel file di configurazione.
+
+
+
+ a| 
+PERSISTENZA_CONF_APP
+ a| 
+(Y
+| N) 
+
+
+ a| 
+Consente di mantenere il rilevamento automatico, il che significa che le modifiche vengono aggiornate dinamicamente nel file di configurazione.
+ a| 
+APP_DEFINED_CLONE
+ a| 
+(Y
+
+
+
+| N)  a| 
+Le capacità di cloning incorporate di Snap Creator vengono ignorate. Il plug-in è invece responsabile della gestione di tutte le attività dei cloni, inclusa la creazione e l'eliminazione dei cloni di volume o LUN. I plug-in integrati non supportano questo tipo di clone.
+ a| 
+NOME_FS
+
+
+
+ a| 
+plug-in
+ a| 
+Determina quale plug-in viene utilizzato per le operazioni del file system.
+ a| 
+JAVA_HOME
+
+
+
+ a| 
+Testo
+ a| 
+Questa impostazione punta alla Java Virtual Machine (JVM) che deve essere utilizzata per l'esecuzione dei file .class e .jar.
+ a| 
+JVM_ARGS
+
+
+
+ a| 
+Testo
+ a| 
+Questa impostazione controlla le impostazioni JVM quando vengono eseguiti file Java .class o .jar nativi. L'impostazione predefinita è -Xms32M -Xmx128M.
+ a| 
+JAVA_CLASSPATH
+
+
+
+ a| 
+Testo
+ a| 
+Questa impostazione definisce il classpath Java. Per impostazione predefinita, i plug-in/native sono configurati e possono essere completati utilizzando questa variabile di ambiente, che viene aggiunta all'impostazione predefinita.
+ a| 
+VOLUME_META_DATI
+
+
+
+ a| 
+ a| 
+Consente di creare una copia Snapshot del volume specificato dopo l'operazione senza oggetto. Questo può essere utile per alcuni plug-in per i quali la copia Snapshot dei dati deve essere creata in momenti diversi. Il parametro non deve solo specificare il volume, ma anche il controller (ad esempio, `controller1:volume1,volume2;controller2:volume3,volume4;controller3:volume5,volume6`).
+ a| 
+PERL_HOME
+
+
+
+ a| 
+Testo
+ a| 
+Questa impostazione punta all'interprete Perl che deve essere utilizzato per l'esecuzione dei file .pl.
+ a| 
+PERL_OPTS
+
+
+
+ a| 
+Testo
+ a| 
+Questa impostazione controlla le impostazioni DELL'interprete PERL quando vengono eseguiti i file Perl nativi. Le opzioni per ulteriori impostazioni includono directory (-i) che possono essere passate all'interprete Perl.
+ a| 
+PYTHON_HOME
+
+
+
+ a| 
+Testo
+ a| 
+Questa impostazione punta all'interprete Python che dovrebbe essere utilizzato per l'esecuzione dei file .py.
+ a| 
+PYTHON_OPTS
+
+
+
+ a| 
+Testo
+ a| 
+Questa impostazione controlla le impostazioni dell'interprete Python quando vengono eseguiti i file nativi Python.
+ a| 
+VALIDATE_VOLUMES
+
+|===

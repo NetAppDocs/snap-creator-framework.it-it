@@ -1,0 +1,105 @@
+---
+permalink: administration/task_creating_scheduled_jobs_using_sc_gui.html 
+sidebar: sidebar 
+keywords: local, retention, policy, configuration, snap, creator, gui, copy, lun, volume, clone, snapvault, ossv, job 
+summary: 'Se si utilizza un criterio di conservazione locale (contenuto nel file di configurazione), è possibile utilizzare lo scheduler dell"interfaccia utente grafica (GUI) di Snap Creator per creare pianificazioni ed eseguire attività. Lo scheduler, contenuto nel server Snap Creator, può pianificare backup (copie Snapshot), cloni LUN, cloni di volumi, cloni definiti dall"applicazione, trasferimenti OSSV (Open Systems SnapVault), processi di archiviazione e azioni personalizzate.' 
+---
+= Creazione di processi pianificati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si utilizza un criterio di conservazione locale (contenuto nel file di configurazione), è possibile utilizzare lo scheduler dell'interfaccia utente grafica (GUI) di Snap Creator per creare pianificazioni ed eseguire attività. Lo scheduler, contenuto nel server Snap Creator, può pianificare backup (copie Snapshot), cloni LUN, cloni di volumi, cloni definiti dall'applicazione, trasferimenti OSSV (Open Systems SnapVault), processi di archiviazione e azioni personalizzate.
+
+Se si prevede di utilizzare gli oggetti policy invece di un criterio di conservazione locale, ignorare questa procedura e creare una pianificazione dei policy.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *Management* > *Schedules* e fare clic su *Create*.
+. Nella finestra nuovo lavoro, immettere i dettagli del lavoro.
++
+image::../media/schedule_new_job_window.gif[finestra di pianificazione di un nuovo processo]
+
++
+|===
+| Campo | Descrizione 
+
+
+ a| 
+Nome lavoro
+ a| 
+Specificare il nome del processo pianificato.
+
+
+
+ a| 
+Data di inizio
+ a| 
+Selezionare la data odierna o una data futura.
+
+
+
+ a| 
+Attivo
+ a| 
+Impostare su attivo per indicare che il processo verrà eseguito come pianificato. Attivo è l'impostazione predefinita.
+
+
+
+ a| 
+Profilo
+ a| 
+Selezionare il profilo da associare a questo lavoro.
+
+
+
+ a| 
+Configurazione
+ a| 
+Selezionare la configurazione da associare a questo lavoro.
+
+
+
+ a| 
+Azione
+ a| 
+Selezionare una delle seguenti opzioni:
+
+** *Backup*: Crea un backup utilizzando la tecnologia di storage NetApp.
+** *CloneLun*: Crea un backup e clona una o più LUN utilizzando il comando LUN clone.
+** *CloneVol*: Crea un backup e clona un volume.
+** *Clone*: Esegue un'operazione di cloni basata su plug-in.
+** *OSSV*: Utilizza Open Systems SnapVault per eseguire il backup.
++
+Non viene creato alcun backup primario.
+
+** *Arch*: Esegue solo la gestione del log di archiviazione.
++
+Non viene creato alcun backup.
+
+** *Custom*: Esegue un'azione di cloning definita dal plug-in.
+
+
+
+
+ a| 
+Policy
+ a| 
+Selezionare la policy da associare a questo lavoro.
+
+
+
+ a| 
+Frequenza
+ a| 
+Selezionare la frequenza per questo lavoro. A seconda della selezione effettuata, è necessario selezionare i campi relativi all'ora appropriati per l'esecuzione del processo pianificato.
+
++
+
+|===
+. Fare clic su *Save* (Salva).
+
+
+*Informazioni correlate*
+
+xref:task_creating_policy_schedules.adoc[Creazione di pianificazioni di policy]

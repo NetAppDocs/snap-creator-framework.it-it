@@ -1,0 +1,141 @@
+---
+permalink: administration/reference_parameters_to_set_up_cloning.html 
+sidebar: sidebar 
+keywords: parameter, snap, creator, server, cloning, operation 
+summary: Per configurare le operazioni di cloning di Snap Creator Server sono necessari diversi parametri. 
+---
+= Parametri per impostare le operazioni di cloning
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Per configurare le operazioni di cloning di Snap Creator Server sono necessari diversi parametri.
+
+|===
+| Parametro | Impostazione | Descrizione 
+
+
+ a| 
+NTAP_VOL_CLONE_RESERVE
+ a| 
+nessuno
+| file 
+
+
+| volume  a| 
+Questa è la garanzia di spazio per un volume clonato.
+ a| 
+NTAP_LUN_CLONE_RESERVATION
+
+
+
+ a| 
+vero
+| falso  a| 
+Se l'opzione è impostata su true, lo spazio viene riservato ai LUN clonati se è selezionata l'azione cloneLun. In caso contrario, lo spazio non è riservato.
+
+
+
+ a| 
+NTAP_CLONE_IGROUP_MAP
+ a| 
+ a| 
+Specifica il sistema storage, il volume di origine e UN IGROUP. L'IGROUP viene quindi mappato alle LUN clonate che risiedono nel volume di origine o alle LUN clonate che risiedono nel clone del volume (ad esempio, `controller1:src_volume1/igroup1,src_volume2/igroup1,src_volume3/igroup1;controller2:src_volume1/igroup2,src_volume2/igroup2,src_volume3/igroup2`). *Nota:*
+
+* I cloni LUN assumono lo stesso nome del loro volume o LUN padre e terminano con _CLONE; cioè, se il volume viene chiamato myvol, il clone sarà myvol_CLONE.
+* I cloni dei volumi iniziano con cl_ e terminano con -YYYYYMMGHHMMSS.
+
+
+
+
+ a| 
+NTAP_CLONE_FOR_BACKUP
+ a| 
+(Y
+| N) 
+
+
+ a| 
+Se questa opzione è attivata, i cloni (volume e LUN) vengono creati e quindi cancellati al termine delle altre operazioni. In caso contrario, i cloni vengono cancellati prima del completamento delle operazioni. *Nota:* se si esegue il backup dei cloni su nastro, impostare su Y. Se si esegue un aggiornamento del database, impostarlo su N.
+ a| 
+NTAP_CLONE_SECONDARY
+ a| 
+(Y
+
+
+
+| N)  a| 
+Se questa opzione è attivata, i cloni vengono creati sulla destinazione SnapMirror al termine dell'aggiornamento di SnapMirror. *Nota:* questa impostazione deve essere utilizzata con NTAP_SNAPMIRROR_USE_SNAPSHOT, NTAP_SNAPMIRROR_WAIT, NTAP_CLONE_SECONDARY_VOLUMES e l'azione cloneVol.
+ a| 
+NTAP_CLONE_SECONDARY_VOLUMES
+
+
+
+ a| 
+ a| 
+Si tratta di una mappatura dei sistemi storage primari o secondari e dei volumi secondari. Questo è necessario per consentire a Snap Creator di trovare i volumi secondari (ad esempio, controllo1:controller1-sec/vol1;controller1:controller1-sec/vol2).
+ a| 
+NTAP_NUM_VOL_CLONI
+
+
+
+ a| 
+ a| 
+Questo è il numero di cloni di volume che si desidera conservare. Questo funziona in modo simile al criterio di conservazione delle copie Snapshot. *Nota:* questa funzione è valida solo per i cloni di volumi che richiedono una licenza FlexClone per lo storage controller.
+ a| 
+NTAP_NFS_EXPORT_HOST
+
+
+
+ a| 
+IP host
+ a| 
+Il nome host o l'indirizzo IP in cui deve essere esportato il clone. Questo è l'host in cui si monta il volume clone utilizzando NFS.
+ a| 
+NTAP_NFS_EXPORT_ACCESS
+
+
+
+ a| 
+root
+| lettura/scrittura | sola lettura 
+
+
+ a| 
+L'host specificato in NTAP_NFS_EXPORT_HOST riceve l'accesso o l'autorizzazione al volume clone.
+
+* root
++
+Viene concesso l'accesso root.
+
+* sola lettura
++
+Viene concesso l'accesso in sola lettura.
+
+* lettura/scrittura
++
+L'accesso in lettura/scrittura è consentito.
+
+
+ a| 
+NTAP_NFS_EXPORT_PERSISTENT
+ a| 
+vero
+
+
+
+| falso  a| 
+Determina se l'esportazione NFS è persistente. Se si seleziona true, il volume clone viene esportato e il file /etc/exports sul controller storage viene aggiornato.
+ a| 
+NTAP_CIFS_EXPORT_ENABLE
+
+
+
+ a| 
+(Y
+| N)  a| 
+Impostazione per condividere un volume clonato utilizzando CIFS.
+
+|===

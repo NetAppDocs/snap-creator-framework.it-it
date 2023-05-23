@@ -1,0 +1,39 @@
+---
+permalink: administration/concept_guidelines_to_define_snap_creator_policies.html 
+sidebar: sidebar 
+keywords: snap, creator, policies, guidelines, retendtion, snapshot 
+summary: 'Le policy di Snap Creator sono ritention delle copie Snapshot definite dall"utente che si applicano alle copie Snapshot sullo storage primario e alle copie SnapVault e SnapMirror sullo storage secondario. È possibile utilizzare un criterio per definire il numero di copie Snapshot che si desidera conservare e l"età delle copie Snapshot.' 
+---
+= Linee guida per la definizione dei criteri di Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Le policy di Snap Creator sono ritention delle copie Snapshot definite dall'utente che si applicano alle copie Snapshot sullo storage primario e alle copie SnapVault e SnapMirror sullo storage secondario. È possibile utilizzare un criterio per definire il numero di copie Snapshot che si desidera conservare e l'età delle copie Snapshot.
+
+È necessario definire almeno un criterio nel campo *Snapshot Retention Count*. Per SnapVault, è possibile associare lo stesso criterio a diversi periodi di conservazione di SnapVault. Ad esempio, per creare copie Snapshot giornaliere e conservarle per sette giorni sullo storage primario e per un mese sullo storage secondario, è necessario utilizzare le seguenti opzioni e impostazioni di policy:
+
+* *Snapshot Retention Count*: Giornaliero:7
+* *Conteggio conservazione SnapVault*: Giornaliero:28
+
+
+È inoltre possibile specificare il numero minimo di giorni dopo il quale una copia Snapshot viene eliminata. In base all'esempio precedente, utilizzare le seguenti opzioni e impostazioni:
+
+* *Snapshot Retention Age*: 7
+* *SnapVault Retention Age*: 28
+
+
+Inoltre, è possibile specificare l'eliminazione della copia Snapshot in base all'età impostando il seguente parametro nel file di configurazione:
+
+NTAP_SNAPSHOT_DELETE_BY_AGE_ONLY=PRIMARIO|SECONDARIO|ENTRAMBI
+
+
+NOTE: Questo parametro non è disponibile attraverso la GUI di Snap Creator. Per ulteriori informazioni sui parametri dei file di configurazione utilizzati per impostare le copie Snapshot, consultare i riferimenti correlati.
+
+Snap Creator può eseguire un solo criterio alla volta. Il valore massimo di età è un parametro globale che si applica a tutte le policy. Per configurare un criterio settimanale aggiuntivo, definirlo e chiamarlo in Snap Creator una volta alla settimana utilizzando cron o task manager con la variabile Snap Creator %SNAP_TYPE impostata su settimanale.
+
+*Informazioni correlate*
+
+xref:reference_parameters_to_set_up_a_snapshot_copy.adoc[Parametri per l'impostazione delle copie Snapshot]

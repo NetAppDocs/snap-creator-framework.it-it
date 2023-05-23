@@ -1,0 +1,84 @@
+---
+permalink: administration/reference_mysql_plug_in_parameters_settings_and_descriptions.html 
+sidebar: sidebar 
+keywords: mysql, plug-in, net-mysql, interoperability, matrix 
+summary: Il plug-in MySQL utilizza Net-MySQL per comunicare con il database. 
+---
+= Plug-in MySQL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il plug-in MySQL utilizza Net-MySQL per comunicare con il database.
+
+Il plug-in MySQL non supporta operazioni di backup e ripristino per più database. La matrice di interoperabilità contiene le informazioni più recenti sul supporto e la compatibilità.
+
+Per le configurazioni Snap Creator, l'utente del database MySQL deve avere il privilegio LOCK TABLES concesso, insieme ad altri privilegi, come SUPER e RELOAD.
+
+La seguente tabella elenca i parametri del plug-in MySQL, fornisce le relative impostazioni e li descrive:
+
+|===
+| Parametro | Impostazione | Descrizione 
+
+
+ a| 
+NOME_APP
+ a| 
+mysql
+ a| 
+Nome dell'applicazione
+
+
+
+ a| 
+MYSQL_DATABASES
+ a| 
+db_name:nome_utente/password
+ a| 
+Elenco di database MySQL, nome utente e password.è possibile specificare più database con nomi utente e password come elenco separato da punto e virgola, ad esempio `db1:user1/pwd1;db2:user2/pwd2`.
+
+
+
+ a| 
+HOST
+ a| 
+nome_host
+ a| 
+Nome dell'host in cui si trovano i database.*Nota:* VALIDATE_VOLUMES funziona correttamente solo se HOST=localhost. Se HOST=IP_address, VALIDATE_VOLUMES non rileverà il database MySQL.
+
+
+
+ a| 
+PORTE
+ a| 
+db_name:numero_porta
+ a| 
+Elenco dei database e delle porte su cui sono in ascolto, ad esempio `db1:3307;db2:3308`.
+
+
+
+ a| 
+MASTER_SLAVE
+ a| 
+(Y
+| N) 
+
+
+ a| 
+Specifica l'ambiente del database di backup:se impostato su Y, esegue il backup del database master.
+
+Se impostato su N, esegue il backup del database slave oppure la configurazione Master-Slave non viene utilizzata.
+
+
+NOTE: Il backup di Snap Creator Framework elimina i file di log binari MySQL richiesti sul server MySQL con l'opzione Master_Slave attivata. Il backup del database MySQL (master) con Snap Creator Framework rimuove tutti i file di log binari e lascia solo un singolo file di log binario vuoto con numerazione di ripristino (.000001). A causa di questo problema, il server slave non si avvia dopo l'operazione di backup.
+ a| 
+PURGE_BINARY_LOG
+ a| 
+(Y
+
+|===
+*Informazioni correlate*
+
+http://mysupport.netapp.com/matrix["Matrice di interoperabilità Tool: mysupport.netapp.com/matrix"]

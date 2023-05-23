@@ -1,0 +1,137 @@
+---
+permalink: administration/reference_maxdb_plug_in.html 
+sidebar: sidebar 
+keywords: maxdb, plug-in, automates, backup, restore, operations 
+summary: Il plug-in MaxDB automatizza le operazioni di backup e ripristino sui database MaxDB. 
+---
+= Plug-in maxdb
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il plug-in MaxDB automatizza le operazioni di backup e ripristino sui database MaxDB.
+
+
+NOTE: Per informazioni aggiornate sul supporto o per visualizzare le matrici di compatibilità, consultare la matrice di interoperabilità.
+
+Il plug-in MaxDB offre le seguenti funzionalità:
+
+* Un framework centralizzato per il backup, il ripristino e la clonazione dei database MaxDB
+* Integrazione con il database e fornitura della coerenza applicativa
+* Utilizzo della tecnologia Snapshot per creare copie point-in-time del database
+* Utilizzo di SnapRestore per ripristinare una copia Snapshot precedente, e quindi un database coerente con l'applicazione, in pochi secondi, indipendentemente dalla capacità o dal numero di file
+* Utilizzo della tecnologia FlexClone per creare cloni di database veloci ed efficienti in termini di spazio basati su backup di copia Snapshot
+
+
+La seguente tabella elenca i parametri del plug-in MaxDB, ne fornisce le impostazioni e li descrive:
+
+|===
+| Parametro | Impostazione | Descrizione 
+
+
+ a| 
+NOME_APP
+ a| 
+max db
+ a| 
+Specifica il nome dell'applicazione.
+
+
+
+ a| 
+XUSER_ENABLE
+ a| 
+(Y
+| N) 
+
+
+ a| 
+Attiva o disattiva l'utilizzo di xuser per MaxDB in modo che non sia necessaria una password per l'utente del database.
+ a| 
+HANDLE_LOGWRITER
+ a| 
+(Y
+
+
+
+| N)  a| 
+Esegue le operazioni di sospensione del logwriter (N) o ripristino del logwriter (Y).
+ a| 
+DBMCLICMD
+
+
+
+ a| 
+path_to_dbmcli_cmd
+ a| 
+Specifica il percorso del comando MaxDB dbmcli.se non impostato, viene utilizzato dbmcli sul percorso di ricerca.
+
+
+NOTE: Se in un ambiente Windows, il percorso deve essere contenuto tra virgolette doppie ("...").
+ a| 
+SQLCLICMD
+
+
+
+ a| 
+percorso_a_sqlcli_cmd
+ a| 
+Specifica il percorso per il comando sqlcli di MaxDB.se non impostato, sqlcli viene utilizzato nel percorso di ricerca.
+ a| 
+MAXDB_UPDATE_HIST_LOG
+
+
+
+ a| 
+(Y
+| N)  a| 
+Indica al programma di backup di MaxDB se aggiornare o meno il registro della cronologia di MaxDB.
+
+
+
+ a| 
+MAXDB_DATABASES
+ a| 
+db_name:nome_utente/password
+ a| 
+Elenca i database di cui eseguire il backup con nome utente e password.è possibile specificare più database e nomi utente utilizzando un elenco separato da virgole: Ad esempio, `db1:user1/password,db2:user2/password`.
+
+
+
+ a| 
+MAXDB_CHECK_SNAPSHOT_DIR
+ a| 
+Esempio: `+SID1:directory[,directory...];[SID2:directory[,directory...]+`
+ a| 
+Verifica che un'operazione di copia Snap Creator Snapshot sia riuscita e che la copia Snapshot sia stata creata. Questo vale solo per NFS. La directory deve puntare al percorso che contiene la directory .snapshot.
+
+È possibile includere più directory in un elenco separato da virgole. È possibile specificare più database come elenco separato da punto e virgola.
+
+In MaxDB 7.8 e versioni successive, la richiesta di backup del database viene contrassegnata come Failed (non riuscito) nella cronologia del backup.
+
+
+
+ a| 
+MAXDB_BACKUP_TEMPLATES
+ a| 
+Esempio di nome_modello: `na_snap`
+ a| 
+Specifica un modello di backup per ogni database. Il modello deve già esistere ed essere un tipo esterno di modello di backup.
+
+Per abilitare l'integrazione delle copie Snapshot per MaxDB 7.8 e versioni successive, è necessario disporre della funzionalità server in background di MaxDB e del modello di backup di MaxDB già configurato.
+
+
+
+ a| 
+MAXDB_BG_SERVER_PREFIX
+ a| 
+esempio di prefisso_server_bg: `na_bg`
+ a| 
+Specifica il prefisso per il nome del server in background. Se il parametro MAXDB_BACKUP_TEMPLATES è impostato, è necessario impostare anche IL parametro MAXDB_BG_SERVER_PREFIX. Se non si imposta il prefisso, il valore predefinito `na_bg_DATABASE` viene utilizzato.
+
+|===
+*Informazioni correlate*
+
+http://mysupport.netapp.com/matrix["Matrice di interoperabilità Tool: mysupport.netapp.com/matrix"]

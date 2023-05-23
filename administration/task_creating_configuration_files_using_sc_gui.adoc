@@ -1,0 +1,177 @@
+---
+permalink: administration/task_creating_configuration_files_using_sc_gui.html 
+sidebar: sidebar 
+keywords: configuration, file, wizard, gui, management 
+summary: È possibile creare file di configurazione utilizzando la Configurazione guidata. 
+---
+= Creazione di file di configurazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare file di configurazione utilizzando la Configurazione guidata.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *Gestione* > *configurazioni*.
+. Nel riquadro profili e configurazioni, fare clic con il pulsante destro del mouse sul profilo in cui si desidera individuare il nuovo file di configurazione, quindi selezionare *Nuova configurazione*.
++
+La Configurazione guidata si apre nel riquadro di destra.
+
+. 
++
+.. Nella pagina di configurazione, immettere un nome per il file di configurazione.
++
+
+NOTE: Per impostazione predefinita, la crittografia della password è attivata per impedire che le password vengano visualizzate in testo non crittografato nel file di configurazione.
+
+.. Nella pagina Plug-in Type (tipo plug-in), selezionare il tipo di plug-in.
++
+La pagina a cui si passa nella Configurazione guidata dipende dall'opzione selezionata.
+
++
+|===
+| Opzione del tipo di plug-in | Pagina successiva | Pagina successiva 
+
+
+ a| 
+Plug-in dell'applicazione
+ a| 
+*Application Plug-in* selezionare il plug-in da configurare.
+ a| 
+*Parametri plug-in* forniscono i dettagli di configurazione associati all'opzione del plug-in selezionata.
+
+
+
+ a| 
+Plug-in per la virtualizzazione
+ a| 
+*Plug-in di virtualizzazione* selezionare il plug-in da configurare.
+ a| 
+*Parametri plug-in* forniscono i dettagli di configurazione associati all'opzione del plug-in selezionata.
+
+
+
+ a| 
+Plug-in della community
+ a| 
+*Community Plug-in* selezionare il plug-in da configurare.
+ a| 
+*Parametri plug-in* forniscono i dettagli di configurazione associati all'opzione del plug-in selezionata.
+
+
+
+ a| 
+Nessuno (se non si utilizza un plug-in)
+ a| 
+*Configurazione agente*
+ a| 
+--
+
+--
+|===
++
+Per ulteriori informazioni sui parametri e sulla configurazione del plug-in, consultare la documentazione del plug-in.
+
+.. Nella pagina Agent Configuration (Configurazione agente), immettere le informazioni di configurazione per Snap Creator Agent.
+.. Nella pagina Storage Connection Settings (Impostazioni connessione storage), selezionare il tipo di trasporto (HTTP o HTTPS).
++
+Viene visualizzata la porta standard per il tipo di trasporto selezionato. Se il sistema di storage utilizza una porta non standard, immettere le informazioni sulla porta nel campo porta.
+
+.. Nella pagina Controller/Vserver Credentials (credenziali controller/server virtuale), immettere l'indirizzo IP e le credenziali di accesso per ciascun controller di storage SVM che contiene i volumi in questo file di configurazione.
++
+
+NOTE: È necessario aggiungere almeno un controller storage o SVM alla configurazione.
+
+.. Nel riquadro Controller/Vserver Volumes (volumi controller/Vserver), selezionare ciascun volume da includere e trascinarlo nel riquadro di destra oppure fare clic sulla freccia destra per spostare il volume nel riquadro di destra, quindi fare clic su *Save* (Salva).
++
+
+IMPORTANT: Se si prevede di replicare le copie Snapshot in una destinazione SnapMirror o SnapVault, il nome della SVM immesso in questo passaggio deve essere identico al nome della SVM utilizzata al momento della creazione della relazione SnapMirror o SnapVault. Se è stato specificato un nome di dominio completo al momento della creazione della relazione, in questa fase è necessario specificare un nome di dominio completo, indipendentemente dal fatto che Snap Creator sia in grado di trovare la SVM con le informazioni fornite. Il caso utilizzato per il nome (maiuscolo o minuscolo) è significativo.
+
++
+È possibile utilizzare il comando show di snapmirror per controllare il nome della SVM sul sistema di storage primario:
+
++
+[listing]
+----
+snapmirror show -destination-path destination_SVM:destination_volume
+----
++
+Dove Destination_SVM_NAME è il nome della SVM sul sistema di destinazione e Destination_volume è il volume.
+
+.. Nella pagina Controller Credentials (credenziali controller), verificare che i controller visualizzino le informazioni corrette.
++
+Se sono necessarie modifiche, selezionare un controller, quindi fare clic su *Edit* (Modifica).
+
+.. Nella pagina Snapshot Details (Dettagli snapshot), fornire i dettagli della copia Snapshot.
++
+|===
+| Campo | Descrizione 
+
+
+ a| 
+Nome copia Snapshot
+ a| 
+Consente di specificare il nome della copia Snapshot in genere, la copia Snapshot ha lo stesso nome del file di configurazione; tuttavia, il nome della copia Snapshot può riflettere i dati di cui viene eseguito il backup.
+
++ NOTA: Non utilizzare caratteri speciali quando si specifica il nome della copia Snapshot.
+
+
+
+ a| 
+Etichetta copia Snapshot
+ a| 
+Consente di specificare l'etichetta della copia Snapshot. Questa opzione è valida per Clustered Data ONTAP 8.2 e versioni successive. Per le release di Data ONTAP precedenti a Clustered Data ONTAP 8.2, questo campo non fornisce alcuna funzionalità.
+
+
+
+ a| 
+Tipo di policy
+ a| 
+Consente di selezionare il tipo di policy. Sono disponibili due opzioni:
+
+*** Policy: Questa opzione attiva uno dei criteri integrati mostrati nell'area Snapshot copy Policies e specifica la conservazione (il numero di backup da conservare)
+*** Use Policy Object (Usa oggetto policy): Selezionare questa opzione se è già stato creato un oggetto policy.
+
+
+
+
+ a| 
+Policy di copia Snapshot
+ a| 
+Consente di selezionare il criterio da attivare
+
+
+
+ a| 
+Impedisci eliminazione copia Snapshot
+ a| 
+Consente di determinare se impedire l'eliminazione della copia Snapshot
+
+
+
+ a| 
+Periodo di conservazione delle policy
+ a| 
+Consente di specificare l'età di conservazione dei criteri
+
+
+
+ a| 
+Convenzione di naming
+ a| 
+Consente di specificare la convenzione di denominazione (recente o timestamp) dei backup. "`Recent`" non è supportato per plug-in come SAP HANA, Vibe e Domino.
+
++
+
+|===
+.. Nella pagina Dettagli snapshot (continua), configurare eventuali impostazioni aggiuntive applicabili all'ambiente in uso.
+.. Nella pagina protezione dati, selezionare se è richiesta l'integrazione con SnapMirror o con il funzionamento SnapVault.
++
+Se si seleziona la tecnologia SnapMirror o SnapVault, sono necessarie ulteriori informazioni. Per le tecnologie SnapMirror e SnapVault, è necessario fornire il nome del sistema di storage e non l'indirizzo IP.
+
+.. Nella pagina Impostazioni DFM/OnCommand, se si desidera integrare la configurazione di Snap Creator con i tool di gestione di NetApp OnCommand, selezionare e fornire i dettagli.
+.. Esaminare il riepilogo, quindi fare clic su *fine*.
+
+
+

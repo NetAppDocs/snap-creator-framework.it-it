@@ -1,0 +1,49 @@
+---
+permalink: domino-ops/concept_domino_database_restore_overview.html 
+sidebar: sidebar 
+keywords: domino, ibm, restore, restoring, databases, understanding, snapmirror, snapvault, destination, directories 
+summary: Il plug-in IBM Domino ripristina i file di database dalla copia Snapshot del volume su cui è memorizzato il database. Al termine del ripristino Snapshot, il plug-in applica le modifiche registrate nella directory changeinfo. 
+---
+= Ripristino dei database
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il plug-in IBM Domino ripristina i file di database dalla copia Snapshot del volume su cui è memorizzato il database. Al termine del ripristino Snapshot, il plug-in applica le modifiche registrate nella directory changeinfo.
+
+
+
+== Informazioni sulle operazioni di ripristino di SnapMirror e SnapVault
+
+Non è possibile utilizzare Snap Creator per ripristinare una copia SnapMirror dei dati. Se si desidera ripristinare una copia mirror, è necessario prima interrompere il mirror, quindi ripristinare manualmente i dati. Per ulteriori informazioni, consultare link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-sm-ic-fr/home.html["Guida rapida per il disaster recovery dei volumi di ONTAP 9"].
+
+Quando si ripristina una copia SnapVault dallo storage secondario, sono disponibili solo ripristini di volumi point-in-time. Non è possibile eseguire un ripristino di un volume fino al minuto o un ripristino di un singolo file. È possibile aggirare questo limite ripristinando prima dallo storage secondario allo storage primario. Dallo storage primario, è possibile eseguire un ripristino del volume fino al minuto o un ripristino di un singolo file, in base alle necessità.
+
+
+
+== Informazioni sulle directory di destinazione
+
+I ripristini dei volumi e dei singoli file hanno in genere directory di destinazione diverse. Specificare la directory di destinazione nel parametro Data Restore Directory nel file di configurazione di backup e ripristino (vedere il passo link:task_using_the_gui_to_create_a_configuration_file.md#STEP_E6C507729B3647FD8B2E8D0818F22D3B["Task_using_the_gui_to_create_a_Configuration_file.MD STEP_E6C507729B3647FD8B2E8D0818F22D3B"]):
+
+* Per il ripristino di un volume, è necessario impostare Data Restore Directory (Directory di ripristino dati) sulla directory dei dati Domino.
+* Per un ripristino a file singolo, è necessario impostare Data Restore Directory su una sottodirectory del volume di dati Domino.
+
+
+Ciò significa che se si alternano tipi di ripristino, è necessario modificare la directory di ripristino dei dati in modo che punti all'impostazione corretta per ciascun tipo di ripristino. In caso contrario, le informazioni sulle modifiche non verranno applicate correttamente e i dati non saranno coerenti con lo stato del database in cui si desidera ripristinare. Naturalmente, è possibile creare diverse configurazioni per il ripristino di volumi e singoli file, se si preferisce.
+
+
+
+== Dove eseguire un ripristino
+
+Con un'eccezione, è possibile utilizzare la GUI di Snap Creator o la CLI di Snap Creator per ripristinare i database. Per il ripristino di un singolo file in un ambiente SAN, è necessario utilizzare la CLI, come descritto in xref:concept_single_file_restore_in_fc_iscsi_environments.adoc[Ripristino di un singolo file in un ambiente SAN].
+
+
+NOTE: In questa guida viene illustrato come utilizzare la CLI solo per il ripristino di un singolo file in un ambiente SAN. In caso contrario, viene illustrato come utilizzare la GUI per ripristinare i database. Per informazioni su come utilizzare la CLI, consultare https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["Guida all'amministrazione di Snap Creator Framework 4.1.2"].
+
+*Informazioni correlate*
+
+link:task_performing_point_in_time_volume_restore.adoc["Esecuzione di un ripristino del volume"]
+link:task_performing_point_in_time_single_file_restore_with_nfs.adoc["Ripristino di un singolo file"]
+link:concept_single_file_restore_in_fc_iscsi_environments.adoc["Ripristino di un singolo file in un ambiente SAN"]

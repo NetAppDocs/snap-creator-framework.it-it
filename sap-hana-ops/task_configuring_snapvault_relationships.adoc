@@ -1,0 +1,54 @@
+---
+permalink: sap-hana-ops/task_configuring_snapvault_relationships.html 
+sidebar: sidebar 
+keywords: configuring, configure snapvault, relationships, snaprestore 
+summary: Quando si configurano le relazioni SnapVault, i controller di storage primari devono avere una licenza SnapRestore e SnapVault valida installata. Lo storage secondario deve disporre di una licenza SnapVault valida. 
+---
+= Configurazione delle relazioni SnapVault
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Quando si configurano le relazioni SnapVault, i controller di storage primari devono avere una licenza SnapRestore e SnapVault valida installata. Lo storage secondario deve disporre di una licenza SnapVault valida.
+
+. Abilitare SnapVault e NDMP sui controller dello storage primario e secondario.
++
+[listing]
+----
+hana1a> options snapvault.enable on
+hana1a> ndmp on
+hana1a>
+hana1b> options snapvault.enable on
+hana1b> ndmpd on
+hana1b
+hana2b> options snapvault.enable on
+hana2b> ndmpd on
+hana2b>
+----
+. Su tutti i controller dello storage primario, configurare l'accesso al controller dello storage secondario.
++
+[listing]
+----
+hana1a> options snapvault.access host=hana2b
+hana1a>
+hana1b> options snapvault.access host=hana2b
+hana1b>
+----
++
+
+NOTE: Si consiglia di utilizzare una rete dedicata per il traffico di replica. In questi casi, è necessario configurare il nome host di questa interfaccia nel controller dello storage secondario. Invece di hana2b, il nome host potrebbe essere hana2b-REP.
+
+. Sul controller dello storage secondario, configurare l'accesso per tutti i controller dello storage primario.
++
+[listing]
+----
+hana2b> options snapvault.access host=hana1a,hana1b
+hana2b>
+----
++
+
+NOTE: Si consiglia di utilizzare una rete dedicata per il traffico di replica. In questi casi, è necessario configurare il nome host di questa interfaccia nei controller di storage primari. Invece di hana1b e hana1a il nome host potrebbe essere hana1a-REP e hana1b-REP.
+
+

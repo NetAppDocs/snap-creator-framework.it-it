@@ -1,0 +1,14 @@
+---
+permalink: administration/concept_managing_clones.html 
+sidebar: sidebar 
+keywords: managing, clones, creating, backup, deleting, unmounting 
+summary: È possibile creare copie di backup, visualizzare un elenco di copie di backup ed eliminare le copie di backup quando non sono più necessarie. 
+---
+= Gestione dei cloni
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile gestire i cloni creando cloni (utilizzando l'impostazione *Actions* o montando una copia di backup come origine), eliminando cloni o smontando cloni.

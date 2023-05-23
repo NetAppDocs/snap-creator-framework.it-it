@@ -1,0 +1,173 @@
+---
+permalink: administration/reference_sybase_plug_in.html 
+sidebar: sidebar 
+keywords: sybase, ase, plug-in, isql, command, database, parameter, user, server 
+summary: Il plug-in ASE di Sybase utilizza il comando isql per interagire con il database Sybase. 
+---
+= Plug-in Sybase ASE
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il plug-in ASE di Sybase utilizza il comando isql per interagire con il database Sybase.
+
+
+NOTE: Per informazioni aggiornate sul supporto o per visualizzare le matrici di compatibilità, consultare la matrice di interoperabilità.
+
+La tabella seguente elenca i parametri del plug-in Sybase, ne fornisce le impostazioni e li descrive:
+
+|===
+| Parametro | Impostazione | Descrizione 
+
+
+ a| 
+SYBASE_USER
+ a| 
+nome_utente
+ a| 
+Specifica l'utente del sistema operativo che può eseguire il comando isql. Questo parametro è obbligatorio per UNIX. Questo parametro è necessario se l'utente che esegue i comandi Agentstart e stop di Snap Creator (di solito l'utente root) e l'utente che esegue il comando isql sono diversi.
+
+
+
+ a| 
+SERVER_SYBASE
+ a| 
+nome_server_dati
+ a| 
+Specifica il nome del server dati Sybase (opzione-S sul comando isql).ad esempio: `p_test`
+
+
+
+ a| 
+DATABASE_SYBASE
+ a| 
+db_name:nome_utente/password
+ a| 
+Elenca i database all'interno dell'istanza di cui eseguire il backup. Viene aggiunto il database master, ad esempio: `DBAtest2:sa/53616c7404351e`.Se viene utilizzato un database denominato +ALL, viene utilizzato il rilevamento automatico del database e i database sybsyntax, sybsybsystemdb, sybsybsystemprocs e tempdb vengono esclusi.
+
+Ad esempio: `+ALL:sa/53616c71a6351e`
+
+Le password crittografate sono supportate se viene impostato il parametro NTAP_PWD_PROTECTION.
+
+
+
+ a| 
+SYBASE_DATABASES_EXCLUDE
+ a| 
+nome_db
+ a| 
+Consente di escludere i database se viene utilizzato il costrutto +ALL. È possibile specificare più database utilizzando un elenco separato da punto e virgola.ad esempio, `pubs2;test_db1`
+
+
+
+ a| 
+SYBASE_TRAN_DUMP
+ a| 
+db_name:percorso_directory
+ a| 
+Consente di eseguire un dump della transazione Sybase dopo la creazione di una copia Snapshot.ad esempio: `pubs2:/sybasedumps/pubs2`
+
+È necessario specificare ogni database che richiede un dump della transazione.
+
+
+
+ a| 
+SYBASE_TRAN_DUMP_FORMAT
+ a| 
+%S_%D_%T.CMN
+ a| 
+Consente di specificare la convenzione di naming dump. È possibile specificare le seguenti chiavi:
+
+* %S = nome istanza da SYBASE_SERVER
+* %D = database da SYBASE_DATABASES
+* %T = timestamp univoco
+
+
+Ecco un esempio: `%S_%D_%T.log`
+
+
+
+ a| 
+SYBASE_TRAN_DUMP_COMPRESS
+ a| 
+(Y
+| N ) 
+
+
+ a| 
+Attiva o disattiva la compressione nativa del dump delle transazioni Sybase.
+ a| 
+SYBASE_ISQL_CMD
+ a| 
+Esempio: /Opt/sybase/OCS-15__0/bin/isql
+
+
+
+ a| 
+Definisce il percorso del comando isql.
+ a| 
+SYBASE
+ a| 
+Esempio: /Sybase
+
+
+
+ a| 
+Specifica la posizione dell'installazione di Sybase.
+ a| 
+SYBASE_LOGDIR
+ a| 
+Esempio: /Usr/local/ntap/scServer/logs
+
+
+
+ a| 
+Definisce la directory in cui sono posizionati i registri di Snap Creator.
+ a| 
+MANIFESTO_SYBASE
+ a| 
+Esempio: `DBAtest2:/t_inf_nzl_devs/`
+
+
+
+ a| 
+Specifica i database per i quali deve essere creato il file manifest, insieme alla posizione in cui deve essere posizionato il file manifest.
+ a| 
+SYBASE_MANIFEST_FORMAT
+ a| 
+%S__%D_%T.esempio manifesto: `%S_%D_%T.manifest`
+
+
+
+ a| 
+Consente di specificare la convenzione di denominazione del file manifest. È possibile specificare le seguenti chiavi:
+
+* %S = Nome istanza da SYBASE_SERVER
+* %D = database da SYBASE_DATABASES
+* %T = timestamp univoco, uguale a quello utilizzato per la denominazione delle copie Snapshot
+
+ a| 
+SYBASE_MANIFEST_DELETE
+ a| 
+(Y
+
+
+
+| N )  a| 
+Consente di eliminare il manifesto dopo la creazione della copia Snapshot. Il file manifest deve essere acquisito nella copia Snapshot in modo che sia sempre disponibile con il backup.
+ a| 
+SYBASE_EXCLUDE_TEMPDB
+
+
+
+ a| 
+(Y
+| N )  a| 
+Consente l'esclusione automatica dei database temporanei creati dall'utente.
+
+|===
+*Informazioni correlate*
+
+http://mysupport.netapp.com/matrix["Matrice di interoperabilità Tool: mysupport.netapp.com/matrix"]

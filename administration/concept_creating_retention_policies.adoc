@@ -1,0 +1,16 @@
+---
+permalink: administration/concept_creating_retention_policies.html 
+sidebar: sidebar 
+keywords: creating, retention, policies, local, configuration 
+summary: 'Se si prevede di utilizzare oggetti policy invece di un criterio di conservazione locale (contenuto nel file di configurazione), è possibile creare un criterio di conservazione.' 
+---
+= Creazione di policy di conservazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si prevede di utilizzare oggetti policy invece di un criterio di conservazione locale (contenuto nel file di configurazione), è possibile creare un criterio di conservazione.
+
+Durante la creazione di un criterio di conservazione, è possibile creare un tipo di backup e una pianificazione dei criteri.

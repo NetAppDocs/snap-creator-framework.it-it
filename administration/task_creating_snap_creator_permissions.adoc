@@ -1,0 +1,27 @@
+---
+permalink: administration/task_creating_snap_creator_permissions.html 
+sidebar: sidebar 
+keywords: snap, creator, permission, cli 
+summary: 'È possibile creare autorizzazioni Snap Creator che possono essere assegnate a un ruolo utilizzando solo l"interfaccia della riga di comando (CLI).' 
+---
+= Creazione delle autorizzazioni di Snap Creator mediante l'interfaccia CLI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare autorizzazioni Snap Creator che possono essere assegnate a un ruolo utilizzando solo l'interfaccia della riga di comando (CLI).
+
+. Creare le autorizzazioni:
++
+`snapcreator --server host_name --port port_number --user sc_user_name --passwd sc_passwd --action permAdd -permName permission_name --perDesc permission_description --verbose`
+
++
+[listing]
+----
+snapcreator --server localhost --port 8080 --user SCadmin
+--passwd passwd123 --action permAdd --permName backup
+--permDesc "Permission to run a backup" –verbose
+----
+

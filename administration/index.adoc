@@ -1,0 +1,14 @@
+---
+permalink: administration/index.html 
+sidebar: sidebar 
+keywords: administration, guide, snap, creator, server, agent, profiles, policies, schedule, jobs, backup, recovery 
+summary: 'Descrive la gestione di Snap Creator Server e Agent, inclusi l"accesso degli utenti e i profili, le policy, i processi di pianificazione e le operazioni di backup e ripristino' 
+---
+= Guida all'amministrazione
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="Lead"]
+Questa guida descrive come gestire Snap Creator Server e Agent per Snap Creator 4.3.3, inclusi accesso utente e profili, policy, processi di pianificazione e operazioni di backup e recovery.

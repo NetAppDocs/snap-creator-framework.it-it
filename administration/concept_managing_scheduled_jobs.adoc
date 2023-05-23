@@ -1,0 +1,16 @@
+---
+permalink: administration/concept_managing_scheduled_jobs.html 
+sidebar: sidebar 
+keywords: manage, scheduled, jobs, listing, running, deleting, managing 
+summary: 'È possibile gestire i processi pianificati creandoli (per automatizzare le operazioni di backup), nonché elencare, elencare, eseguire ed eliminare i processi pianificati.' 
+---
+= Gestione dei processi pianificati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile gestire i processi pianificati creandoli (per automatizzare le operazioni di backup), nonché elencare, elencare, eseguire ed eliminare i processi pianificati.
+
+Snap Creator Server contiene uno scheduler centralizzato che consente di pianificare i lavori di Snap Creator, tramite una pianificazione di policy (parte di oggetti Policy) o tramite lo scheduler. Lo scheduler può eseguire fino a 10 lavori contemporaneamente e mettere in coda altri lavori fino al completamento di un lavoro in esecuzione.

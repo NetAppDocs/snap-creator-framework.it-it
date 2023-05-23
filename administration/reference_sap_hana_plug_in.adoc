@@ -1,0 +1,22 @@
+---
+permalink: administration/reference_sap_hana_plug_in.html 
+sidebar: sidebar 
+keywords: sap, hana, plug-in, backup, point-in-time, recovery, sql 
+summary: Il plug-in SAP HANA consente di creare backup ed eseguire il ripristino point-in-time dei database SAP HANA in base alle copie Snapshot dello storage. 
+---
+= Plug-in SAP HANA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Il plug-in SAP HANA consente di creare backup ed eseguire il ripristino point-in-time dei database SAP HANA in base alle copie Snapshot dello storage.
+
+Questo plug-in utilizza il client SAP HANA hdbsql per eseguire comandi SQL per garantire la coerenza del database e gestire il catalogo di backup SAP HANA. Il plug-in è supportato per i programmi SAP Certified hardware Appliances e TDI (Tailored Datacenter Integration).
+
+Il plug-in viene installato come parte di Snap Creator Agent su un host che ha accesso ai nodi di database SAP HANA.
+
+*Informazioni correlate*
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2854420["Guida operativa del plug-in SAP HANA di Snap Creator Framework 4.3.3"]

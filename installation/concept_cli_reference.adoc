@@ -1,0 +1,14 @@
+---
+permalink: installation/concept_cli_reference.html 
+sidebar: sidebar 
+keywords: cli, reference 
+summary: 'Questa sezione contiene informazioni di riferimento per l"utilizzo di Snap Creator dall"interfaccia della riga di comando.' 
+---
+= Riferimento CLI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Questa sezione contiene informazioni di riferimento per l'utilizzo di Snap Creator dall'interfaccia della riga di comando.

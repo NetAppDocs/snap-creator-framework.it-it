@@ -1,0 +1,19 @@
+---
+permalink: installation/concept_configuring_unix_specific_settings_creating_symbolic_links.html 
+sidebar: sidebar 
+keywords: configuring, configure, unix, settings, create, creating, symbolic, links 
+summary: 'Se si intende installare Snap Creator Agent su un sistema operativo UNIX (AIX, Linux e Solaris), affinché il plug-in IBM Domino funzioni correttamente, è necessario creare tre collegamenti simbolici (collegamenti simbolici) per il collegamento ai file a oggetti condivisi di Domino.' 
+---
+= Configurazione delle impostazioni specifiche di UNIX: Creazione di collegamenti simbolici
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se si intende installare Snap Creator Agent su un sistema operativo UNIX (AIX, Linux e Solaris), affinché il plug-in IBM Domino funzioni correttamente, è necessario creare tre collegamenti simbolici (collegamenti simbolici) per il collegamento ai file a oggetti condivisi di Domino.
+
+Le procedure di installazione variano leggermente a seconda del sistema operativo. Fare riferimento alla procedura appropriata per il sistema operativo in uso.
+
+
+NOTE: Domino non supporta il sistema operativo HP-UX.

@@ -1,0 +1,96 @@
+---
+permalink: administration/reference_troubleshooting_network_issues.html 
+sidebar: sidebar 
+keywords: network, issues, snap, creator, authorization, failure, troubleshoot, nat 
+summary: In Snap Creator potrebbero verificarsi problemi di rete, ad esempio errori di autorizzazione. È necessario essere consapevoli di questi problemi e sapere come risolverli. 
+---
+= Risoluzione dei problemi di rete
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+In Snap Creator potrebbero verificarsi problemi di rete, ad esempio errori di autorizzazione. È necessario essere consapevoli di questi problemi e sapere come risolverli.
+
+* *Problema*
++
+In Snap Creator, si verifica un problema di autorizzazione non riuscita.
+
+* *Causa*
++
+Un errore di autorizzazione potrebbe essere dovuto alla configurazione, alle autorizzazioni del firewall o alla NAT (Network Address Translation).
+
+* *Azione correttiva*
++
+Verificare quanto segue:
+
++
+** IP/Nome host
++
+A meno che non si utilizzi host equiv, il nome del sistema di storage dal comando hostname sul controller deve essere lo stesso di quello immesso nel file di configurazione di Snap Creator.
+
++
+Non utilizzare un nome di dominio completo (FQDN) quando il nome host di un sistema di storage è abbreviato.
+
++
+Assicurarsi che la risoluzione IP corrisponda al nome specificato. In caso di mancata corrispondenza, correggerla utilizzando host equiv sul sistema storage.
+
++
+Per abilitare host equiv, attenersi alla seguente procedura:
+
++
+... Immettere il seguente comando: Options https.admin.hostsequiv.enable on
+... Modificare il file /etc/hostsequiv e aggiungere quanto segue: IP/host_name_in_Snap_Creator config_fileSnap_Creator_user
+
+
+** La funzionalità di protezione dei dati di NetApp Management Console
++
+Il nome del controller di storage definito nei VOLUMI del parametro di configurazione Snap Creator deve corrispondere al nome del controller di storage nella funzionalità di protezione dei dati di NetApp Management Console. Se i nomi dei controller di storage non corrispondono, è possibile utilizzare il file host del sistema operativo per forzare la corrispondenza dei nomi dei controller di storage.
+
+** Firewall
++
+Se è presente un firewall tra l'host su cui è in esecuzione Snap Creator e il sistema di storage, assicurarsi di disporre di elenchi di controllo degli accessi bidirezionali (ACL) aperti per 80, 443 o entrambi.
+
++
+*** 80: Utilizzato per comunicare con il sistema di storage se è selezionato HTTP
+*** 443: Utilizzato per comunicare con il sistema storage se si seleziona HTTPS per utilizzare HTTPS (443) per Linux, Solaris o AIX, installare le librerie openssl, necessarie per utilizzare SSL.
+
+
+
+
++
+Se Snap Creator Agent è in esecuzione, la porta su cui l'Agent è in esecuzione deve essere aperta. Assicurarsi che il traffico di ritorno dal sistema storage possa essere diretto al sistema che esegue Snap Creator, almeno sulle porte non privilegiate.
+
++
+** Se SSL è disattivato, Snap Creator Framework può comunicare con Clustered Data ONTAP e Data ONTAP in modalità 7 utilizzando TLS.
++
+In Snap Creator Framework è possibile disattivare SSLV3 nell'host e nel sistema di storage:
+
++
+*** Per disattivare SSLV3 su AIX, Unix o Windows, aggiornare il parametro jdk.tls.disabledAlgorithms nel file java.security come segue:
++
+jdk.tls.disabledAlgorithms=sslv3
+
++
+Il file java.security si trova nel percorso: /java/jre/lib/Security/
+
+*** Per disattivare SSLV3 sul sistema di storage, eseguire il comando di modifica Web del servizio di sistema e configurare i seguenti parametri:
++
+TLSv1 abilitato: Vero
+
++
+SSLv3 abilitato: Falso
+
++
+SSLv2 abilitato: Falso
+
+
+
+** NAT
++
+Se si utilizza NAT, assicurarsi che gli indirizzi IP di origine/destinazione non vengano modificati nel pacchetto TCP (Transmission Control Protocol). I sistemi host e storage devono sapere con chi comunicano. La presentazione di un IP del firewall invece dell'IP effettivo dell'host o del controller potrebbe causare problemi.
+
+
+
+

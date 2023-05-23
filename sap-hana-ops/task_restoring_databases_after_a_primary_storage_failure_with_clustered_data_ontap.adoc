@@ -1,0 +1,44 @@
+---
+permalink: sap-hana-ops/task_restoring_databases_after_a_primary_storage_failure_with_clustered_data_ontap.html 
+sidebar: sidebar 
+keywords: sap, hana, restore, restoring, databases, primary, storage, failure, clustered, data, ontap 
+summary: È possibile ripristinare un database SAP HANA dopo un errore di un sistema storage primario che esegue Clustered Data ONTAP. 
+---
+= Ripristino dei database dopo un errore dello storage primario con Clustered Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile ripristinare un database SAP HANA dopo un errore di un sistema storage primario che esegue Clustered Data ONTAP.
+
+Supponendo che il volume primario venga perso completamente, è necessario creare un nuovo volume primario e ripristinarlo dal volume di backup.
+
+. Creare un volume primario con la protezione dei dati di tipo.
++
+[listing]
+----
+hana::> volume create -vserver hana1a -volume hana_data -aggregate aggr_sas_101 -size 300G -state online -type DP -policy default -autosize-mode grow_shrink -space-guarantee none
+-snapshot-policy none -foreground true
+[Job 6744] Job is queued: Create hana_data.
+[Job 6744] Job succeeded: Successful
+----
+. Ripristinare tutti i dati dal volume di backup.
++
+[listing]
+----
+hana::> snapmirror restore -destination-path hana1a:hana_data -source-path hana2b:backup_hana_data -source-snapshot sc-backup-daily_20140505121000
+[Job 6746] Job is queued: snapmirror restore from source "hana2b:backup_hana_data" for the
+snapshot sc-backup-daily_20140505121000.
+
+hana::> job show -id 6746
+Owning
+Job ID Name                 Vserver    Node           State
+------ -------------------- ---------- -------------- ----------
+6746   SnapMirror restore   hana        hana01        Running
+       Description: snapmirror restore from source "hana2b:backup_hana_data" for the snapshot sc-backup-daily_20140505121000
+----
+
+
+Al termine del processo di ripristino, si utilizza SAP HANA per eseguire il ripristino.

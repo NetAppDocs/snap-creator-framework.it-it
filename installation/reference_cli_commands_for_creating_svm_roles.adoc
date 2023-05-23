@@ -1,0 +1,522 @@
+---
+permalink: installation/reference_cli_commands_for_creating_svm_roles.html 
+sidebar: sidebar 
+keywords: cli, commands, creating, svm, roles, role create 
+summary: La tabella seguente elenca i comandi necessari per creare un ruolo per un nuovo utente SVM. 
+---
+= Comandi CLI per la creazione dei ruoli SVM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La tabella seguente elenca i comandi necessari per creare un ruolo per un nuovo utente SVM.
+
+|===
+| Nome della directory dei comandi | Comando da eseguire 
+
+
+ a| 
+adduser
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "adduser" -vserver Snapcreator
+
+
+
+ a| 
+event generate-autosupport-log
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "event generate-autosupport-log" -vserver Snapcreator
+
+
+
+ a| 
+commento lun
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "lun comment" -vserver Snapcreator
+
+
+
+ a| 
+lun create (crea lun)
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "lun create" -vserver Snapcreator
+
+
+
+ a| 
+lun delete (elimina lun)
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "lun delete" -vserver Snapcreator
+
+
+
+ a| 
+geometria del lun
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "lun geometry" -vserver Snapcreator
+
+
+
+ a| 
+lun igroup add
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "lun igroup add" -vserver Snapcreator
+
+
+
+ a| 
+lun igroup create
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "lun igroup create" -vserver Snapcreator
+
+
+
+ a| 
+set di igroup lun
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "lun igroup set" -vserver Snapcreator
+
+
+
+ a| 
+lun igroup show
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "lun igroup show" -vserver Snapcreator
+
+
+
+ a| 
+mappa del lun
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "lun map" -vserver Snapcreator
+
+
+
+ a| 
+visualizzazione della mappatura del lun
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "lun mapping show" -vserver Snapcreator
+
+
+
+ a| 
+modifica del lun
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "lun modify" -vserver Snapcreator
+
+
+
+ a| 
+spostamento del lun
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "lun Move" -vserver Snapcreator
+
+
+
+ a| 
+lun offline
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "lun offline" -vserver Snapcreator
+
+
+
+ a| 
+lun online
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "lun online" -vserver Snapcreator
+
+
+
+ a| 
+ridimensionamento del lun
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "lun resize"-vserver Snapcreator
+
+
+
+ a| 
+lun show
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "lun show" -vserver Snapcreator
+
+
+
+ a| 
+lun dismappato
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "lun unmap" -vserver Snapcreator
+
+
+
+ a| 
+rete
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "network" -vserver SnapCreator
+
+
+
+ a| 
+connessioni di rete
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "connessioni di rete" -vserver SnapCreator
+
+
+
+ a| 
+connessioni di rete attive
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "connessioni di rete attive" -vserver SnapCreator
+
+
+
+ a| 
+vengono visualizzate le connessioni di rete in ascolto
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "network connections listening show" -vserver SnapCreator
+
+
+
+ a| 
+interfaccia di rete
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "network interface" -vserver SnapCreator
+
+
+
+ a| 
+routing-group di rete
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "network routing-groups" -vserver SnapCreator
+
+
+
+ a| 
+file di ripristino
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "restore-file" -vserver Snapcreator
+
+
+
+ a| 
+snapmirror
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "snapmirror" -vserver SnapCreator
+
+
+
+ a| 
+versione
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "version" -vserver Snapcreator
+
+
+
+ a| 
+volume
+ a| 
+Ruolo create -role VSERVERRBACROLE_New -cmddirname "volume"
+
+
+
+ a| 
+dimensionamento automatico del volume
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume autodimensize" -vserver Snapcreator
+
+
+
+ a| 
+clone del volume
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume clone" -vserver Snapcreator
+
+
+
+ a| 
+creazione del clone del volume
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume clone create" -vserver Snapcreator
+
+
+
+ a| 
+creazione del volume
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume create" -vserver Snapcreator
+
+
+
+ a| 
+distruggere il volume
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume Destroy" -vserver Snapcreator
+
+
+
+ a| 
+efficienza del volume disattivata
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume efficiency off" -vserver Snapcreator
+
+
+
+ a| 
+efficienza dei volumi attivata
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume Efficiency on" -vserver Snapcreator
+
+
+
+ a| 
+inizio dell'efficienza dei volumi
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume Efficiency start" -vserver Snapcreator
+
+
+
+ a| 
+dimostrazione dell'efficienza dei volumi
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume efficiency show" -vserver Snapcreator
+
+
+
+ a| 
+file di volume
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume file" -vserver Snapcreator
+
+
+
+ a| 
+clone del file di volume
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "clone del file di volume" -vserver Snapcreator
+
+
+
+ a| 
+creazione del clone del file di volume
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume file clone create" -vserver Snapcreator
+
+
+
+ a| 
+modifica del volume
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume modify" -vserver Snapcreator
+
+
+
+ a| 
+montaggio del volume
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume mount" -vserver Snapcreator
+
+
+
+ a| 
+volume offline
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume offline" -vserver Snapcreator
+
+
+
+ a| 
+presentazione del volume
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume show" -vserver Snapcreator
+
+
+
+ a| 
+dimensione del volume
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume size" -vserver Snapcreator
+
+
+
+ a| 
+creazione di snapshot di volume
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume snapshot create" -vserver Snapcreator
+
+
+
+ a| 
+eliminazione dello snapshot del volume
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume snapshot delete" -vserver Snapcreator
+
+
+
+ a| 
+ripristino dello snapshot del volume
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume snapshot restore" -vserver Snapcreator
+
+
+
+ a| 
+smontare il volume
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "volume unmount" -vserver Snapcreator
+
+
+
+ a| 
+visualizzazione della regola dei criteri di esportazione di vserver
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver export-policy rule show" -vserver Snapcreator
+
+
+
+ a| 
+visualizzazione della policy di esportazione di vserver
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver export-policy show" -vserver Snapcreator
+
+
+
+ a| 
+fcp vserver
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver fcp" -vserver Snapcreator
+
+
+
+ a| 
+mostra initiator fcp vserver
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver fcp initiator show" -vserver Snapcreator
+
+
+
+ a| 
+mostra vserver fcp
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver fcp show" -vserver Snapcreator
+
+
+
+ a| 
+stato fcp del vserver
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver fcp status" -vserver Snapcreator
+
+
+
+ a| 
+iscsi vserver
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver iscsi" -vserver Snapcreator
+
+
+
+ a| 
+visualizzazione della connessione iscsi del vserver
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver iscsi Connection show" -vserver Snapcreator
+
+
+
+ a| 
+aggiunta dell'elenco di accesso dell'interfaccia iscsi di vserver
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver iscsi interface accesslist add" -vserver Snapcreator
+
+
+
+ a| 
+visualizzazione dell'elenco di accesso all'interfaccia iscsi di vserver
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver iscsi interface accesslist show" -vserver Snapcreator
+
+
+
+ a| 
+query isns iscsi vserver
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver iscsi isns query" -vserver Snapcreator
+
+
+
+ a| 
+nome del nodo iscsi di vserver
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver iscsi nodename" -vserver Snapcreator
+
+
+
+ a| 
+presentazione della sessione iscsi di vserver
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver iscsi session show" -vserver Snapcreator
+
+
+
+ a| 
+spettacolo vserver iscsi
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver iscsi show" -vserver Snapcreator
+
+
+
+ a| 
+stato iscsi vserver
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver iscsi status" -vserver Snapcreator
+
+
+
+ a| 
+nfs vserver
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver nfs" -vserver Snapcreator
+
+
+
+ a| 
+stato nfs di vserver
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver nfs status" -vserver Snapcreator
+
+
+
+ a| 
+vengono visualizzati gli host dns dei servizi vserver
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver Services name-service dns hosts show" -vserver SnapCreator
+
+
+
+ a| 
+creazione del gruppo unix dei servizi vserver
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver Services name-service unix-group create" -vserver Snapcreator
+
+
+
+ a| 
+vserver services unix-group show
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver Services name-service unix-group show" -vserver Snapcreator
+
+
+
+ a| 
+servizi vserver creazione unix-user
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver Services name-service unix-user create" -vserver Snapcreator
+
+
+
+ a| 
+vserver services unix-user show
+ a| 
+Role create -role VSERVERRBACROLE_New -cmddirname "vserver Services name-service unix-user show" -vserver Snapcreator
+
+|===

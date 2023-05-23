@@ -1,0 +1,221 @@
+---
+permalink: administration/reference_snap_creator_gui_error_messages.html 
+sidebar: sidebar 
+keywords: snap, creator, gui, error, message, gui 
+summary: La seguente tabella elenca i messaggi di errore della GUI di Snap Creator. 
+---
+= Messaggi di errore della GUI di SNAP Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La seguente tabella elenca i messaggi di errore della GUI di Snap Creator.
+
+|===
+| Codice di errore | Descrizione/risoluzione 
+
+
+ a| 
+gui-00001
+ a| 
+Verificare che la password crittografata nel file di configurazione sia corretta.
+
+
+
+ a| 
+gui-00002
+ a| 
+Assicurarsi di utilizzare il corretto eseguibile di Snap Creator. Verificare che /etc/snapcreatorgui.conf sia corretto.
+
+
+
+ a| 
+gui-00003
+ a| 
+Assicurarsi che i log e la cartella del profilo corrispondente esistano.
+
+
+
+ a| 
+gui-00004
+ a| 
+Controllare se Snap Creator home/logs/nomefile esiste.
+
+
+
+ a| 
+gui-00005
+ a| 
+Controllare se il profilo e la configurazione corrispondenti sono presenti nella directory configs.
+
+
+
+ a| 
+gui-00006
+ a| 
+Provare a eseguire la configurazione del profilo di snapcreatorgui.conf, se il file viene perso.
+
+
+
+ a| 
+gui-00007
+ a| 
+Controllare se la configurazione viene rinominata o eliminata.
+
+
+
+ a| 
+gui-00008
+ a| 
+Controllare il nome utente e la password e verificare di aver eseguito il comando di impostazione del profilo di snapcreator.
+
+
+
+ a| 
+gui-00009
+ a| 
+Verificare l'esistenza di permessi su file o cartella.
+
+
+
+ a| 
+gui-00010
+ a| 
+Verificare l'esistenza di permessi su file o cartella.
+
+
+
+ a| 
+gui-00011
+ a| 
+Scegliere un profilo diverso o eliminare quello esistente.
+
+
+
+ a| 
+gui-00012
+ a| 
+Verificare se la directory configs esiste e se è stato eseguito il comando di impostazione del profilo snapcreator.
+
+
+
+ a| 
+gui-00013
+ a| 
+Per ulteriori informazioni, consultare i registri.
+
+
+
+ a| 
+gui-00014
+ a| 
+Chiudere la configurazione e riaprirla.
+
+
+
+ a| 
+gui-00015
+ a| 
+Controllare le autorizzazioni sul file e se esistono.
+
+
+
+ a| 
+gui-00017
+ a| 
+Verificare che vCenter sia corretto e disponga di un data center valido.
+
+
+
+ a| 
+gui-00019
+ a| 
+Riprovare, perché l'archivio dati potrebbe essere stato cancellato durante il recupero.
+
+
+
+ a| 
+gui-00020
+ a| 
+Riprovare, perché l'archivio dati potrebbe essere stato cancellato durante il recupero.
+
+
+
+ a| 
+gui-00021
+ a| 
+Riprovare e verificare che vCenter sia corretto.
+
+
+
+ a| 
+gui-00022
+ a| 
+Aggiungi datastore al tuo vCenter.
+
+
+
+ a| 
+gui-00023
+ a| 
+Riprovare, verificare il vCenter.
+
+
+
+ a| 
+gui-00024
+ a| 
+La versione di vCloud Director in uso non è supportata.
+
+
+
+ a| 
+gui-00025
+ a| 
+Immettere le credenziali corrette e riprovare.
+
+
+
+ a| 
+gui-00026
+ a| 
+Organizzazioni non trovate per VCD. Creare organizzazioni e riprovare.
+
+
+
+ a| 
+gui-00027
+ a| 
+Controllare le credenziali vCenter.
+
+
+
+ a| 
+gui-00028
+ a| 
+Controllare il controller details/NTAP_USERS.
+
+
+
+ a| 
+gui-00029
+ a| 
+Verificare l'URL di vCloud Director.
+
+
+
+ a| 
+gui-00030
+ a| 
+Controllare se esistono VDC per le organizzazioni.
+
+
+
+ a| 
+gui-00031
+ a| 
+Controllare se esistono vApp per i VDC.
+
+|===

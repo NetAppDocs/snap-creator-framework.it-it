@@ -1,0 +1,22 @@
+---
+permalink: administration/task_creating_snap_creator_roles.html 
+sidebar: sidebar 
+keywords: snap, creator, gui, creating, role 
+summary: È possibile creare ruoli Snap Creator utilizzando la GUI di Snap Creator. 
+---
+= Creazione di ruoli Snap Creator
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+È possibile creare ruoli Snap Creator utilizzando la GUI di Snap Creator.
+
+. Dal menu principale della GUI di Snap Creator, selezionare *utenti e ruoli* > *gestione dei ruoli*.
+. Nella scheda Gestione ruoli, fare clic su *Aggiungi*.
+. Nella finestra di dialogo Aggiungi ruolo, immettere il nome e la descrizione del ruolo, quindi fare clic su *Salva*.
++
+Il nuovo ruolo viene visualizzato nel riquadro *ruoli*.
+
+

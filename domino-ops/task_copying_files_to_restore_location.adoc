@@ -1,0 +1,24 @@
+---
+permalink: domino-ops/task_copying_files_to_restore_location.html 
+sidebar: sidebar 
+keywords: domino, ibm, copy, copying, file, data restore directory 
+summary: Dopo aver montato la copia Snapshot del file da ripristinare, è possibile copiare il file nella directory di ripristino dei dati specificata nel file di configurazione di backup e ripristino. 
+---
+= Copia del file nella directory di ripristino dei dati
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Dopo aver montato la copia Snapshot del file da ripristinare, è possibile copiare il file nella directory di ripristino dei dati specificata nel file di configurazione di backup e ripristino.
+
+. Copiare il file da ripristinare dalla copia Snapshot montata.
+. Incollare il file nella directory di ripristino dei dati specificata nel file di configurazione di backup e ripristino.
++
+L'esempio seguente mostra come copiare il file di database t04.nsf dalla copia Snapshot montata sul disco R: Alla directory di ripristino dei dati specificata nel file di configurazione.
+
++
+image::../media/scfw_domino_copy_files_to_restore.gif[Questa immagine viene spiegata dal testo circostante.]
+
+
