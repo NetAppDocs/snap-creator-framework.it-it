@@ -14,9 +14,10 @@ summary: È possibile eseguire il backup dei database su richiesta o in base a u
 È possibile eseguire il backup dei database su richiesta o in base a una pianificazione. È possibile utilizzare la GUI di Snap Creator o la CLI di Snap Creator per eseguire il backup dei database.
 
 
-NOTE: Questa guida illustra come utilizzare la GUI per eseguire il backup dei database. Per informazioni su come utilizzare la CLI, consultare https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["Guida all'amministrazione di Snap Creator Framework 4.1.2"].
+NOTE: È possibile utilizzare la GUI per eseguire il backup dei database. Per informazioni su come utilizzare la CLI, consultare https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["Guida all'amministrazione di Snap Creator Framework 4.1.2"^].
 
 *Informazioni correlate*
 
-link:task_creating_a_domino_backup_using_the_snap_creator_gui.adoc["Backup dei database on-demand"]
-link:task_scheduling_actions_using_the_snap_creator_gui.adoc["Pianificazione dei backup"]
+* link:task_creating_a_domino_backup_using_the_snap_creator_gui.adoc["Backup dei database on-demand"]
+* link:task_scheduling_actions_using_the_snap_creator_gui.adoc["Pianificazione dei backup"]
+
