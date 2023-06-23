@@ -868,11 +868,11 @@
           
           <a target="_blank" 
             
-              href="/it-it/snap-creator-framework/pdfs/sidebar/Operazioni_plug_in_IBM__Domino_.pdf" 
+              href="/it-it/snap-creator-framework/pdfs/sidebar/Operazioni_plug_in_IBM_Domino.pdf" 
             
           >
             <img src="/it-it/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
-            Operazioni plug-in IBM® Domino®
+            Operazioni plug-in IBM Domino
           </a>
           
 
@@ -1148,11 +1148,11 @@
           
           <a target="_blank" 
             
-              href="/it-it/snap-creator-framework/pdfs/sidebar/Operazioni_del_plug_in_SAP_HANA_.pdf" 
+              href="/it-it/snap-creator-framework/pdfs/sidebar/Operazioni_plug_in_SAP_HANA.pdf" 
             
           >
             <img src="/it-it/snap-creator-framework/images/pdf.png" alt="" width="16" height="16"/>
-            Operazioni del plug-in SAP HANA®
+            Operazioni plug-in SAP HANA
           </a>
           
 
@@ -2836,11 +2836,11 @@
         Comandi CLI per la creazione dei ruoli SVM
       </a></li></ul></li></ul></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Operazioni plug-in IBM® Domino®"
+      data-pdf-filename="Operazioni plug-in IBM Domino"
       data-li-level="1" 
       class="subfolders "
     ><a href="/it-it/snap-creator-framework/domino-ops/index.html">
-        <div class="na-navbar-padding"> Operazioni plug-in IBM® Domino®</div>
+        <div class="na-navbar-padding"> Operazioni plug-in IBM Domino</div>
       </a>
       <ul style="display: none;">
         <li 
@@ -3101,11 +3101,11 @@
         Dove andare
       </a></li></ul></li><li 
       data-pdf-exists="true" 
-      data-pdf-filename="Operazioni del plug-in SAP HANA®"
+      data-pdf-filename="Operazioni plug-in SAP HANA"
       data-li-level="1" 
       class="subfolders "
     ><a href="/it-it/snap-creator-framework/sap-hana-ops/index.html">
-        <div class="na-navbar-padding"> Operazioni del plug-in SAP HANA®</div>
+        <div class="na-navbar-padding"> Operazioni plug-in SAP HANA</div>
       </a>
       <ul style="display: none;">
         <li 
@@ -4619,7 +4619,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-23 13:36:17 +0000">05/23/2023</time>
+    <time datetime="2023-06-23 17:04:07 +0000">06/23/2023</time>
     
   
 
@@ -4630,19 +4630,19 @@
 </p>
 
 <div class="paragraph lead">
-<p>È possibile creare un backup del database in pochi minuti utilizzando la tecnologia NetApp Snapshot™. Il tempo necessario per creare una copia Snapshot è indipendente dalle dimensioni del database, in quanto una copia Snapshot non sposta alcun blocco di dati.</p>
+<p>È possibile creare un backup del database in pochi minuti utilizzando la tecnologia Snapshot di NetApp. Il tempo necessario per creare una copia Snapshot è indipendente dalle dimensioni del database, in quanto una copia Snapshot non sposta alcun blocco di dati.</p>
 </div>
 <div class="paragraph">
 <p>L&#8217;utilizzo della tecnologia Snapshot non ha alcun effetto sulle performance del sistema SAP in produzione. Pertanto, la creazione di copie Snapshot può essere pianificata senza dover considerare i periodi di attività di picco. I clienti SAP e NetApp pianificano in genere diversi backup Snapshot online durante la giornata. Ad esempio, i backup possono essere eseguiti ogni quattro ore. Questi backup Snapshot vengono in genere conservati per tre o cinque giorni nel sistema di storage primario.</p>
 </div>
 <div class="paragraph">
-<p>Le copie Snapshot offrono anche vantaggi chiave per le operazioni di ripristino e ripristino. La funzionalità NetApp SnapRestore® consente di ripristinare l&#8217;intero database o parti del database nel momento in cui è stata creata una copia Snapshot disponibile. Questo processo di ripristino viene eseguito in pochi minuti, indipendentemente dalle dimensioni del database. Anche il tempo necessario per il processo di ripristino è drasticamente ridotto, poiché sono state create diverse copie Snapshot durante la giornata e occorre applicare un numero inferiore di registri.</p>
+<p>Le copie Snapshot offrono anche vantaggi chiave per le operazioni di ripristino e ripristino. La funzionalità NetApp SnapRestore consente di ripristinare l&#8217;intero database o parti del database nel momento in cui è stata creata qualsiasi copia Snapshot disponibile. Questo processo di ripristino viene eseguito in pochi minuti, indipendentemente dalle dimensioni del database. Anche il tempo necessario per il processo di ripristino è drasticamente ridotto, poiché sono state create diverse copie Snapshot durante la giornata e occorre applicare un numero inferiore di registri.</p>
 </div>
 <div class="paragraph">
 <p>I backup di Snapshot vengono memorizzati sullo stesso sistema di dischi dei dati online attivi. Pertanto, NetApp consiglia di utilizzare i backup Snapshot come integrazione, non come sostituzione dei backup in una posizione secondaria come disco o nastro. Sebbene i backup in una posizione secondaria siano ancora necessari, è solo una minima probabilità che tali backup siano necessari per il ripristino e il ripristino. La maggior parte delle azioni di ripristino e ripristino viene gestita utilizzando SnapRestore sul sistema di storage primario. I ripristini da una posizione secondaria sono necessari solo se il sistema di storage primario che contiene le copie Snapshot è danneggiato o se è necessario ripristinare un backup non più disponibile da una copia Snapshot. Ad esempio, potrebbe essere necessario ripristinare un backup di due settimane fa.</p>
 </div>
 <div class="paragraph">
-<p>Un backup in una posizione secondaria si basa sempre sulle copie Snapshot create sullo storage primario. Pertanto, i dati vengono letti direttamente dal sistema di storage primario senza generare carico sul server di database SAP. Lo storage primario comunica direttamente con lo storage secondario e invia i dati di backup alla destinazione utilizzando il backup disk-to-disk di SnapVault®. La funzionalità NetApp SnapVault offre vantaggi significativi rispetto ai backup tradizionali. Dopo un trasferimento iniziale dei dati, in cui tutti i dati devono essere trasferiti dall&#8217;origine alla destinazione, tutti i backup successivi copiano solo i blocchi modificati nello storage secondario. In questo modo si riduce significativamente il carico sul sistema di storage primario e il tempo necessario per un backup completo. Poiché SnapVault memorizza solo i blocchi modificati nella destinazione, un backup completo del database richiede meno spazio su disco.</p>
+<p>Un backup in una posizione secondaria si basa sempre sulle copie Snapshot create sullo storage primario. Pertanto, i dati vengono letti direttamente dal sistema di storage primario senza generare carico sul server di database SAP. Lo storage primario comunica direttamente con lo storage secondario e invia i dati di backup alla destinazione utilizzando il backup disk-to-disk di SnapVault. La funzionalità NetApp SnapVault offre vantaggi significativi rispetto ai backup tradizionali. Dopo un trasferimento iniziale dei dati, in cui tutti i dati devono essere trasferiti dall&#8217;origine alla destinazione, tutti i backup successivi copiano solo i blocchi modificati nello storage secondario. In questo modo si riduce significativamente il carico sul sistema di storage primario e il tempo necessario per un backup completo. Un backup completo del database richiede meno spazio su disco perché SnapVault memorizza solo i blocchi modificati nella destinazione.</p>
 </div>
 <div class="paragraph">
 <p>Potrebbe essere ancora necessario eseguire il backup dei dati su nastro come backup a lungo termine. Ad esempio, si tratta di un backup settimanale che viene conservato per un anno. In questo caso, l&#8217;infrastruttura a nastro può essere collegata direttamente allo storage secondario e i dati possono essere scritti su nastro utilizzando il protocollo NDMP (Network Data Management Protocol).</p>
