@@ -49,18 +49,6 @@ Descrive come preparare un sistema storage per la replica SnapVault.
 +
 Descrive le Best practice per il plug-in IBM Domino.
 
-* http://www.netapp.com/us/media/tr-3588.pdf["Report tecnico 3588: Integrazione di Domino 8.5 per Windows 2008 con un sistema di storage NetApp"]
-+
-Descrive come integrare IBM Domino 8.5 per Windows 2008 con un sistema storage NetApp.
-
-* http://www.netapp.com/us/media/tr-3691.pdf["Report tecnico 3691: Integrazione di IBM Domino 8.5 per Linux con un sistema di storage NetApp"]
-+
-Descrive come integrare IBM Domino 8.0.2 per Linux con un sistema storage NetApp.
-
-* http://www.netapp.com/us/media/tr-3723.pdf["Report tecnico 3723: Implementazione di Domino 8.0.2 in un ambiente AIX e NetApp con NFS"]
-+
-Descrive come integrare IBM Domino 8.0.2 per AIX con un sistema storage NetApp.
-
 * http://community.netapp.com/t5/Snap-Creator-Framework-Discussions/bd-p/snap-creator-framework-discussions["Discussioni su SNAP Creator Framework"]
 +
 Consente di entrare in contatto con i colleghi, porre domande, scambiare idee, trovare risorse e condividere le Best practice di Snap Creator.
