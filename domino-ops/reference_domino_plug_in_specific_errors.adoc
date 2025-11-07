@@ -14,7 +14,7 @@ summary: 'Gli errori comuni di Snap Creator sono suddivisi in due categorie: Err
 Gli errori comuni di Snap Creator sono suddivisi in due categorie: Errori generici di Snap Creator e errori specifici del plug-in Domino. Gli errori specifici del plug-in Domino in genere comportano problemi di preinstallazione, database errati o problemi con un'azione di ripristino personalizzata.
 
 
-NOTE: Per informazioni sugli errori generici di Snap Creator, vedere link:https://library.netapp.com/ecm/ecm_download_file/ECMP12395422["Guida all'amministrazione di Snap Creator Framework 4.1.2"].
+NOTE: Per informazioni sugli errori generici di Snap Creator, vederelink:../administration/index.html["Guida all'amministrazione di Snap Creator Framework 4.3.3"] .
 
 
 
@@ -47,7 +47,7 @@ Questi messaggi di errore vengono visualizzati se una delle seguenti condizioni 
 * Le fasi di preinstallazione non sono state eseguite o non sono state eseguite correttamente:
 +
 ** Negli host UNIX, è necessario creare collegamenti simbolici ai file a oggetti condivisi IBM Domino.
-** Negli host Windows, è necessario aggiungere il percorso di installazione di IBM Domino alla variabile di ambiente PATH. Per ulteriori informazioni, consultare link:https://library.netapp.com/ecm/ecm_download_file/ECMP12395424["Guida all'installazione di Snap Creator Framework 4.1.2"].
+** Sugli host Windows, è necessario aggiungere il percorso di installazione di IBM Domino alla variabile di ambiente PATH. Per maggiori informazioni, vedere illink:https://docs.netapp.com/us-en/snap-creator-framework/installation/task_configure_windows_specific_settings_adding_path_to_the_environment_variables.html["Guida all'installazione Snap Creator Framework - Aggiunta del percorso alle variabili di ambiente"] .
 
 
 * Il livello di bit di Domino è diverso dal livello di bit di Snap Creator. Ad esempio, se si utilizza Domino a 32 bit, è necessario utilizzare Snap Creator a 32 bit.
