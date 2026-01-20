@@ -52,6 +52,8 @@ La porta da utilizzare per le comunicazioni con la console di Operations Manager
  a| 
 OM_EVENT_GENERATE
  a| 
-(Y
-| N) 
+(S|N)
+ a| 
+Abilita o disabilita la creazione di eventi nella console di Operations Manager.
+
 |===

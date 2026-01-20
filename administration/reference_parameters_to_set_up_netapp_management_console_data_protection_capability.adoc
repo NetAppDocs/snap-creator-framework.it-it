@@ -20,30 +20,47 @@ Per configurare la funzionalità di protezione dei dati di NetApp Management Con
  a| 
 NTAP_PM_UPDATE
  a| 
-(Y
-| N) 
-
-
+(S|N)
  a| 
 Consente di attivare e disattivare l'aggiornamento della funzionalità di protezione dei dati di NetApp Management Console che registra le copie Snap Creator Snapshot nella funzionalità di protezione dei dati di NetApp Management Console. *Nota:* se NTAP_PM_UPDATE è abilitato, è necessario configurare NTAP_DFM_DATA_SET.
+
+
+
  a| 
 NTAP_DFM_DATA_SET
  a| 
-
-
-
  a| 
 Elenca i sistemi storage e i set di dati delle funzionalità di protezione dei dati di NetApp Management Console in base alle correlazioni dei volumi, ovvero controller1:datet1/vol1,vol2;controller1:datet2/vol3.
+
+
+
  a| 
 NTAP_PM_RUN_BACKUP
  a| 
-(Y
-
-
-
-| N)  a| 
+(S|N)
+ a| 
 Avvia il backup della funzionalità di protezione dei dati di NetApp Management Console, verifica l'avanzamento e lo stato e attende il completamento.
+
+
+
  a| 
 NTAP_DFM_SNAPSHOT_FORMAT
+ a| 
+ a| 
+Impostazione facoltativa per il formato delle copie Snapshot secondarie quando si utilizza la funzionalità di protezione dei dati della NetApp Management Console. Questa opzione richiede OnCommand 5.0 o versione successiva. Variabile obbligatoria:
+
+* Marca temporale: %T
+
+
+Variabili facoltative:
+
+* Tipo di conservazione: %R
+* Etichetta del set di dati: %L
+* Controller di archiviazione: %H
+* Nome volume: %N
+* Dati specifici dell'applicazione: %A
+
+
+Se questa opzione non è impostata, verrà utilizzata la convenzione di denominazione predefinita per la funzionalità di protezione dei dati della NetApp Management Console. La convenzione di denominazione può essere impostata solo al momento della creazione del set di dati.
 
 |===

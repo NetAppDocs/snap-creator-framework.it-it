@@ -62,10 +62,7 @@ Elenco dei database e delle porte su cui sono in ascolto, ad esempio `db1:3307;d
  a| 
 MASTER_SLAVE
  a| 
-(Y
-| N) 
-
-
+(S|N)
  a| 
 Specifica l'ambiente del database di backup:se impostato su Y, esegue il backup del database master.
 
@@ -73,10 +70,19 @@ Se impostato su N, esegue il backup del database slave oppure la configurazione 
 
 
 NOTE: Il backup di Snap Creator Framework elimina i file di log binari MySQL richiesti sul server MySQL con l'opzione Master_Slave attivata. Il backup del database MySQL (master) con Snap Creator Framework rimuove tutti i file di log binari e lascia solo un singolo file di log binario vuoto con numerazione di ripristino (.000001). A causa di questo problema, il server slave non si avvia dopo l'operazione di backup.
+
+
+
  a| 
 PURGE_BINARY_LOG
  a| 
-(Y
+(S|N)
+ a| 
+Il parametro funziona per la configurazione del database master-slave MySQL.
+
+Se impostato su Y, eliminerà i log binari nell'ultimo file di log binario disponibile.
+
+Se impostato su N, utilizza il timestamp recente per la query di eliminazione.
 
 |===
 *Informazioni correlate*

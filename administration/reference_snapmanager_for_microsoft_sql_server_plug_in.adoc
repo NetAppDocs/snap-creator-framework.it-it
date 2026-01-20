@@ -60,8 +60,10 @@ Specifica l'SnapManager per il nome di Microsoft SQL Server.
  a| 
 SMSQL_32 bit
  a| 
-(Y
-| N) 
+(S|N)
+ a| 
+Abilita o disabilita l'utilizzo della versione a 32 bit di PowerShell.
+
 |===
 *Informazioni correlate*
 

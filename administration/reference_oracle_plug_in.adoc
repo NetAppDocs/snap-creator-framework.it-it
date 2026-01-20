@@ -75,11 +75,8 @@ Percorso della directory in cui memorizzare il file temporaneo, ad esempio /tmp.
  a| 
 ARCHIVE_LOG_ONLY
  a| 
-(Y
-| N 
-
-
-| Policy:<Y | N>)  a| 
+(S|N|politica:<S|N>)
+ a| 
 Informa il plug-in Oracle di eseguire solo un'operazione di log dello switch. Questa impostazione è utile se si gestiscono i backup dei log di archiviazione separatamente dai backup dei dati.
 
 
@@ -103,24 +100,31 @@ Percorso alla home directory Oracle per un dato identificatore di sistema (SID)q
  a| 
 ORACLE_EXPORT_PARAMETERS
  a| 
-(Y
-| N ) 
-
-
+(S|N)
  a| 
 I parametri di ambiente ORACLE_HOME e ORACLE_SID vengono esportati utilizzando il comando di esportazione. Questo è applicabile solo in ambiente UNIX o basato su Linux.
+
+
+
  a| 
 ORACLE_BACKUPMODE
  a| 
-
-
-
  a| 
 Opzione per configurare backup offline o online utilizzando il criterio di Snap Creator. L'opzione predefinita è online. ORACLE_BACKUPMODE=oraria:online,giornaliera:offline
+
+
+
  a| 
 ORACLE_SHUTDOWNABORT
  a| 
-(Y
+(S|N)
+ a| 
+Se impostato su Y durante l'esecuzione del backup offline di Oracle, utilizza il meccanismo di interruzione dell'arresto per garantire che il database venga arrestato in uno stato coerente. I passaggi di arresto per il parametro ORACLE_SHUTDOWNABORT sono i seguenti:
+
+* Interruzione dello spegnimento
+* Limitazione di avvio
+* Arresto immediato
+
 
 |===
 *Informazioni correlate*
