@@ -67,7 +67,7 @@ Inoltre, eliminare la directory di installazione di Snap Creator 4.0.
 
 IMPORTANT: Non eliminare le copie di backup finché non si è certi di non dover ripristinare una versione precedente.
 
-È inoltre necessario convalidare l'avvio della GUI di Snap Creator Framework accedendo all'host locale sulla porta specificata (https://IP_address:gui_port[]).
+È inoltre necessario convalidare l'avvio dell'interfaccia grafica di Snap Creator Framework accedendo all'host locale sulla porta specificata +(https://IP_address:gui_port)+[].
 
 È necessario connettersi utilizzando HTTPS; in caso contrario, la connessione non viene automaticamente reindirizzata a una connessione HTTPS e la GUI non funziona.
 

@@ -164,7 +164,7 @@ INFO: To access NetApp Snap Creator Framework release-version GUI goto https://h
 Checking Status of scServer:
 Running
 ----
-. Convalidare l'avvio della GUI di Snap Creator Framework accedendo all'host locale sulla porta specificata (ad esempio, https://10.12.123.123:8443[]).
+. Convalida l'avvio dell'interfaccia grafica di Snap Creator Framework accedendo all'host locale sulla porta specificata +(ad esempio,  https://10.12.123.123:8443)+[].
 +
 È necessario connettersi utilizzando HTTPS; in caso contrario, la GUI non funziona.
 

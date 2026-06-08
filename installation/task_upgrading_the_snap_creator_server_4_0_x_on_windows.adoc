@@ -79,7 +79,7 @@ Una volta completato il processo di aggiornamento, avviare il servizio Snap Crea
 * Da un prompt dei comandi, immettere il seguente comando: `sc start snapcreatorserverservice`
 
 
-Inoltre, è necessario convalidare l'avvio della GUI di Snap Creator Framework accedendo all'host locale sulla porta specificata (https://IP_address:gui_port[]).
+Inoltre, è necessario convalidare l'avvio dell'interfaccia grafica di Snap Creator Framework accedendo all'host locale sulla porta specificata +(https://IP_address:gui_port)+[].
 
 È necessario connettersi utilizzando HTTPS; in caso contrario, la connessione non viene automaticamente reindirizzata a una connessione HTTPS e la GUI non funziona.
 

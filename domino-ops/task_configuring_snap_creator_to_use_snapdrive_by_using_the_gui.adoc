@@ -82,6 +82,6 @@ dove:
 
 
 . Una volta ottenuto il risultato desiderato, premere *Invio*.
-. Ripetere i passaggi <<STEP_3F9C83DD05D84075AD0277213FD67C56,STEP_3F9C83DD05D84075AD0277213FD67C56>> attraverso <<STEP_FBEDD7AE105F42138EB35315EA9FA7CC,STEP_FBEDD7AE105F42138EB35315EA9FA7CC>> per aggiungere un altro comando.
+. Ripeti i passaggi 3 e 4 per aggiungere un altro comando.
 . Fare clic su *Save* (Salva) nel pannello Configuration Content (contenuto configurazione) per salvare le modifiche.
 

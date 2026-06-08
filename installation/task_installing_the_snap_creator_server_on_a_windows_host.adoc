@@ -96,7 +96,7 @@ NOTE: Sebbene il valore massimo accettato per la dimensione del registro lavori 
 Durante l'installazione del servizio Snap Creator Server, viene visualizzato un prompt dei comandi se è stato selezionato un servizio come parte delle opzioni di installazione. Questo processo tenta di avviare i servizi esistenti; pertanto, è comune vedere i messaggi di errore elencati come parte di questo passaggio.
 
 .. Fare clic su *fine* per chiudere il programma di installazione di Windows.
-.. Convalidare l'avvio della GUI di Snap Creator Framework accedendo all'host locale sulla porta specificata (https://IP_address:gui_port[]).
+.. Convalida l'avvio dell'interfaccia grafica di Snap Creator Framework accedendo all'host locale sulla porta specificata +(https://IP_address:gui_port)+[].
 +
 È necessario connettersi utilizzando HTTPS; in caso contrario, la connessione non viene automaticamente reindirizzata a una connessione HTTPS e la GUI non funziona.
 

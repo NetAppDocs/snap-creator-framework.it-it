@@ -55,7 +55,7 @@ Selezionando *Restore* viene avviata automaticamente la procedura guidata di rip
 
 +
 
-NOTE: Se si esegue il ripristino da una copia SnapVault, viene richiesto di eseguire il ripristino dallo storage primario o secondario. La scelta dipende dalla modalità di gestione della limitazione descritta in link:concept_domino_database_restore_overview.md#GUID-4D864E27-DE54-43BF-9B9F-EF2F240F65D9["Concept_domino_database_restore_Overview.MD GUID-4D864E27-DE54-43BF-9B9F-EF2F240F65D9"].
+NOTE: Se si esegue un ripristino da una copia SnapVault, viene richiesto di ripristinare dallo storage primario o secondario. La scelta dipende da come si gestisce la limitazione descritta in link:concept_domino_database_restore_overview.html["Concept_domino_database_restore_Overview.MD GUID-4D864E27-DE54-43BF-9B9F-EF2F240F65D9"].
 
 . Nella pagina Restore details (Dettagli ripristino), specificare i dettagli del ripristino:
 +

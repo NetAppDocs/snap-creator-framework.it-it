@@ -25,7 +25,7 @@ Quando si ripristina una copia SnapVault dallo storage secondario, sono disponib
 
 == Informazioni sulle directory di destinazione
 
-I ripristini dei volumi e dei singoli file hanno in genere directory di destinazione diverse. Specificare la directory di destinazione nel parametro Data Restore Directory nel file di configurazione di backup e ripristino (vedere il passo link:task_using_the_gui_to_create_a_configuration_file.md#STEP_E6C507729B3647FD8B2E8D0818F22D3B["Task_using_the_gui_to_create_a_Configuration_file.MD STEP_E6C507729B3647FD8B2E8D0818F22D3B"]):
+In genere, i ripristini di volumi e i ripristini di singoli file hanno directory di destinazione diverse. È possibile specificare la directory di destinazione nel parametro Data Restore Directory nel file di configurazione di backup e ripristino (vedere il passaggio link:task_using_the_gui_to_create_a_configuration_file.html["attività utilizzando la gui per creare un file di configurazione"]):
 
 * Per il ripristino di un volume, è necessario impostare Data Restore Directory (Directory di ripristino dati) sulla directory dei dati Domino.
 * Per un ripristino a file singolo, è necessario impostare Data Restore Directory su una sottodirectory del volume di dati Domino.

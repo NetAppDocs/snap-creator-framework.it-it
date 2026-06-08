@@ -22,7 +22,7 @@ Le fasi di alto livello sono le seguenti:
 . Verificare la presenza di database incoerenti o corrotti.
 +
 
-NOTE: È possibile forzare il plug-in a procedere con le operazioni di backup nonostante gli errori, come descritto al punto link:task_using_the_gui_to_create_a_configuration_file.md#STEP_AA41331683A24598B7845367CB967F99["Task_using_the_gui_to_create_a_Configuration_file.MD STEP_AA41331683A24598B7845367CB967F99"].
+NOTE: È possibile forzare il plug-in a procedere con le operazioni di backup nonostante gli errori, come descritto nel passaggio link:task_using_the_gui_to_create_a_configuration_file.html["attività_utilizzo_della_GUI_per_creare_un_file_di_configurazione"].
 
 . Creare una copia Snapshot di ciascun volume.
 . Se la registrazione delle transazioni Domino è in uso, archiviare le copie dei registri delle transazioni Domino da utilizzare nelle operazioni di ripristino aggiornate al minuto.
